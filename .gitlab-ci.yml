@@ -1,0 +1,39 @@
+# CI for kmila-9s/Tests — builds the Kmila.Shared xunit suite against the live
+# sibling repos. Tests is a LEAF (nothing depends on it), so it includes
+# auto-merge (vX.Y.Z -> main) but NOT downstream-fanout.
+include:
+    - project: 'kmila-9s/ci-templates'
+      file: '/auto-merge.yml'
+
+stages:
+    - test
+    - merge
+
+variables:
+    GIT_DEPTH: "20"
+
+before_script:
+    # Clean any stale sibling checkout a previous job left on the runner —
+    # otherwise an out-of-date copy is reused and breaks the build (CS1061).
+    - rm -rf ../Parser ../LibraryCompiler ../Interpreter ../TimeMachine ../Debugger ../App
+    # Clone every repo the Kmila.Shared test project references, at the layout
+    # the ProjectReference paths expect: siblings at ../<repo>, and the App
+    # (kmila-9s/Kmila) at ../App/Kmila so ../../../App/Kmila/Kmila.Shared resolves.
+    # Dependency order: Parser + LibraryCompiler first (needed by Interpreter),
+    # then Interpreter, TimeMachine, Debugger, and finally the App.
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/Parser.git" ../Parser
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/LibraryCompiler.git" ../LibraryCompiler
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/Interpreter.git" ../Interpreter
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/TimeMachine.git" ../TimeMachine
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/Debugger.git" ../Debugger
+    - mkdir -p ../App
+    - git clone --depth 20 "http://gitlab-ci-token:${CI_JOB_TOKEN}@${CI_SERVER_HOST}:8083/${CI_PROJECT_NAMESPACE}/Kmila.git" ../App/Kmila
+
+unit-tests:
+    stage: test
+    image: mcr.microsoft.com/dotnet/sdk:9.0
+    script:
+        # Coerce the multi-target deps (Kmila.Shared/Interpreter/Debugger are
+        # net9.0 + MAUI heads) to net9.0 only, as the sibling repos' CI does,
+        # so no MAUI workloads are needed on the runner.
+        - dotnet test Unit/Kmila.Shared.Tests/Kmila.Shared.Tests.csproj -c Release -f net9.0 -p:TargetFrameworks=net9.0
