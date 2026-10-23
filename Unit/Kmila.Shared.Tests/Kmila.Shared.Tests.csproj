@@ -42,6 +42,11 @@
     <Content Include="Fixtures/RoundTripFidelity/*.vhd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <!-- Hierarchical resource-estimation fixtures (structural tops + a
+         generic-parameterized leaf). Loaded by HierarchicalResourceTests. -->
+    <Content Include="Fixtures/Hierarchy/*.vhd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
