@@ -31,9 +31,9 @@ before_script:
 
 unit-tests:
     stage: test
-    image: mcr.microsoft.com/dotnet/sdk:9.0
+    image: mcr.microsoft.com/dotnet/sdk:10.0
     script:
         # Coerce the multi-target deps (Kmila.Shared/Interpreter/Debugger are
-        # net9.0 + MAUI heads) to net9.0 only, as the sibling repos' CI does,
+        # net10.0 + MAUI heads) to net10.0 only, as the sibling repos' CI does,
         # so no MAUI workloads are needed on the runner.
-        - dotnet test Unit/Kmila.Shared.Tests/Kmila.Shared.Tests.csproj -c Release -f net9.0 -p:TargetFrameworks=net9.0
+        - dotnet test Unit/Kmila.Shared.Tests/Kmila.Shared.Tests.csproj -c Release -f net10.0 -p:TargetFrameworks=net10.0
