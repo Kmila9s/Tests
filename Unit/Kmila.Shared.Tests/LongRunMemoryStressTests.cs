@@ -178,18 +178,13 @@ public class LongRunMemoryStressTests
             $"live-replay doc exceeded its cap: {r.ReplayStepCount} > {ReplayState.LiveDocFrameCap}");
     }
 
-    // #4b — each live-replay frame SHOULD store a DELTA (changed signals), not a
-    // full copy of the whole signal table (the per-frame full-table copy is
-    // large-object churn). DEFERRED TO PHASE 2: storing deltas requires the
-    // player to reconstruct full state from keyframes, and LiveDoc.Steps is
-    // mutated on the sim thread while ExecutionPlayer reads it on the UI thread —
-    // reconstruction would widen that existing race into a crash source. The
-    // live-replay doc is ALREADY capped (ReplayDoc_LongRun_StaysWithinCap) and is
-    // opt-in/off-by-default, and the dominant unbounded leaks (SignalHistory,
-    // WaveformData) are fixed in Phase 1, so this churn reduction is folded into
-    // the Phase 2 streaming trace-store redesign that rebuilds this area with
-    // correct threading. Re-enable (remove Skip) when Phase 2 lands.
-    [Fact(Skip = "Phase 2: delta-frame live replay (needs player reconstruction + sim/UI thread safety) — see plan")]
+    // #4b — each live-replay frame stores a DELTA (changed signals), not a full
+    // copy of the whole signal table (the per-frame full-table copy was
+    // large-object churn). Phase 2: delta steps + a keyframe every
+    // ReplayState.LiveKeyframeInterval steps; ExecutionTimelineDoc.ResolveSignals
+    // reconstructs full state, and the sim-thread writer / UI-thread reader race
+    // is closed by SyncRoot + ReadView().
+    [Fact]
     public async Task ReplayDoc_Frames_AreDeltas_NotFullTableSnapshots()
     {
         var r = await RunStressAsync(EdgesLarge, attachReplay: true);
@@ -201,5 +196,91 @@ public class LongRunMemoryStressTests
             $"live-replay frames store the FULL signal table " +
             $"(avg {r.ReplayLateAvgSignalsPerStep:F1} of {r.SignalCount} signals per frame) " +
             $"instead of per-frame deltas — this is the large-object churn that crashes long runs.");
+    }
+
+    // #4c — delta frames must reconstruct EXACTLY the full table the old per-frame
+    // snapshot stored, including steps that survived FIFO eviction (whose first
+    // step was promoted to a keyframe). An independent observer subscribed after
+    // ReplayState rebuilds the running table frame by frame and samples it; every
+    // sample still on the tape must match ExecutionTimelineDoc.ResolveSignals.
+    [Fact]
+    public async Task ReplayDoc_DeltaFrames_ReconstructFullTable()
+    {
+        EntityRegistry.Instance.Clear();
+        PackageRegistry.Instance.Clear();
+        FunctionRegistry.Instance.Clear();
+        SignalAttributeHandler.Instance.Reset();
+
+        var source = File.ReadAllText(Path.Combine(FixtureDir, "self_retriggering_clock.vhd"));
+        var path = Path.Combine(Path.GetTempPath(), $"kmila_stress_{Guid.NewGuid():N}.vhd");
+        await File.WriteAllTextAsync(path, source);
+        try
+        {
+            EntityRegistry.Instance.ScanFile(path);
+            var parser = new Debugger.Repositories.Parser(path);
+            parser.ParseFile();
+            var entity = parser.Entities.FirstOrDefault(e => e.Architecture != null);
+            Assert.NotNull(entity);
+
+            const int tickResNs = 10;
+            var config = StimulusBuilder.BuildConfigNs(entity!, portMoments: null,
+                totalNs: (long)EdgesLarge * 20L, tickResNs: tickResNs, systemClockMhz: 50);
+
+            var replay = new ReplayState(new SignalCursorBus()) { LiveReplayDuringRun = true };
+            var running = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            var expected = new Dictionary<long, Dictionary<string, string>>(); // 1-based frame → table
+            long frameNo = 0;
+
+            var runner = new SimulationRunner();
+            try
+            {
+                runner.OnEngineReady += eng =>
+                {
+                    eng.TickResolutionNs = tickResNs;
+                    replay.AttachLive(eng, source); // subscribes first → writes the frame first
+                    eng.OnFrameEmitted += args =>
+                    {
+                        foreach (var s in args.ChangedSignals)
+                            if (!string.IsNullOrEmpty(s.Name))
+                                running[s.Name] = s.Value?.ToString() ?? "U";
+                        frameNo++;
+                        if (frameNo % 37 == 0)
+                            expected[frameNo] = new Dictionary<string, string>(running, StringComparer.OrdinalIgnoreCase);
+                    };
+                };
+                await runner.RunAsync(config);
+
+                var view = replay.LiveDoc!.ReadView();
+                Assert.Equal(frameNo, (long)replay.LiveFrameTick);
+                Assert.True(frameNo > ReplayState.LiveDocFrameCap,
+                    $"run too short to exercise eviction ({frameNo} frames)");
+                Assert.False(view.Steps[0].IsDelta, "first step after eviction must be a keyframe");
+
+                long firstFrame = frameNo - view.Steps.Count + 1;
+                int compared = 0;
+                foreach (var (f, exp) in expected)
+                {
+                    long idx = f - firstFrame;
+                    if (idx < 0 || idx >= view.Steps.Count) continue;
+                    var got = view.ResolveSignals((int)idx);
+                    Assert.Equal(exp.Count, got.Count);
+                    foreach (var kv in exp)
+                    {
+                        Assert.True(got.TryGetValue(kv.Key, out var gv), $"frame {f}: missing {kv.Key}");
+                        Assert.Equal(kv.Value, gv);
+                    }
+                    compared++;
+                }
+                Assert.True(compared > 50, $"too few samples compared ({compared})");
+            }
+            finally
+            {
+                runner.Dispose();
+            }
+        }
+        finally
+        {
+            try { File.Delete(path); } catch { /* best-effort temp cleanup */ }
+        }
     }
 }
