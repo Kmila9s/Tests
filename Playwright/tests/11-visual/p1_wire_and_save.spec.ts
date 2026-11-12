@@ -48,6 +48,12 @@ test('seed Counter4: LED array wired to count, saved', async ({ page }) => {
     if (!(await modal.isVisible().catch(() => false))) await wireBtn.click();
     return modal.isVisible();
   }, { timeout: 10_000 }).toBe(true);
+  // Wiring modal groups pins per component, collapsed by default — expand all.
+  for (let i = 0; i < 20; i++) {
+    const closed = modal.locator('.kviz-wiring-group[data-open="false"] .kviz-wiring-group-header');
+    if ((await closed.count()) === 0) break;
+    await closed.first().click();
+  }
   await modal.locator('.kviz-wiring-table tbody tr').filter({
     has: page.locator('code', { hasText: 'anodes' }),
   }).last().locator('select').selectOption('count');
@@ -85,6 +91,12 @@ test('seed ToggleLed: Switch + LED, wired and saved', async ({ page }) => {
     return modal.isVisible();
   }, { timeout: 10_000 }).toBe(true);
 
+  // Wiring modal groups pins per component, collapsed by default — expand all.
+  for (let i = 0; i < 20; i++) {
+    const closed = modal.locator('.kviz-wiring-group[data-open="false"] .kviz-wiring-group-header');
+    if ((await closed.count()) === 0) break;
+    await closed.first().click();
+  }
   const rows = modal.locator('.kviz-wiring-table tbody tr');
   await rows.filter({ has: page.locator('code', { hasText: 'out' }) }).last().locator('select').selectOption('sw');
   await rows.filter({ has: page.locator('code', { hasText: 'anode' }) }).last().locator('select').selectOption('lamp');

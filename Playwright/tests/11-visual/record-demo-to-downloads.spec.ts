@@ -46,6 +46,12 @@ test('In-app Record button captures the running counter to a webm download', asy
   await page.locator('[data-testid="visual-wire"]').click();
   const modal = page.locator('.kviz-wiring-modal');
   await expect(modal).toBeVisible({ timeout: 5_000 });
+  // Wiring modal groups pins per component, collapsed by default — expand all.
+  for (let i = 0; i < 20; i++) {
+    const closed = modal.locator('.kviz-wiring-group[data-open="false"] .kviz-wiring-group-header');
+    if ((await closed.count()) === 0) break;
+    await closed.first().click();
+  }
   await modal.locator('.kviz-wiring-table tbody tr')
     .filter({ has: page.locator('code', { hasText: 'anodes' }) }).last()
     .locator('select').selectOption('count');
