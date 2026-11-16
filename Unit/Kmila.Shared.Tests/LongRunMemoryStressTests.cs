@@ -27,9 +27,6 @@ namespace Kmila.Shared.Tests;
 // ─────────────────────────────────────────────────────────────────────────────
 public class LongRunMemoryStressTests
 {
-    private static readonly string FixtureDir = Path.Combine(
-        AppContext.BaseDirectory, "Fixtures", "Stress");
-
     // Clock-edge counts for the two-length ratio checks. Both must exceed the
     // per-signal retention cap so a bounded implementation plateaus (ratio ~1)
     // while the unbounded one scales linearly (ratio ~2).
@@ -49,90 +46,71 @@ public class LongRunMemoryStressTests
     // disposed and returned as scalars so disposal can't affect them.
     private static async Task<StressResult> RunStressAsync(int clockEdges, bool attachReplay)
     {
-        EntityRegistry.Instance.Clear();
-        PackageRegistry.Instance.Clear();
-        FunctionRegistry.Instance.Clear();
-        SignalAttributeHandler.Instance.Reset();
+        var source = TestDesigns.Fixture("Stress", "self_retriggering_clock.vhd");
+        var entity = TestDesigns.LoadTop(source);
 
-        var source = File.ReadAllText(Path.Combine(FixtureDir, "self_retriggering_clock.vhd"));
-        var path = Path.Combine(Path.GetTempPath(), $"kmila_stress_{Guid.NewGuid():N}.vhd");
-        await File.WriteAllTextAsync(path, source);
+        const int tickResNs = 10;
+        const int clockMhz = 50;                 // 20 ns period → rising edge every 20 ns
+        long totalNs = (long)clockEdges * 20L;
+
+        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+            totalNs: totalNs, tickResNs: tickResNs, systemClockMhz: clockMhz);
+
+        var replay = new ReplayState(new SignalCursorBus());
+        if (attachReplay) replay.LiveReplayDuringRun = true;
+
+        // WaveformData: the second, UI-facing copy of the history. The Editor
+        // rebuilds it incrementally from a 200 ms progress timer, so we mirror
+        // that here — merge periodically DURING the run (not once at the end),
+        // which is what makes WaveformData.Transitions accumulate cumulatively
+        // in the live path.
+        var wf = WaveformData.CreateEmpty(tickResNs);
+        int frameCounter = 0;
+
+        var runner = new SimulationRunner();
         try
         {
-            EntityRegistry.Instance.ScanFile(path);
-
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            var entity = parser.Entities.FirstOrDefault(e => e.Architecture != null);
-            Assert.NotNull(entity);
-
-            const int tickResNs = 10;
-            const int clockMhz = 50;                 // 20 ns period → rising edge every 20 ns
-            long totalNs = (long)clockEdges * 20L;
-
-            var config = StimulusBuilder.BuildConfigNs(entity!, portMoments: null,
-                totalNs: totalNs, tickResNs: tickResNs, systemClockMhz: clockMhz);
-
-            var replay = new ReplayState(new SignalCursorBus());
-            if (attachReplay) replay.LiveReplayDuringRun = true;
-
-            // WaveformData: the second, UI-facing copy of the history. The Editor
-            // rebuilds it incrementally from a 200 ms progress timer, so we mirror
-            // that here — merge periodically DURING the run (not once at the end),
-            // which is what makes WaveformData.Transitions accumulate cumulatively
-            // in the live path.
-            var wf = WaveformData.CreateEmpty(tickResNs);
-            int frameCounter = 0;
-
-            var runner = new SimulationRunner();
-            try
+            runner.OnEngineReady += eng =>
             {
-                runner.OnEngineReady += eng =>
+                eng.TickResolutionNs = tickResNs;
+                if (attachReplay) replay.AttachLive(eng, source);
+                eng.OnFrameEmitted += _ =>
                 {
-                    eng.TickResolutionNs = tickResNs;
-                    if (attachReplay) replay.AttachLive(eng, source);
-                    eng.OnFrameEmitted += _ =>
+                    // ~ one merge per 500 frames ≈ the real progress-timer cadence.
+                    if (++frameCounter % 500 == 0)
                     {
-                        // ~ one merge per 500 frames ≈ the real progress-timer cadence.
-                        if (++frameCounter % 500 == 0)
-                        {
-                            lock (eng.History) { wf.MergeFrom(eng.History); }
-                        }
-                    };
+                        lock (eng.History) { wf.MergeFrom(eng.History); }
+                    }
                 };
-                await runner.RunAsync(config);
+            };
+            await runner.RunAsync(config);
 
-                var history = runner.Engine!.History;
-                lock (history) { wf.MergeFrom(history); }   // final catch-up merge
-                int wfTransitions = wf.Signals.Sum(s => s.Transitions.Count);
+            var history = runner.Engine!.History;
+            lock (history) { wf.MergeFrom(history); }   // final catch-up merge
+            int wfTransitions = wf.Signals.Sum(s => s.Transitions.Count);
 
-                int replaySteps = 0;
-                double lateAvg = 0;
-                var doc = attachReplay ? replay.LiveDoc : null;
-                if (doc != null)
-                {
-                    replaySteps = doc.Steps.Count;
-                    // Average per-step payload size over the LATE window (by then
-                    // every signal has been seen at least once, so a full-table
-                    // snapshot == SignalCount while a delta == a handful).
-                    int take = Math.Min(200, doc.Steps.Count);
-                    if (take > 0)
-                        lateAvg = doc.Steps.Skip(doc.Steps.Count - take)
-                                           .Average(s => s.Signals.Count);
-                }
-
-                return new StressResult(
-                    history.TotalSamples, history.SignalCount, wfTransitions,
-                    replaySteps, lateAvg);
-            }
-            finally
+            int replaySteps = 0;
+            double lateAvg = 0;
+            var doc = attachReplay ? replay.LiveDoc : null;
+            if (doc != null)
             {
-                runner.Dispose();
+                replaySteps = doc.Steps.Count;
+                // Average per-step payload size over the LATE window (by then
+                // every signal has been seen at least once, so a full-table
+                // snapshot == SignalCount while a delta == a handful).
+                int take = Math.Min(200, doc.Steps.Count);
+                if (take > 0)
+                    lateAvg = doc.Steps.Skip(doc.Steps.Count - take)
+                                       .Average(s => s.Signals.Count);
             }
+
+            return new StressResult(
+                history.TotalSamples, history.SignalCount, wfTransitions,
+                replaySteps, lateAvg);
         }
         finally
         {
-            try { File.Delete(path); } catch { /* best-effort temp cleanup */ }
+            runner.Dispose();
         }
     }
 
@@ -206,81 +184,63 @@ public class LongRunMemoryStressTests
     [Fact]
     public async Task ReplayDoc_DeltaFrames_ReconstructFullTable()
     {
-        EntityRegistry.Instance.Clear();
-        PackageRegistry.Instance.Clear();
-        FunctionRegistry.Instance.Clear();
-        SignalAttributeHandler.Instance.Reset();
+        var source = TestDesigns.Fixture("Stress", "self_retriggering_clock.vhd");
+        var entity = TestDesigns.LoadTop(source);
 
-        var source = File.ReadAllText(Path.Combine(FixtureDir, "self_retriggering_clock.vhd"));
-        var path = Path.Combine(Path.GetTempPath(), $"kmila_stress_{Guid.NewGuid():N}.vhd");
-        await File.WriteAllTextAsync(path, source);
+        const int tickResNs = 10;
+        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+            totalNs: (long)EdgesLarge * 20L, tickResNs: tickResNs, systemClockMhz: 50);
+
+        var replay = new ReplayState(new SignalCursorBus()) { LiveReplayDuringRun = true };
+        var running = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+        var expected = new Dictionary<long, Dictionary<string, string>>(); // 1-based frame → table
+        long frameNo = 0;
+
+        var runner = new SimulationRunner();
         try
         {
-            EntityRegistry.Instance.ScanFile(path);
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            var entity = parser.Entities.FirstOrDefault(e => e.Architecture != null);
-            Assert.NotNull(entity);
-
-            const int tickResNs = 10;
-            var config = StimulusBuilder.BuildConfigNs(entity!, portMoments: null,
-                totalNs: (long)EdgesLarge * 20L, tickResNs: tickResNs, systemClockMhz: 50);
-
-            var replay = new ReplayState(new SignalCursorBus()) { LiveReplayDuringRun = true };
-            var running = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-            var expected = new Dictionary<long, Dictionary<string, string>>(); // 1-based frame → table
-            long frameNo = 0;
-
-            var runner = new SimulationRunner();
-            try
+            runner.OnEngineReady += eng =>
             {
-                runner.OnEngineReady += eng =>
+                eng.TickResolutionNs = tickResNs;
+                replay.AttachLive(eng, source); // subscribes first → writes the frame first
+                eng.OnFrameEmitted += args =>
                 {
-                    eng.TickResolutionNs = tickResNs;
-                    replay.AttachLive(eng, source); // subscribes first → writes the frame first
-                    eng.OnFrameEmitted += args =>
-                    {
-                        foreach (var s in args.ChangedSignals)
-                            if (!string.IsNullOrEmpty(s.Name))
-                                running[s.Name] = s.Value?.ToString() ?? "U";
-                        frameNo++;
-                        if (frameNo % 37 == 0)
-                            expected[frameNo] = new Dictionary<string, string>(running, StringComparer.OrdinalIgnoreCase);
-                    };
+                    foreach (var s in args.ChangedSignals)
+                        if (!string.IsNullOrEmpty(s.Name))
+                            running[s.Name] = s.Value?.ToString() ?? "U";
+                    frameNo++;
+                    if (frameNo % 37 == 0)
+                        expected[frameNo] = new Dictionary<string, string>(running, StringComparer.OrdinalIgnoreCase);
                 };
-                await runner.RunAsync(config);
+            };
+            await runner.RunAsync(config);
 
-                var view = replay.LiveDoc!.ReadView();
-                Assert.Equal(frameNo, (long)replay.LiveFrameTick);
-                Assert.True(frameNo > ReplayState.LiveDocFrameCap,
-                    $"run too short to exercise eviction ({frameNo} frames)");
-                Assert.False(view.Steps[0].IsDelta, "first step after eviction must be a keyframe");
+            var view = replay.LiveDoc!.ReadView();
+            Assert.Equal(frameNo, (long)replay.LiveFrameTick);
+            Assert.True(frameNo > ReplayState.LiveDocFrameCap,
+                $"run too short to exercise eviction ({frameNo} frames)");
+            Assert.False(view.Steps[0].IsDelta, "first step after eviction must be a keyframe");
 
-                long firstFrame = frameNo - view.Steps.Count + 1;
-                int compared = 0;
-                foreach (var (f, exp) in expected)
-                {
-                    long idx = f - firstFrame;
-                    if (idx < 0 || idx >= view.Steps.Count) continue;
-                    var got = view.ResolveSignals((int)idx);
-                    Assert.Equal(exp.Count, got.Count);
-                    foreach (var kv in exp)
-                    {
-                        Assert.True(got.TryGetValue(kv.Key, out var gv), $"frame {f}: missing {kv.Key}");
-                        Assert.Equal(kv.Value, gv);
-                    }
-                    compared++;
-                }
-                Assert.True(compared > 50, $"too few samples compared ({compared})");
-            }
-            finally
+            long firstFrame = frameNo - view.Steps.Count + 1;
+            int compared = 0;
+            foreach (var (f, exp) in expected)
             {
-                runner.Dispose();
+                long idx = f - firstFrame;
+                if (idx < 0 || idx >= view.Steps.Count) continue;
+                var got = view.ResolveSignals((int)idx);
+                Assert.Equal(exp.Count, got.Count);
+                foreach (var kv in exp)
+                {
+                    Assert.True(got.TryGetValue(kv.Key, out var gv), $"frame {f}: missing {kv.Key}");
+                    Assert.Equal(kv.Value, gv);
+                }
+                compared++;
             }
+            Assert.True(compared > 50, $"too few samples compared ({compared})");
         }
         finally
         {
-            try { File.Delete(path); } catch { /* best-effort temp cleanup */ }
+            runner.Dispose();
         }
     }
 }

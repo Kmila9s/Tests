@@ -21,7 +21,6 @@ namespace Kmila.Shared.Tests;
 // ─────────────────────────────────────────────────────────────────────────────
 public class LongRunTraceStoreTests
 {
-    private static readonly string FixtureDir = Path.Combine(AppContext.BaseDirectory, "Fixtures", "Stress");
     private const int TickResNs = 10;
 
     private sealed record RunResult(SignalHistory History, WaveformData Waveform, TraceSession? Trace);
@@ -32,54 +31,35 @@ public class LongRunTraceStoreTests
     private static async Task<RunResult> RunAsync(int clockEdges, int historyCap, TraceStorage? storage,
         Action<Variable, IReadOnlyList<(long, object, int)>>? extraSpill = null)
     {
-        EntityRegistry.Instance.Clear();
-        PackageRegistry.Instance.Clear();
-        FunctionRegistry.Instance.Clear();
-        SignalAttributeHandler.Instance.Reset();
+        var entity = TestDesigns.SelfRetriggeringClock();
+        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+            totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
 
-        var source = File.ReadAllText(Path.Combine(FixtureDir, "self_retriggering_clock.vhd"));
-        var path = Path.Combine(Path.GetTempPath(), $"kmila_trace_{Guid.NewGuid():N}.vhd");
-        await File.WriteAllTextAsync(path, source);
+        var trace = storage?.StartSession(TickResNs);
+        var runner = new SimulationRunner();
         try
         {
-            EntityRegistry.Instance.ScanFile(path);
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            var entity = parser.Entities.FirstOrDefault(e => e.Architecture != null);
-            Assert.NotNull(entity);
-            var config = StimulusBuilder.BuildConfigNs(entity!, portMoments: null,
-                totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
-
-            var trace = storage?.StartSession(TickResNs);
-            var runner = new SimulationRunner();
-            try
+            runner.OnEngineReady += eng =>
             {
-                runner.OnEngineReady += eng =>
+                eng.TickResolutionNs = TickResNs;
+                eng.History.MaxSamplesPerSignal = historyCap;
+                trace?.Attach(eng.History);
+                if (extraSpill != null)
                 {
-                    eng.TickResolutionNs = TickResNs;
-                    eng.History.MaxSamplesPerSignal = historyCap;
-                    trace?.Attach(eng.History);
-                    if (extraSpill != null)
-                    {
-                        var inner = eng.History.OnEvicting;
-                        eng.History.OnEvicting = (v, b) => { inner?.Invoke(v, b); extraSpill(v, b); };
-                    }
-                };
-                await runner.RunAsync(config);
-                var history = runner.Engine!.History;
-                if (trace != null) await trace.CompleteAsync();
-                var wf = WaveformData.FromSignalHistory(history, TickResNs);
-                trace?.AttachArchives(wf);
-                return new RunResult(history, wf, trace);
-            }
-            finally
-            {
-                runner.Dispose(); // does not clear the history
-            }
+                    var inner = eng.History.OnEvicting;
+                    eng.History.OnEvicting = (v, b) => { inner?.Invoke(v, b); extraSpill(v, b); };
+                }
+            };
+            await runner.RunAsync(config);
+            var history = runner.Engine!.History;
+            if (trace != null) await trace.CompleteAsync();
+            var wf = WaveformData.FromSignalHistory(history, TickResNs);
+            trace?.AttachArchives(wf);
+            return new RunResult(history, wf, trace);
         }
         finally
         {
-            try { File.Delete(path); } catch { /* best effort */ }
+            runner.Dispose(); // does not clear the history
         }
     }
 

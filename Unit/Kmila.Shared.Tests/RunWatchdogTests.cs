@@ -20,7 +20,6 @@ namespace Kmila.Shared.Tests;
 // ─────────────────────────────────────────────────────────────────────────────
 public class RunWatchdogTests
 {
-    private static readonly string FixtureDir = Path.Combine(AppContext.BaseDirectory, "Fixtures", "Stress");
     private const int TickResNs = 10;
 
     // ── Policy ───────────────────────────────────────────────────────────────
@@ -80,26 +79,9 @@ public class RunWatchdogTests
 
     private static SimulationConfig BuildConfig(int clockEdges)
     {
-        EntityRegistry.Instance.Clear();
-        PackageRegistry.Instance.Clear();
-        FunctionRegistry.Instance.Clear();
-        SignalAttributeHandler.Instance.Reset();
-
-        var path = Path.Combine(Path.GetTempPath(), $"kmila_wd_{Guid.NewGuid():N}.vhd");
-        File.WriteAllText(path, File.ReadAllText(Path.Combine(FixtureDir, "self_retriggering_clock.vhd")));
-        try
-        {
-            EntityRegistry.Instance.ScanFile(path);
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            var entity = parser.Entities.First(e => e.Architecture != null);
-            return StimulusBuilder.BuildConfigNs(entity, portMoments: null,
-                totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
-        }
-        finally
-        {
-            try { File.Delete(path); } catch { /* best effort */ }
-        }
+        var entity = TestDesigns.SelfRetriggeringClock();
+        return StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+            totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
     }
 
     [Fact]
@@ -176,7 +158,7 @@ public class RunWatchdogTests
     {
         var project = Path.Combine(Path.GetTempPath(), $"kmila_wdproj_{Guid.NewGuid():N}");
         Directory.CreateDirectory(project);
-        File.Copy(Path.Combine(FixtureDir, "self_retriggering_clock.vhd"), Path.Combine(project, "counter.vhd"));
+        File.Copy(TestDesigns.FixturePath("Stress", "self_retriggering_clock.vhd"), Path.Combine(project, "counter.vhd"));
 
         // A 1-byte heap budget is always exceeded → the first poll stops the run.
         var wd = new RunWatchdog(maxManagedHeapBytes: 1) { PollInterval = TimeSpan.FromMilliseconds(50) };

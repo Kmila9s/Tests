@@ -12,19 +12,7 @@ namespace Kmila.Shared.Tests;
 // Drives the real build-path parser (Debugger.Repositories.Parser.ParseFile).
 public class ScannerEndHandlingTests
 {
-    private static Debugger.Repositories.Parser ParseSource(string vhdl)
-    {
-        var path = Path.Combine(Path.GetTempPath(),
-            $"kmila_scan_{Guid.NewGuid():N}.vhd");
-        File.WriteAllText(path, vhdl);
-        try
-        {
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            return parser;
-        }
-        finally { try { File.Delete(path); } catch { /* best effort */ } }
-    }
+    private static Kmila.Frontend.ParsedUnit ParseSource(string vhdl) => TestDesigns.Parse(vhdl);
 
     private const string Ent =
         "library IEEE;\nuse IEEE.STD_LOGIC_1164.ALL;\n" +

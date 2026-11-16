@@ -27,7 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../../../Parser/Parser.csproj" />
-    <ProjectReference Include="../../../Debugger/Debugger.csproj" />
+    <ProjectReference Include="../../../App/Kmila/Kmila.Frontend/Kmila.Frontend.csproj" />
   </ItemGroup>
 
   <!-- VHDL corpus formerly swept by Parser/Program.cs (test1..40 + the three
