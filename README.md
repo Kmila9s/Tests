@@ -105,7 +105,7 @@ buildable Kmila Android APK.
 
 ## Unit — .NET unit tests
 
-An xUnit project, `Unit/Kmila.Shared.Tests/`, targeting `net9.0` and
+An xUnit project, `Unit/Kmila.Shared.Tests/`, targeting `net10.0` and
 referencing `App/Kmila/Kmila.Shared`. It exercises the VHDL block model and
 round-trip logic in `Kmila.Shared`, e.g.:
 
@@ -122,4 +122,29 @@ cd Tests/Unit/Kmila.Shared.Tests
 dotnet test
 ```
 
-Requires the .NET 9 SDK.
+Requires the .NET 10 SDK.
+
+---
+
+## Unit — JavaScript (Concepts exercise interpreter)
+
+`Unit/js/kmila-exec-sim.test.mjs` tests `App/Kmila/Kmila.Shared/wwwroot/js/kmila-exec-sim.js`,
+the interpreter behind the Concepts › Execution models block exercises. It loads the script in a
+`node:vm` sandbox (fake `window` / `document` / `localStorage`), builds workspaces in the same JSON
+shape `kmila-blocks.js` serializes, and checks every world:
+
+- `recipe` (e1) — valid order, wrong order explains the missing step, missing serve fails
+- `kitchen` (e2) — four tasks in parallel, total = longest task
+- `logic` (e3) — half-adder over all four input combinations, wrong gate and empty slot reported
+- `clocked` (e4) — +1 per edge, two increments still +1 (last assignment wins), no-clock loop
+- `restaurant` (e5) — sequential / polling / bells give the same totals as the `exec-restaurant`
+  figure's model (≈ 70.6 / 37.4 / 22.7 s) and the matching stars
+- `signals` (e6) — the variable reaches 16; a signal used as the intermediate reads its OLD value
+
+### Running
+
+```bash
+node --test Tests/Unit/js/kmila-exec-sim.test.mjs
+```
+
+Requires Node 20+ (no npm dependencies).
