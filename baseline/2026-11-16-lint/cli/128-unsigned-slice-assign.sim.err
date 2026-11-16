@@ -1,0 +1,1 @@
+[sim] entity=unsigned_slice_assign signals=15 ticks=20 256ms → 128-unsigned-slice-assign.vcd

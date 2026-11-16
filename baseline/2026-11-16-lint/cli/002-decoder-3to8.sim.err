@@ -1,0 +1,1 @@
+[sim] entity=dec3x8_concurrent signals=3 ticks=20 199ms → 002-decoder-3to8.vcd
