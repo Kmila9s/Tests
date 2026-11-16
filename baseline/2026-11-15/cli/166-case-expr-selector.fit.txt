@@ -1,0 +1,8 @@
+Resource estimate for 'case_expr_selector':
+  Resource       Used    Avail    Util  Status
+  LUTs              0        -       -  -
+  FlipFlops         0        -       -  -
+  BRAM              0        -       -  -
+  DSP               0        -       -  -
+  IO               11        -       -  -
+  Clocks            0        -       -  -

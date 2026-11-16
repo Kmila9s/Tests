@@ -1,0 +1,2 @@
+kmila.vhdl:24:1: warning [VHD-BLOCK-BALANCE]: Block mismatch: 1 'begin' keyword(s) vs 2 'end' keyword(s). Double-check your block closers.
+[check] 0 error(s), 1 warning(s), 0 info across 1 file(s)

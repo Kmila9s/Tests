@@ -1,0 +1,36 @@
+========================================
+Delta Cycle Engine Tests
+========================================
+
+
+=== Test: Signal Scheduler ===
+Before apply: sig1 = 0, sig2 = 0
+Pending updates: 2
+After apply: sig1 = 1, sig2 = 1
+Changed signals: 2
+PASS: Signal scheduler works correctly!
+
+=== Test: Scheduled Operation ===
+Before: result = 0000, input1 = 0101
+After execute (before apply): result = 0000
+Pending updates: 1
+After apply: result = 0101
+PASS: Scheduled operation works correctly!
+
+=== Test: Process Scheduler Sensitivity ===
+ProcessScheduler created and ready for sensitivity tracking
+Total processes: 0
+PASS: Process scheduler initializes correctly!
+=== Test: Delta Swap Behavior ===
+Initial values: a = 0, b = 1
+Unhandled exception. System.AggregateException: One or more errors occurred. (Delta cycle limit (1000) exceeded at tick 0. Possible combinational loop in design.)
+ ---> System.InvalidOperationException: Delta cycle limit (1000) exceeded at tick 0. Possible combinational loop in design.
+   at Interpreter.Services.DeltaCycleEngine.RunTimeStepAsync() in /Users/miku/Documents/Kmila-9s/Interpreter/Services/DeltaCycleEngine.cs:line 675
+   at Interpreter.Tests.DeltaCycleEngineTests.TestDeltaSwapBehavior() in /Users/miku/Documents/Kmila-9s/Interpreter/Tests/DeltaCycleEngineTests.cs:line 41
+   at Interpreter.Tests.DeltaCycleEngineTests.RunAllTests() in /Users/miku/Documents/Kmila-9s/Interpreter/Tests/DeltaCycleEngineTests.cs:line 487
+   at Interpreter.Program.RunDeltaCycleTests() in /Users/miku/Documents/Kmila-9s/Interpreter/Program.cs:line 310
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at Interpreter.Program.Main(String[] args) in /Users/miku/Documents/Kmila-9s/Interpreter/Program.cs:line 47

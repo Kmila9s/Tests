@@ -1,0 +1,7 @@
+kmila.vhdl:43:17: warning [VHD-MISSING-SEMICOLON]: Statement appears to be missing a trailing ';'. The simulator tolerates this but your synthesizer won't.
+kmila.vhdl:48:17: warning [VHD-MISSING-SEMICOLON]: Statement appears to be missing a trailing ';'. The simulator tolerates this but your synthesizer won't.
+kmila.vhdl:50:17: warning [VHD-MISSING-SEMICOLON]: Statement appears to be missing a trailing ';'. The simulator tolerates this but your synthesizer won't.
+kmila.vhdl:52:17: warning [VHD-MISSING-SEMICOLON]: Statement appears to be missing a trailing ';'. The simulator tolerates this but your synthesizer won't.
+kmila.vhdl:55:17: warning [VHD-MISSING-SEMICOLON]: Statement appears to be missing a trailing ';'. The simulator tolerates this but your synthesizer won't.
+kmila.vhdl:63:1: warning [VHD-BLOCK-BALANCE]: Block mismatch: 3 'begin' keyword(s) vs 2 'end' keyword(s). Double-check your block closers.
+[check] 0 error(s), 6 warning(s), 0 info across 1 file(s)
