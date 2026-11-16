@@ -62,7 +62,7 @@ public sealed class FrontendTests : IDisposable
         Assert.Same(HdlLanguages.Vhdl, HdlLanguages.FromPath("a/b/c.vhdl"));
         Assert.Same(HdlLanguages.Vhdl, HdlLanguages.FromId("VHDL"));
         Assert.Null(HdlLanguages.FromPath("c.txt"));
-        Assert.Equal(".vhd,.vhdl", HdlLanguages.AcceptList());
+        Assert.Equal(".vhdl,.vhd", HdlLanguages.AcceptList());
     }
 
     [Fact]
