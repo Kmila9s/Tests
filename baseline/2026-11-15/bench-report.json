@@ -1,0 +1,4128 @@
+[
+  {
+    "Id": "000-smoke-and",
+    "Title": "[PLACEHOLDER] AND gate harness smoke test",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 350,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "001-and-gate",
+    "Title": "AND gate with assertion-checked testbench",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 34,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "002-decoder-3to8",
+    "Title": "3-to-8 line decoder (concurrent SOP)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "output": {
+          "Port": "output",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 22,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "003-counter-8bit",
+    "Title": "8-bit synchronous counter with active-low reset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "cout": {
+          "Port": "cout",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 101,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "004-dff",
+    "Title": "D flip-flop (process with variable \u002B rising_edge)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 18,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "005-encoder-8to3",
+    "Title": "8-to-3 priority encoder (with...select \u002B after delays)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 30,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "006-demux-1to8",
+    "Title": "1-to-8 demultiplexer (per-bit with...select \u002B after 20 ns)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 66,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "007-boolfn-4bit",
+    "Title": "4-bit boolean function f=\u03A3(1,3,9,11) (process\u002Bif with OR chain)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "f": {
+          "Port": "f",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 30,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "008-seqdet-fsm",
+    "Title": "Overlapping sequence detector FSM (detects \u00271001\u0027 or \u00271111\u0027)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "det_vld": {
+          "Port": "det_vld",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 160,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "009-boolfn-minset",
+    "Title": "4-bit boolean function f=\u03A3(4,5,7,12,13,15) (process\u002Bif with to_unsigned literals)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "f": {
+          "Port": "f",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 26,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "010-mux-8to1",
+    "Title": "8-to-1 multiplexer (concurrent SOP, nested-loop exhaustive TB)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 510,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 71,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "011-decoder-cond",
+    "Title": "3-to-8 decoder (when\u2026else conditional concurrent assignment)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 27,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "012-decoder-sel",
+    "Title": "3-to-8 decoder (selected signal assignment with transport after 50 ns on two choices)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "output": {
+          "Port": "output",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 24,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "013-mux-cond",
+    "Title": "8-to-1 mux (when\u2026else conditional concurrent assignment, exhaustive nested-loop TB)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 510,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 121,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "014-mux-sel",
+    "Title": "8-to-1 mux (with\u2026select \u002B transport after 50 ns on two choices)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 19,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 28,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "015-encoder-16to4",
+    "Title": "16-to-4 priority encoder (chained when\u2026else over 16 one-hot inputs)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 27,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "016-demux-1to32",
+    "Title": "1-to-32 demultiplexer (per-bit when\u2026else, exhaustive sel sweep TB)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 33,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 579,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "017-fsm-2state",
+    "Title": "4-state FSM with enumerated state_type (synchronous, active-high reset)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "dout": {
+          "Port": "dout",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 456,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "018-or-gate",
+    "Title": "2-input OR gate (assertion-checked TB sweep)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "c": {
+          "Port": "c",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 40,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "019-not-gate",
+    "Title": "6-bit vector inverter (NOT)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 40,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "020-xor-gate",
+    "Title": "8-bit vector XOR",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "c": {
+          "Port": "c",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 32,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "021-adder",
+    "Title": "8-bit adder with carry in/out (numeric_std resize\u002Bunsigned)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "cout": {
+          "Port": "cout",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 23,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "022-mux4x1",
+    "Title": "4-to-1 mux (with\u2026select on scalar inputs)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 3,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "023-flipflop-d",
+    "Title": "D flip-flop with clock-enable \u002B sync reset (pmassolino)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 39,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "024-flipflop-jk",
+    "Title": "JK flip-flop with complementary output",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "nq": {
+          "Port": "nq",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 64,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "025-counter-pmas",
+    "Title": "10-bit counter with load \u002B clock-enable \u002B reset (pmassolino)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 53,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "026-shift-register",
+    "Title": "5-stage serial-in serial-out shift register",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 24,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "027-add-sub",
+    "Title": "8-bit adder/subtractor (add=1 \u2192 sum; add=0 \u2192 diff; numeric_std \u002B conditional concurrent)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "cout": {
+          "Port": "cout",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 78,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "028-state-machine",
+    "Title": "Moore FSM with async reset (3-process style, enumerated state_type)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 79,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "029-lfsr",
+    "Title": "8-bit LFSR (taps 7,5,4,3 XOR; sync reset to 0x01)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 40,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 68,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "030-half-adder",
+    "Title": "1-bit half adder (XOR \u002B AND)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "s": {
+          "Port": "s",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "c": {
+          "Port": "c",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 52,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "031-full-adder",
+    "Title": "1-bit full adder (XOR cascade \u002B carry OR)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "s": {
+          "Port": "s",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "cout": {
+          "Port": "cout",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 182,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "032-parity",
+    "Title": "8-bit parity generator (even/odd, process\u002Bfor-loop XOR fold)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "p": {
+          "Port": "p",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 118,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "033-priority",
+    "Title": "32-to-5 priority encoder (highest-index-set wins, process\u002Bfor-loop)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "b": {
+          "Port": "b",
+          "Samples": 12,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 32,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "034-hamming",
+    "Title": "Hamming-distance counter (XOR \u002B 1-bit popcount via function)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o_dist": {
+          "Port": "o_dist",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 49,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "035-fsm-fcayci",
+    "Title": "Mealy\u002BMoore FSM (3 architectures: rtla/rtlb/rtlc; TB instantiates all three)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "mealy": {
+          "Port": "mealy",
+          "Samples": 6,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "moore": {
+          "Port": "moore",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 45,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "036-fsm-counter",
+    "Title": "FSM \u002B counter PWM-style sequence generator",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 77,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "037-adder4",
+    "Title": "4-bit ripple-carry adder (4 full_adders chained, with overflow)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "s": {
+          "Port": "s",
+          "Samples": 102,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "v": {
+          "Port": "v",
+          "Samples": 21,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "cout": {
+          "Port": "cout",
+          "Samples": 16,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 542,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "042-prio4",
+    "Title": "4-input priority encoder (highest-index \u00271\u0027 wins; valid flag)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "valid": {
+          "Port": "valid",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "result": {
+          "Port": "result",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 32,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "045-compar",
+    "Title": "4-bit magnitude comparator (cascaded a\u003Eb / b\u003Ea chain)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "so_a": {
+          "Port": "so_a",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "so_b": {
+          "Port": "so_b",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1852,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "046-dff-lemur",
+    "Title": "D flip-flop with async high reset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 23,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "047-counter-lemur",
+    "Title": "4-bit up/down counter with async reset \u002B self-reset on Q[2]=Q[0]=1",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "count": {
+          "Port": "count",
+          "Samples": 13,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 104,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "048-ring-counter",
+    "Title": "Ring counter (one-hot) \u002B Johnson counter, 4-bit each",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 21,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "Q2": {
+          "Port": "Q2",
+          "Samples": 21,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 257,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "049-grey",
+    "Title": "3-bit binary-to-Gray code converter",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "so": {
+          "Port": "so",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 63,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "050-one-hot",
+    "Title": "7-input one-hot to 3-bit binary encoder",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "so": {
+          "Port": "so",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 15,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "051-mux1-lemur",
+    "Title": "7-to-1 multiplexer with 3-bit select",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "smo": {
+          "Port": "smo",
+          "Samples": 13,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 15,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "052-piso",
+    "Title": "4-bit parallel-in serial-out shift register",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 43,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "053-sipo",
+    "Title": "4-bit shift register: shift-right, shift-left, or parallel load",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 52,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "054-abs1",
+    "Title": "5-bit conditional XOR / 2\u0027s-complement converter",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "smo": {
+          "Port": "smo",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 933,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "055-seqdet-lemur",
+    "Title": "Sequence detector FSM (4-state, detects \u0027101\u0027)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "det": {
+          "Port": "det",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 107,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "056-code-det",
+    "Title": "4-digit code-sequence detector FSM (recognizes 9-7-2-1)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "O": {
+          "Port": "O",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 59,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "057-barrel",
+    "Title": "4-bit barrel shifter (logical-left \u002B rotate-right modes)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "Q2": {
+          "Port": "Q2",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 110,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "059-reg-adder",
+    "Title": "Serial bit-pipelined 4-bit adder",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "C": {
+          "Port": "C",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "over": {
+          "Port": "over",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 97,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "060-trans",
+    "Title": "Serial popcount \u002B bit-rotate (transmit/echo)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "C": {
+          "Port": "C",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "sum": {
+          "Port": "sum",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 75,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "061-compar-fsm",
+    "Title": "Serial 2-bit comparator FSM (a vs b, MSB-first)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o": {
+          "Port": "o",
+          "Samples": 6,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 80,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "062-cod4a2",
+    "Title": "4-to-2 priority encoder with group-active flag",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "g_o": {
+          "Port": "g_o",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 86,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "063-comp-n",
+    "Title": "4-bit signed comparator (greater / less / equal)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "may_o": {
+          "Port": "may_o",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "men_o": {
+          "Port": "men_o",
+          "Samples": 8,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "igu_o": {
+          "Port": "igu_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 93,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "065-mux4-suc",
+    "Title": "4-channel 1-bit mux with 2-bit select",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 32,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 10,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "066-gray2bin",
+    "Title": "4-bit Gray-to-binary converter",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "b_o": {
+          "Port": "b_o",
+          "Samples": 16,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 61,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "067-paridad",
+    "Title": "4-bit parity tree (even \u002B odd outputs)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "pp_o": {
+          "Port": "pp_o",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "pi_o": {
+          "Port": "pi_o",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 90,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "068-summag",
+    "Title": "3-bit unsigned adder with carry-in/out",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "sum_o": {
+          "Port": "sum_o",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "co_o": {
+          "Port": "co_o",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 88,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "071-nat2aik",
+    "Title": "BCD natural \u2192 Aiken (2-4-2-1) code converter",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "a_o": {
+          "Port": "a_o",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 52,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "072-ffd-susi",
+    "Title": "D flip-flop (rising-edge triggered)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 12,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "073-ffd-clen",
+    "Title": "D flip-flop with async clear and enable",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 40,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "074-contm",
+    "Title": "Modulo-10 synchronous counter (4-bit) with reset, enable, terminal-count flag",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "tc_o": {
+          "Port": "tc_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 24,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1642,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "075-cont-anillo",
+    "Title": "6-bit ring counter with auto-correcting feedback",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 88,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "076-johnson8",
+    "Title": "4-bit Johnson counter with auto-correction (mod-8)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 101,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "077-contsec",
+    "Title": "3-bit custom-sequence counter (4\u21923\u21927\u21921\u21920\u21924\u2026) with reset \u002B self-correction",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 13,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 38,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "079-ffjk",
+    "Title": "JK flip-flop with async clear \u002B preset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 120,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "080-contmpot2",
+    "Title": "3-bit binary counter (mod-8) with synchronous reset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 13,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 35,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "081-latch-d",
+    "Title": "D latch with enable (level-sensitive)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 19,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "082-latch-sr",
+    "Title": "SR latch with reset priority",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 21,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "084-and2ecu",
+    "Title": "2-input AND gate (data-flow style)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 23,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "085-compnandn",
+    "Title": "4-input NAND gate",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "salida_o": {
+          "Port": "salida_o",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 70,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "086-sec-moore",
+    "Title": "Moore-state \u00271011\u0027 overlapping sequence detector",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "sal_o": {
+          "Port": "sal_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 72,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "087-deco3a8",
+    "Title": "3-to-8 decoder with active-high enable (truth-table style)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 16,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 185,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "088-decon",
+    "Title": "2-to-4 decoder with active-high enable (TB sets N=2)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 98,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "089-muxn",
+    "Title": "4-input multiplexer with active-high enable (TB sets N=2)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y_o": {
+          "Port": "y_o",
+          "Samples": 33,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 39,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "091-compnorn",
+    "Title": "4-input NOR gate",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "salida_o": {
+          "Port": "salida_o",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 81,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "092-sec-mealy",
+    "Title": "Mealy-state \u0027101\u0027 detector (fires on next dat=1 \u2192 1011)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "sal_o": {
+          "Port": "sal_o",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 62,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "093-sec-mooress",
+    "Title": "Moore-state \u00271011\u0027 detector WITHOUT overlap (resets on accept)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "sal_o": {
+          "Port": "sal_o",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 79,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "095-regsinc",
+    "Title": "4-bit synchronous register with synchronous reset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 12,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 24,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "097-bidir",
+    "Title": "3-bit bidirectional counter (up/down) with sync reset \u002B enable",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 14,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 48,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "098-tcqrs",
+    "Title": "3-bit synchronous binary counter (mod-8) with reset, enable, terminal-count",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 14,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "tc_o": {
+          "Port": "tc_o",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 922,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "099-sec-mealyss",
+    "Title": "Mealy \u00271011\u0027 detector WITHOUT overlap",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "sal_o": {
+          "Port": "sal_o",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 93,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "100-traffic",
+    "Title": "Traffic-light controller (Moore FSM, 3 states)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "red": {
+          "Port": "red",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "yellow": {
+          "Port": "yellow",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "green": {
+          "Port": "green",
+          "Samples": 9,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 53,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "101-johnson7",
+    "Title": "4-bit Johnson counter (mod-7, odd modulus) with auto-correction",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 79,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "102-counter-arst",
+    "Title": "8-bit counter with async reset \u002B synchronous enable",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q_o": {
+          "Port": "q_o",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 45,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "103-dff-qbar",
+    "Title": "D flip-flop with synchronous reset \u002B complementary q/q_bar outputs",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 6,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "q_bar": {
+          "Port": "q_bar",
+          "Samples": 6,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 25,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "105-ha-marq",
+    "Title": "Half adder (process \u002B if-elsif truth table)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "SUM": {
+          "Port": "SUM",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "CARRY": {
+          "Port": "CARRY",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 34,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "106-comb-marq",
+    "Title": "3-input combinational logic: Q = (A OR B) AND C",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 46,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "107-deco-marq",
+    "Title": "2-to-4 decoder (process \u002B case)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "out_dec": {
+          "Port": "out_dec",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 9,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "108-demux-marq",
+    "Title": "1-to-4 demultiplexer (concurrent when-else)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Y": {
+          "Port": "Y",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1030,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "109-cnt9-marq",
+    "Title": "9-bit synchronous counter with synchronous reset",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "Q": {
+          "Port": "Q",
+          "Samples": 28,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 36,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "112-ser-fsm",
+    "Title": "8-bit serializer FSM (10-state, MSB-first)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "serial_out": {
+          "Port": "serial_out",
+          "Samples": 19,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "done": {
+          "Port": "done",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 69,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "113-edges-det",
+    "Title": "2-bit edge-detector (rising or falling, selectable via trig_inv)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "triggers_vector_pulse": {
+          "Port": "triggers_vector_pulse",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 95,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "114-seven-seg",
+    "Title": "Hexadecimal 7-segment decoder (with\u2026select truth table)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "outSelect": {
+          "Port": "outSelect",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "out7Seg": {
+          "Port": "out7Seg",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 18,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "115-ud-cnt8",
+    "Title": "8-bit up/down counter with enable",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "COUNTER_OUT": {
+          "Port": "COUNTER_OUT",
+          "Samples": 26,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 35,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "116-7seg-mux",
+    "Title": "Time-multiplexed 2-digit 7-segment display driver",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "SEG_SEL": {
+          "Port": "SEG_SEL",
+          "Samples": 21,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "SEG_OUT": {
+          "Port": "SEG_OUT",
+          "Samples": 18,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 15,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "117-buffer",
+    "Title": "1-bit buffer (y = x)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 16,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "118-comparator2",
+    "Title": "2-bit magnitude comparator (b\u003Ea / b=a / b\u003Ca)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "b_gt": {
+          "Port": "b_gt",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "b_a_eq": {
+          "Port": "b_a_eq",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "a_gt": {
+          "Port": "a_gt",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 342,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "119-demorgan",
+    "Title": "DeMorgan equivalence \u2014 three formulations of f(a,b,c)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "f_org": {
+          "Port": "f_org",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "f_nand": {
+          "Port": "f_nand",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "f_nor": {
+          "Port": "f_nor",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 421,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "120-multi-hop-pure",
+    "Title": "Three-hop concurrent alias chain off a clocked counter",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 20,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 35,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "121-multi-hop-synced-rom",
+    "Title": "Synchronous-ROM read through multi-hop alias chain into clocked sample register",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "done": {
+          "Port": "done",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "acc_out": {
+          "Port": "acc_out",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 954,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "122-rom-array-lookup",
+    "Title": "Indexed read from a constant std_logic_vector array",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "data": {
+          "Port": "data",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 28,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "123-rom-literal-lookup",
+    "Title": "Literal-index read from a constant std_logic_vector array",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 50,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "124-named-aggregate-funcs",
+    "Title": "Constant array with named-association aggregate \u002B user-defined function elements \u002B others fallback",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "data": {
+          "Port": "data",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 56,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "125-case-ident-match",
+    "Title": "Case statement matching constant identifiers (not literal strings)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "out_reg": {
+          "Port": "out_reg",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 23,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "126-case-ident-hex",
+    "Title": "Case statement matching constants declared with hex literals",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "out_reg": {
+          "Port": "out_reg",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 31,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "127-case-slice-selector",
+    "Title": "Case statement with a vector slice as selector matching hex constants",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "out_reg": {
+          "Port": "out_reg",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 18,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "128-unsigned-slice-assign",
+    "Title": "Clocked write of unsigned(\u003Cslice\u003E) driving sync-ROM addr (P2A LOAD shape)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "data": {
+          "Port": "data",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 37,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "129-enum-eq-conditional",
+    "Title": "Conditional assignment driven by enum-state equality (P2A HALT shape)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "flag": {
+          "Port": "flag",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 427,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "130-arith-in-vector-range",
+    "Title": "Vector range with arithmetic (W-1 downto 0) where W is a constant",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "data": {
+          "Port": "data",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 31,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "131-indexed-lhs-write",
+    "Title": "Array element write inside a clocked process (mem(idx) \u003C= data)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "dout": {
+          "Port": "dout",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 40,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "132-entity-work-inst",
+    "Title": "Top entity instantiates a sub-entity via direct \u0060entity work.X(arch) port map(...)\u0060",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "cout": {
+          "Port": "cout",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 48,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "133-others-init-readback",
+    "Title": "(others =\u003E \u00270\u0027) initial value reads back as expanded zeros before first write",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 44,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "134-others-rhs-clocked-reset",
+    "Title": "(others =\u003E \u00270\u0027) as RHS aggregate inside a clocked reset branch \u2014 engine must expand at assignment time against the target width",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 29,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "135-mul-width-tripwire",
+    "Title": "unsigned multiply width tripwire \u2014 leftW\u002BrightW matches numeric_std",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "out9": {
+          "Port": "out9",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 14,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "136-fn-multi-caller-scope",
+    "Title": "Function-body caller-scope binding tripwire \u2014 same function reads a per-instance architecture signal",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "o1": {
+          "Port": "o1",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "o2": {
+          "Port": "o2",
+          "Samples": 1,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 662,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "137-entity-work-generic-map",
+    "Title": "Top entity instantiates a parametric sub-entity via \u0060entity work.X generic map (\u2026) port map (\u2026)\u0060",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "cout": {
+          "Port": "cout",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 38,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "138-multi-level-elab",
+    "Title": "Three-level hierarchy exercises SourceElaborator recursion end-to-end",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "cout": {
+          "Port": "cout",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 33,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "139-lfsr-through-fn",
+    "Title": "LFSR routed through a user-defined function (regression fence for user-fn reactivity)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 16,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 798,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "140-multiarg-userfn",
+    "Title": "Multi-arg user function inside clocked process (mirrors Ring 5 q_mul/q_div/q_pow/q_ln pattern)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 75,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "141-wait-in-if-body",
+    "Title": "wait for N ns inside an if branch body \u2014 F-G-13d regression fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 497,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "142-wait-in-case-arm",
+    "Title": "wait for N ns inside a case-when arm body \u2014 F-G-13d regression fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 19,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "143-wait-in-nested-loop",
+    "Title": "wait inside a nested for-loop body \u2014 F-G-13d regression fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 20,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "144-procedure-wait",
+    "Title": "wait for N ns inside a procedure body \u2014 Phase 3 regression fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 508,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "145-procedure-if-branch",
+    "Title": "wait inside if branch inside procedure body \u2014 Phase 3 \u002B Phase 2 composition fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 948,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "146-procedure-time-formal",
+    "Title": "type time as a procedure formal \u2014 Session 27 follow-up fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 499,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "147-case-matching",
+    "Title": "VHDL-2008 case? matching with \u0060-\u0060 don\u0027t-care choices",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 18,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "148-signal-event-in-wait",
+    "Title": "clk\u0027event and clk=\u00271\u0027 idiom \u2014 Tier 4.1 DeferredAttribute regression fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "count": {
+          "Port": "count",
+          "Samples": 10,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 57,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "149-signal-last-value",
+    "Title": "sig\u0027last_value written to a clocked target \u2014 Tier 4.1 close-out fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "q_prev": {
+          "Port": "q_prev",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 8,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "150-signal-stable-time-arg",
+    "Title": "sig\u0027stable(T ns) time-argument fence \u2014 Tier 4.1 close-out",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "stable_out": {
+          "Port": "stable_out",
+          "Samples": 7,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 11,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "151-fn-inline-and2",
+    "Title": "User function body inlined at synth \u2014 Tier 4.3 B1 minimum case",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1001,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "152-fn-inline-mux2",
+    "Title": "User function body with if/else return inlined as MUX \u2014 Tier 4.3 B1 expansion",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 18,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "153-proc-inline-signal-assign",
+    "Title": "Clocked process calling a signal-assign procedure \u2014 Tier 4.3 B2",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "q": {
+          "Port": "q",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 3,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "154-fn-local-var",
+    "Title": "User function body with local-variable write \u2014 Tier 4.3 pass-4 item A",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1028,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "155-fn-case-mux",
+    "Title": "User function body with top-level case \u2014 Tier 4.3 pass-4 item B",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 28,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "156-proc-in-fn",
+    "Title": "Procedure call from inside a function body \u2014 Tier 4.3 pass-8",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 3060,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "157-fn-two-callsites",
+    "Title": "Same user function called from two concurrent-assign sites \u2014 Tier 4.3 pass-13 fence",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y1": {
+          "Port": "y1",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        },
+        "y2": {
+          "Port": "y2",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 2350,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "158-process-local-ram",
+    "Title": "Process-local variable array write and read (mem(idx) := data)",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "dout": {
+          "Port": "dout",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 28,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "159-fn-early-return-simple",
+    "Title": "User function body with early-return followed by terminal return \u2014 Tier 4.3 pass 20 canonicalizer",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 17,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "160-fn-early-return-chain",
+    "Title": "User function body with chained early returns (priority-encoder shape) \u2014 pass 20",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 20,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "161-fn-branch-local-var",
+    "Title": "User function body with per-branch local writes then return \u2014 pass 20 branch relax",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 5,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 22,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "162-fn-case-arm-local-var",
+    "Title": "User function body \u2014 case arms with variable := prefix then return \u2014 pass 21",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 4,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 20,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "163-fn-early-return-with-tail-ops",
+    "Title": "Early-return followed by local writes then terminal return \u2014 pass 22",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 20,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "164-fn-xor-literal-vector",
+    "Title": "Function body: xor on std_logic_vector with string literal \u2014 pass 23 investigation",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 3,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 1204,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "165-fn-for-loop-count-ones",
+    "Title": "User function body \u2014 bounded for-loop over local vector, per-iteration bit write \u2014 pass 24",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "y": {
+          "Port": "y",
+          "Samples": 2,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 32,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  },
+  {
+    "Id": "166-case-expr-selector",
+    "Title": "case to_integer(unsigned(val)) expression selector in a process",
+    "Pass": true,
+    "Skipped": false,
+    "SkipReason": null,
+    "Diff": {
+      "Pass": true,
+      "Skipped": false,
+      "SkipReason": null,
+      "Ports": {
+        "seg": {
+          "Port": "seg",
+          "Samples": 11,
+          "Mismatches": 0,
+          "Examples": [],
+          "Skipped": null
+        }
+      }
+    },
+    "GhdlError": null,
+    "KmilaError": null,
+    "KmilaMs": 9,
+    "RoundTripRaws": 0,
+    "RoundTripDiags": 0
+  }
+]

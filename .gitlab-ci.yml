@@ -37,3 +37,4 @@ unit-tests:
         # net10.0 + MAUI heads) to net10.0 only, as the sibling repos' CI does,
         # so no MAUI workloads are needed on the runner.
         - dotnet test Unit/Kmila.Shared.Tests/Kmila.Shared.Tests.csproj -c Release -f net10.0 -p:TargetFrameworks=net10.0
+        - dotnet test Unit/Kmila.Engine.Tests/Kmila.Engine.Tests.csproj -c Release -f net10.0 -p:TargetFrameworks=net10.0

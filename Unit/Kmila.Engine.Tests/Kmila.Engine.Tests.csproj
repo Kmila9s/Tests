@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- xUnit suite for the engine projects (Parser, Interpreter, Debugger,
+       LibraryCompiler, TimeMachine). Replaces the hand-rolled console
+       harnesses that used to live inside those (shipping) assemblies. -->
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+    <NoWarn>$(NoWarn);CS1591;CS8602;CS8604</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../../Parser/Parser.csproj" />
+    <ProjectReference Include="../../../App/Kmila/Kmila.Frontend/Kmila.Frontend.csproj" />
+  </ItemGroup>
+
+  <!-- VHDL corpus formerly swept by Parser/Program.cs (test1..40 + the three
+       must-reject files). Parsed through the production front door. -->
+  <ItemGroup>
+    <Content Include="Fixtures/**/*.vhdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

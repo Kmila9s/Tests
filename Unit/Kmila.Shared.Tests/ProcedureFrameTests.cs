@@ -18,7 +18,7 @@ public class ProcedureFrameTests
 {
     private static TokenStream StreamFrom(string source)
     {
-        var tokenizer = new Tokenizer(string.Empty);
+        var tokenizer = new Tokenizer();
         tokenizer.ReadString(source);
         tokenizer.Evaluate();
         return new TokenStream(tokenizer.GetDictionaryType());

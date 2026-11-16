@@ -16,58 +16,34 @@ public class FastRunnerEquivalenceTests
 {
     private enum RunnerKind { Reference, Fast }
 
-    // Parse + build config + run, returning the exported VCD. Each call starts
-    // from clean global state (registries + attribute handler) and a fresh
+    // Load + build config + run, returning the exported VCD. Each call starts
+    // from clean global state (the front-end resets the registries) and a fresh
     // parse, so the ONLY difference between a Reference and a Fast call for the
     // same source is which runner drove the identical config.
     private static async Task<string> RunVcdAsync(string vhdl, string entityName,
         long totalNs, int tickResNs, RunnerKind kind)
     {
-        EntityRegistry.Instance.Clear();
-        PackageRegistry.Instance.Clear();
-        FunctionRegistry.Instance.Clear();
-        SignalAttributeHandler.Instance.Reset();
+        var entity = TestDesigns.LoadTop(vhdl, entityName);
+        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+            totalNs: totalNs, tickResNs: tickResNs, systemClockMhz: 50);
 
-        var path = Path.Combine(Path.GetTempPath(),
-            $"kmila_fasteq_{entityName}_{Guid.NewGuid():N}.vhd");
-        await File.WriteAllTextAsync(path, vhdl);
-        try
+        SignalHistory history;
+        if (kind == RunnerKind.Reference)
         {
-            EntityRegistry.Instance.ScanFile(path);
-
-            var parser = new Debugger.Repositories.Parser(path);
-            parser.ParseFile();
-            var entity = parser.Entities.FirstOrDefault(e =>
-                             string.Equals(e.Name, entityName, StringComparison.OrdinalIgnoreCase)
-                             && e.Architecture != null)
-                         ?? parser.Entities.FirstOrDefault(e => e.Architecture != null);
-            Assert.NotNull(entity);
-
-            var config = StimulusBuilder.BuildConfigNs(entity!, portMoments: null,
-                totalNs: totalNs, tickResNs: tickResNs, systemClockMhz: 50);
-
-            SignalHistory history;
-            if (kind == RunnerKind.Reference)
-            {
-                using var runner = new SimulationRunner();
-                runner.OnEngineReady += eng => eng.TickResolutionNs = tickResNs;
-                await runner.RunAsync(config);
-                history = runner.Engine!.History;
-            }
-            else
-            {
-                using var runner = new FastSimulationRunner();
-                runner.OnEngineReady += eng => eng.TickResolutionNs = tickResNs;
-                await runner.RunAsync(config);
-                history = runner.Engine!.History;
-            }
-
-            return history.ExportToVcd(entity!.Name, timescaleNs: tickResNs);
+            using var runner = new SimulationRunner();
+            runner.OnEngineReady += eng => eng.TickResolutionNs = tickResNs;
+            await runner.RunAsync(config);
+            history = runner.Engine!.History;
         }
-        finally
+        else
         {
-            try { File.Delete(path); } catch { /* best-effort temp cleanup */ }
+            using var runner = new FastSimulationRunner();
+            runner.OnEngineReady += eng => eng.TickResolutionNs = tickResNs;
+            await runner.RunAsync(config);
+            history = runner.Engine!.History;
         }
+
+        return history.ExportToVcd(entity.Name, timescaleNs: tickResNs);
     }
 
     private static async Task AssertRunnersAgreeAsync(string vhdl, string entity,
