@@ -10,18 +10,6 @@ namespace Kmila.Shared.Tests;
 /// </summary>
 public class ElaborationRegressionTests
 {
-    private const string AndGate = """
-        library ieee;
-        use ieee.std_logic_1164.all;
-        entity and2 is
-          port (a, b : in std_logic; y : out std_logic);
-        end entity;
-        architecture rtl of and2 is
-        begin
-          y <= a and b;
-        end architecture;
-        """;
-
     private const string StructuralTop = """
         library ieee;
         use ieee.std_logic_1164.all;
@@ -44,7 +32,7 @@ public class ElaborationRegressionTests
         var project = store.Create("elab-gap", retain: false);
         try
         {
-            project.WriteFile("and2.vhd", AndGate);
+            project.WriteFile("and2.vhd", TestDesigns.AndGate);
             project.WriteFile("top.vhd", StructuralTop);
             static PortMomentValue At(int ns, string v) => new() { Time = ns, TimeScale = "NS", Value = v };
             var run = await HeadlessSimulator.RunProjectAsync(project.Path, new HeadlessRunOptions

@@ -45,6 +45,19 @@ internal static class TestDesigns
         }
     }
 
+    /// <summary>A two-input AND gate: the smallest complete design.</summary>
+    public const string AndGate = """
+        library ieee;
+        use ieee.std_logic_1164.all;
+        entity and2 is
+          port (a, b : in std_logic; y : out std_logic);
+        end entity;
+        architecture rtl of and2 is
+        begin
+          y <= a and b;
+        end architecture;
+        """;
+
     /// <summary>The free-running counter used by the long-run / watchdog / stress suites.</summary>
     public static Entity SelfRetriggeringClock() => LoadTop(Fixture("Stress", "self_retriggering_clock.vhd"));
 
