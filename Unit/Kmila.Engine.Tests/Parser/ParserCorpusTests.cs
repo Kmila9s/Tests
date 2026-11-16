@@ -15,7 +15,7 @@ public class ParserCorpusTests
     /// </summary>
     public static readonly Dictionary<string, string> KnownGaps = new()
     {
-        ["test40.vhdl"] = "GAP-PAR-001: underscores inside a hex bit-string literal (x\"3243_1DAC\") are rejected",
+        // GAP-PAR-001 (test40.vhdl, underscores in x"3243_1DAC") closed in v3.0.4.
     };
 
     public static TheoryData<string> CorpusFiles()

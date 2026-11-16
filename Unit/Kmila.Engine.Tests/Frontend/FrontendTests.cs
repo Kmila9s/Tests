@@ -100,20 +100,25 @@ public sealed class FrontendTests : IDisposable
     }
 
     /// <summary>
-    /// Known gap GAP-ELAB-001 (Phase 1): the elaborator's entity regex needs
-    /// whitespace after <c>end entity</c>, so the valid VHDL-93 form
-    /// <c>end entity;</c> hides the entity and the design is not flattened.
-    /// Ratchet: when the engine is fixed this test fails — flip it to assert
-    /// <c>Elaborated</c> and drop the gap from the handoff.
+    /// GAP-ELAB-001 (closed in v3.0.4): every IEEE 1076-1993 entity closer
+    /// form, and a component declaration without the optional <c>is</c>,
+    /// must still let the elaborator flatten the hierarchy.
     /// </summary>
-    [Fact]
-    public void KnownGap_end_entity_without_label_is_not_elaborated()
+    [Theory]
+    [InlineData("end top;")]
+    [InlineData("end entity;")]
+    [InlineData("end entity top;")]
+    [InlineData("end;")]
+    public void LoadDesign_elaborates_every_entity_closer_form(string closer)
     {
         Write("and2.vhd", AndGate);
-        Write("top.vhd", StructuralTop.Replace("end top;", "end entity;"));
+        Write("top.vhd", StructuralTop.Replace("end top;", closer));
         var design = Frontends.For(HdlLanguages.Vhdl).LoadDesign(
             new DesignRequest { Root = _dir, Entry = "top", Elaborate = true });
-        Assert.False(design.Elaborated);
+
+        Assert.Null(design.Error);
+        Assert.True(design.Elaborated);
+        Assert.Equal("top", design.Top?.Name);
     }
 
     [Fact]

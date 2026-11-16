@@ -8,7 +8,7 @@ suites, each with its own toolchain:
 |-------|------|--------|---------|
 | [`Playwright/`](#playwright--e2e-browser-tests) | End-to-end browser | `@playwright/test` (TypeScript) | `Kmila.Web` in a real browser |
 | [`Performance/`](#performance--android-benchmark) | Performance benchmark | `bash` + `adb` | Kmila MAUI Android build on an emulator/device |
-| [`Unit/`](#unit--net-unit-tests) | Unit | `dotnet test` (xUnit) | `Kmila.Shared` library |
+| [`Unit/`](#unit--net-unit-tests) | Unit | `dotnet test` (xUnit) | `Kmila.Shared` library, the engine and `Kmila.Frontend` |
 
 Each suite is self-contained — there is no top-level "run all" command; run each
 one with its own toolchain as described below.
@@ -105,9 +105,24 @@ buildable Kmila Android APK.
 
 ## Unit — .NET unit tests
 
-An xUnit project, `Unit/Kmila.Shared.Tests/`, targeting `net10.0` and
-referencing `App/Kmila/Kmila.Shared`. It exercises the VHDL block model and
-round-trip logic in `Kmila.Shared`, e.g.:
+Two xUnit projects (`net10.0`), both run in CI:
+
+- **`Unit/Kmila.Engine.Tests/`** (since v3.0.1) — engine + front-end: tokenizer,
+  user-type registry, variable ranges, the former Parser corpus
+  (`Fixtures/ParserCorpus/test*.vhdl`, parsed through the production parser,
+  plus must-reject files), and `Frontend/FrontendTests` (language registry,
+  clean-state loads, in-memory elaboration, every entity closer form).
+  `EngineFixture` is its single entry point for parsed designs.
+- **`Unit/Kmila.Shared.Tests/`** — app services. `TestDesigns` is its single
+  entry point for parsed designs (it goes through `Kmila.Frontend`, never a
+  hand-copied pipeline).
+
+Rules: sources under test are never edited to make Kmila pass — a known gap is
+kept as a ratchet test that must still fail until the engine is fixed (see
+`ParserCorpusTests.KnownGaps`). `baseline/2026-11-15/` holds the pre-refactor
+golden master (bench VCD hashes, suite results, CLI outputs).
+
+`Kmila.Shared.Tests` exercises, e.g.:
 
 - `VhdlBlockBuilderTests`, `VhdlBlockEmitterTests`, `BlockProgramTests`
 - `RoundTripTests`, `RoundTripFidelityTests` (with `.vhd` fixtures under
@@ -118,8 +133,9 @@ round-trip logic in `Kmila.Shared`, e.g.:
 ### Running
 
 ```bash
-cd Tests/Unit/Kmila.Shared.Tests
-dotnet test
+cd Tests
+dotnet test Unit/Kmila.Engine.Tests -f net10.0 -p:TargetFrameworks=net10.0
+dotnet test Unit/Kmila.Shared.Tests -f net10.0 -p:TargetFrameworks=net10.0
 ```
 
 Requires the .NET 10 SDK.

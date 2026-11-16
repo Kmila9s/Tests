@@ -47,4 +47,31 @@ public class TokenizerTests
             Assert.Equal(expectedLastToken, tokens.Last().Value);
         }
     }
+
+    /// <summary>
+    /// GAP-PAR-001: IEEE 1076 allows underscores between the digits of a
+    /// bit-string literal with a base specifier. The tokenizer drops them so
+    /// every consumer of the literal sees plain digits; string literals and
+    /// identifiers keep their underscores.
+    /// </summary>
+    [Theory]
+    [InlineData("c <= x\"3243_1DAC\";", "x\"32431DAC\"")]
+    [InlineData("c <= X\"FF_00\";", "X\"FF00\"")]
+    [InlineData("c <= b\"1010_0101\";", "b\"10100101\"")]
+    [InlineData("c <= O\"7_7\";", "O\"77\"")]
+    [InlineData("c <= x\"FF\";", "x\"FF\"")]
+    public void BitStringLiteral_separators_are_dropped(string line, string expectedLiteral)
+    {
+        var tokens = new Tokenizer().TokenizeLineReturn(line);
+        Assert.Contains(expectedLiteral, tokens);
+    }
+
+    [Theory]
+    [InlineData("report \"max_value\";", "max_value")]
+    [InlineData("signal data_bus : std_logic;", "data_bus")]
+    public void Underscores_outside_bit_string_literals_are_kept(string line, string fragment)
+    {
+        var joined = string.Join(" ", new Tokenizer().TokenizeLineReturn(line));
+        Assert.Contains(fragment, joined);
+    }
 }
