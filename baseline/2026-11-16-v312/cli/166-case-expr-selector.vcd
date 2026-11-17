@@ -1,0 +1,58 @@
+$date
+   2026-11-16 21:23:56
+$end
+$version
+   VHDL Interpreter v0.17.0
+$end
+$timescale
+   1ps
+$end
+$scope module case_expr_selector $end
+$var wire 1 ! _clk $end
+$var reg 7 " seg $end
+$var reg 4 # val $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+0!
+b0000001 "
+b0000 #
+$end
+#10000
+1!
+#20000
+0!
+#30000
+1!
+#40000
+0!
+#50000
+1!
+#60000
+0!
+#70000
+1!
+#80000
+0!
+#90000
+1!
+#100000
+0!
+#110000
+1!
+#120000
+0!
+#130000
+1!
+#140000
+0!
+#150000
+1!
+#160000
+0!
+#170000
+1!
+#180000
+0!
+#190000
+1!

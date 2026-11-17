@@ -1,0 +1,4 @@
+t=7 ie.y=0101 ie.z=00110 ie.st=1 ie.f=1 nest.o=1001 vc.y=1011 pk.en=0 pk.on=0 pk.y=1 pk.d=1010 pk.s=01 rv.y=0 rv.z=1 rv.u=0 ag.y=011011 ag.eq=1 ar.y=01 as.y=1011 as.z=0111 in.y1=1 in.z1=0 in.y2=1 in.z2=1 q.y=1111 iv.y=0001
+t=27 ie.y=1010 ie.z=01011 ie.st=0 ie.f=0 nest.o=0110 vc.y=0100 pk.en=1 pk.on=1 pk.y=0 pk.d=0101 pk.s=10 rv.y=1 rv.z=0 rv.u=0 ag.y=100100 ag.eq=0 ar.y=01 as.y=0010 as.z=0111 in.y1=1 in.z1=1 in.y2=1 in.z2=0 q.y=0000 iv.y=0011
+t=47 ie.y=1010 ie.z=01011 ie.st=0 ie.f=0 nest.o=0110 vc.y=0100 pk.en=1 pk.on=1 pk.y=0 pk.d=0101 pk.s=10 rv.y=1 rv.z=0 rv.u=0 ag.y=100100 ag.eq=0 ar.y=01 as.y=0010 as.z=0111 in.y1=1 in.z1=1 in.y2=1 in.z2=0 q.y=0000 iv.y=0101
+t=67 ie.y=1010 ie.z=01011 ie.st=0 ie.f=0 nest.o=0110 vc.y=0100 pk.en=1 pk.on=1 pk.y=0 pk.d=0101 pk.s=10 rv.y=1 rv.z=0 rv.u=0 ag.y=100100 ag.eq=0 ar.y=00 as.y=0010 as.z=0111 in.y1=1 in.z1=1 in.y2=1 in.z2=0 q.y=0000 iv.y=0111

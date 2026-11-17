@@ -47,6 +47,9 @@
     <Content Include="Fixtures/Hierarchy/*.vhd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Fixtures/Records/*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <!-- Long-run memory stress fixture (free-running counter). Loaded by
          LongRunMemoryStressTests to reproduce the long-running freeze/crash. -->
     <Content Include="Fixtures/Stress/*.vhd">

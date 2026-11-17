@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="220.67" viewBox="0 0 460 220.67" font-family="ui-monospace, Menlo, Consolas, monospace">
+<rect x="0" y="0" width="460" height="220.67" fill="#ffffff" />
+<text x="40" y="44" font-size="16" font-weight="600" fill="#1f2937">and_gate</text>
+<rect x="175" y="68" width="110" height="100" rx="12" fill="rgba(60,130,246,.09)" stroke="rgba(60,130,246,.55)" stroke-width="1.5" /><text x="187" y="84" font-size="11" font-weight="600" font-family="var(--kmila-font-display, 'Archivo', system-ui, sans-serif)" fill="#1f2937">y &lt;= a and b</text>
+<path d="M 70 135.33 L 156.33 135.33 L 156.33 118.67 L 195 118.67 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<path d="M 70 168.67 L 173.67 168.67 L 173.67 135.33 L 195 135.33 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<path d="M 265 127 L 295 127 L 295 152 L 390 152 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<g transform="translate(195 102)"><path d="M 5 5 L 35 5 A 20 20 0 0 1 35 45 L 5 45 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5" /><text x="22" y="29" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">and</text></g>
+<circle cx="70" cy="135.33" r="6" fill="#3c82f6" stroke="#1e293b" stroke-width="1.5" /><text x="82" y="139.33" text-anchor="start" font-size="14" font-weight="600" fill="#1e293b">a</text>
+<circle cx="70" cy="168.67" r="6" fill="#3c82f6" stroke="#1e293b" stroke-width="1.5" /><text x="82" y="172.67" text-anchor="start" font-size="14" font-weight="600" fill="#1e293b">b</text>
+<circle cx="390" cy="152" r="6" fill="#f59e0b" stroke="#1e293b" stroke-width="1.5" /><text x="378" y="156" text-anchor="end" font-size="14" font-weight="600" fill="#1e293b">y</text>
+</svg>

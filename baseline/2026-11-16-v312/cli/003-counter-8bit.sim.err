@@ -1,0 +1,1 @@
+[sim] entity=counter signals=4 ticks=20 149ms → 003-counter-8bit.vcd
