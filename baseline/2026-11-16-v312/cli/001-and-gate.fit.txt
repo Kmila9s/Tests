@@ -1,0 +1,8 @@
+Resource estimate for 'and_gate':
+  Resource       Used    Avail    Util  Status
+  LUTs              1        -       -  -
+  FlipFlops         0        -       -  -
+  BRAM              0        -       -  -
+  DSP               0        -       -  -
+  IO                3        -       -  -
+  Clocks            0        -       -  -

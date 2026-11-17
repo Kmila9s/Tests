@@ -1,5 +1,4 @@
-using Kmila.Shared.Models;
-using Kmila.Shared.Services.Api;
+using static Kmila.Shared.Tests.Engine.EngineHarness;
 
 namespace Kmila.Shared.Tests.Engine;
 
@@ -112,36 +111,6 @@ public class PartialAssignmentTests
           dout <= mem(to_integer(unsigned(addr)));
         end architecture rtl;
         """;
-
-    private static PortMomentValue At(int ns, string v) => new() { Time = ns, TimeScale = "NS", Value = v };
-
-    private static PortMomentConfiguration Port(string name, params PortMomentValue[] values) =>
-        new() { PortName = name, Values = [.. values] };
-
-    /// <summary>Simulates <paramref name="vhdl"/> for 100 ns at 1 ns resolution (50 MHz clock) and returns its waveform.</summary>
-    private static async Task<WaveformData> SimulateAsync(string vhdl, string entry, params PortMomentConfiguration[] moments)
-    {
-        var store = new SandboxProjectStore();
-        var project = store.Create("partial-assign", retain: false);
-        try
-        {
-            project.WriteFile($"{entry}.vhdl", vhdl);
-            var run = await HeadlessSimulator.RunProjectAsync(project.Path, new HeadlessRunOptions
-            {
-                EntryPoint = entry,
-                TotalNs = 100,
-                TickResNs = 1,
-                SystemClockMhz = 50,
-                PortMoments = [.. moments],
-            });
-            Assert.Null(run.EngineError);
-            return WaveformData.FromSignalHistory(run.History, 1);
-        }
-        finally { store.Delete(project.Id); }
-    }
-
-    private static double? ValueAt(WaveformData wf, string signal, long ns) =>
-        wf.Signals.Single(s => s.Name.Equals(signal, StringComparison.OrdinalIgnoreCase)).ValueAtNs(ns).Value;
 
     [Fact]
     public async Task Selected_and_conditional_assignments_write_only_their_bit_or_range()
