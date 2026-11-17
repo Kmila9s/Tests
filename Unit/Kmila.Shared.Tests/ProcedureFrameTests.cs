@@ -25,28 +25,25 @@ public class ProcedureFrameTests
     }
 
     // ProcedureFrame is a sealed IProcessFrame with init-only Tasks /
-    // CallRef / OutMap / BoundScope and a mutable InnerPc. Locks the
+    // CallRef / BoundScope and a mutable InnerPc. Locks the
     // wiring the delta-engine drain switch relies on.
     [Fact]
-    public void ProcedureFrame_ExposesTasksInnerPcOutMapBoundScope()
+    public void ProcedureFrame_ExposesTasksInnerPcBoundScope()
     {
         var tasks = new List<object>();
         var vars = new HashSet<Variable>();
-        var outMap = new Dictionary<ParameterDefinition, Variable>();
         var call = new ProcedureCallStatement(vars, "noop", new List<string>());
         var frame = new ProcedureFrame
         {
             Tasks = tasks,
             InnerPc = 5,
             CallRef = call,
-            OutMap = outMap,
             BoundScope = vars,
         };
 
         Assert.Same(tasks, frame.Tasks);
         Assert.Equal(5, frame.InnerPc);
         Assert.Same(call, frame.CallRef);
-        Assert.Same(outMap, frame.OutMap);
         Assert.Same(vars, frame.BoundScope);
         Assert.IsAssignableFrom<IProcessFrame>(frame);
 
@@ -137,7 +134,7 @@ public class ProcedureFrameTests
                 callerScope, "toggle", new List<string> { "state" });
 
             var tasks = call.ResolveBoundBody(
-                scheduler: null, out var outMap, out var boundScope);
+                scheduler: null, out var boundScope);
 
             Assert.NotEmpty(tasks);
             var op = tasks.OfType<Operation>().FirstOrDefault();
@@ -146,7 +143,6 @@ public class ProcedureFrameTests
             // caller-side `state` Variable, not a shadow bound under `s`.
             Assert.Equal("state", op.Result?.Name, ignoreCase: true);
             Assert.Same(state, op.Result);
-            Assert.True(outMap.ContainsKey(def.Parameters[0]));
         }
         finally
         {
@@ -190,8 +186,8 @@ public class ProcedureFrameTests
             var call2 = new ProcedureCallStatement(
                 callerScope, "toggle_cached", new List<string> { "state" });
 
-            var tasks1 = call1.ResolveBoundBody(null, out _, out _);
-            var tasks2 = call2.ResolveBoundBody(null, out _, out _);
+            var tasks1 = call1.ResolveBoundBody(null, out _);
+            var tasks2 = call2.ResolveBoundBody(null, out _);
 
             Assert.Same(tasks1, tasks2);
         }
@@ -239,10 +235,9 @@ public class ProcedureFrameTests
             // Must not NRE. Prior to the fix this threw
             // NullReferenceException at actualVar.Name.
             var tasks = call.ResolveBoundBody(
-                scheduler: null, out var outMap, out var boundScope);
+                scheduler: null, out var boundScope);
 
             Assert.NotEmpty(tasks);
-            Assert.Empty(outMap); // literal actual has no caller-side var
         }
         finally
         {
