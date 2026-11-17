@@ -17,8 +17,25 @@ public static class EngineFixture
     /// </summary>
     public static ParsedUnit Parse(string path)
     {
-        var (_, unit) = Frontends.ForPath(path).AnalyzeEach([path]).Single();
+        var unit = Analyze(path);
         unit.ThrowIfFailed();
         return unit;
+    }
+
+    /// <summary>Analyses one HDL file like <c>kmila check</c>; a failure stays in <see cref="ParsedUnit.Error"/>.</summary>
+    public static ParsedUnit Analyze(string path) =>
+        Frontends.ForPath(path).AnalyzeEach([path]).Single().Unit;
+
+    /// <summary><see cref="Analyze(string)"/> over source text (written to a temporary <c>.vhdl</c> file).</summary>
+    public static ParsedUnit AnalyzeSource(string vhdl)
+    {
+        var dir = Directory.CreateTempSubdirectory("kmila-engine-").FullName;
+        try
+        {
+            var path = Path.Combine(dir, "design.vhdl");
+            File.WriteAllText(path, vhdl);
+            return Analyze(path);
+        }
+        finally { Directory.Delete(dir, recursive: true); }
     }
 }
