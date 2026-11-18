@@ -1,0 +1,14 @@
+conc_assert.vhdl:8:3:@0ms:(assertion note): conc_assert: a is low
+textio_out: n=0 a=0 bits=0000 hex=0
+textio_out: n=5 a=1 bits=0101 hex=5
+tb_v313.vhdl:25:7:@7ns:(report note): t=7 lb.y=0110 en.y=0001 en.z=0011 en.w=1010 en.u=0001 ca.y=1 ca.z=1 cp.y=0 cp.z=1 gb.y=1010 gb.z=0 s8.y=1 s8.z=1 s8.w=0
+textio_out: n=11 a=0 bits=1011 hex=B
+gen_body.vhdl:23:5:@20ns:(assertion note): gen_body: msb set
+conc_assert.vhdl:8:3:@20ns:(assertion note): conc_assert: a is low
+conc_assert.vhdl:9:3:@20ns:(assertion note): conc_assert: b is high
+tb_v313.vhdl:25:7:@27ns:(report note): t=27 lb.y=1001 en.y=0010 en.z=0011 en.w=1011 en.u=0000 ca.y=1 ca.z=1 cp.y=0 cp.z=0 gb.y=0100 gb.z=1 s8.y=1 s8.z=1 s8.w=1
+textio_out: n=14 a=0 bits=1110 hex=E
+tb_v313.vhdl:25:7:@47ns:(report note): t=47 lb.y=1000 en.y=0000 en.z=0011 en.w=1011 en.u=0000 ca.y=1 ca.z=1 cp.y=0 cp.z=0 gb.y=0001 gb.z=1 s8.y=1 s8.z=0 s8.w=1
+textio_out: n=7 a=0 bits=0111 hex=7
+tb_v313.vhdl:25:7:@67ns:(report note): t=67 lb.y=1001 en.y=0011 en.z=0011 en.w=1011 en.u=0001 ca.y=1 ca.z=1 cp.y=0 cp.z=0 gb.y=1000 gb.z=1 s8.y=1 s8.z=0 s8.w=1
+simulation finished @67ns

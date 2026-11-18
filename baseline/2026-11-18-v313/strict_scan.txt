@@ -1,0 +1,1763 @@
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/alu.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/buzzer_ctrl.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/calc_top.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/clock_divider.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/cpu.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/expr_engine.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/fixed_point.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/hd44780_seq.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/keypad_scanner.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/lcd_driver.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/led_marquee.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/ram.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/rom.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/seg7_driver.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/testbench_full.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/testbench.vhd	OK
+App/Kmila/Kmila.Shared/Assets/CapstoneCalc/types_pkg.vhd	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/01-half-adder/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/01-half-adder/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/02-and-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/02-and-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/03-or-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/03-or-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/04-xor-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/04-xor-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/05-not-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/05-not-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/06-nand-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/06-nand-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/07-nor-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/07-nor-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/08-xnor-gate/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/08-xnor-gate/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/09-mux-2to1/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/09-mux-2to1/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/10-mux-4to1/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/10-mux-4to1/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/11-decoder-2to4/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/11-decoder-2to4/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/12-comparator-eq/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/12-comparator-eq/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/13-parity-even/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/13-parity-even/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/14-majority/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/14-majority/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/15-half-subtractor/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/easy/15-half-subtractor/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/01-traffic-fsm/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/01-traffic-fsm/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/02-debouncer/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/02-debouncer/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/03-alu-8bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/03-alu-8bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/04-pwm/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/04-pwm/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/05-fifo-depth4/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/05-fifo-depth4/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/06-crc8/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/06-crc8/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/07-uart-rx-state/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/07-uart-rx-state/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/08-spi-master/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/08-spi-master/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/09-multiplier-4bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/09-multiplier-4bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/10-stack-4word/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/10-stack-4word/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/11-arbiter-rr/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/11-arbiter-rr/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/12-lfsr-8bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/12-lfsr-8bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/13-hamming74-enc/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/13-hamming74-enc/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/14-manchester-enc/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/14-manchester-enc/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/15-cordic-step/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/hard/15-cordic-step/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/01-full-adder/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/01-full-adder/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/02-adder-4bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/02-adder-4bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/03-shift-reg-8/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/03-shift-reg-8/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/04-counter-4bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/04-counter-4bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/05-tff/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/05-tff/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/06-comparator-gle/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/06-comparator-gle/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/07-edge-detector/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/07-edge-detector/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/08-mux-4to1-en/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/08-mux-4to1-en/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/09-load-register/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/09-load-register/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/10-up-down-counter/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/10-up-down-counter/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/11-clk-divider-4/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/11-clk-divider-4/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/12-2bit-encoder/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/12-2bit-encoder/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/13-onehot-to-bin/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/13-onehot-to-bin/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/14-toggle-reg/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/14-toggle-reg/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/15-graycode-3bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m1-from-zero/medium/15-graycode-3bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/01-full-adder-fix/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/01-full-adder-fix/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/02-mux-sel-inverted/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/02-mux-sel-inverted/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/03-and-vs-or/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/03-and-vs-or/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/04-sum-cout-swapped/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/04-sum-cout-swapped/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/05-comparator-1bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/05-comparator-1bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/06-not-or-buffer/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/06-not-or-buffer/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/07-3input-and-missing/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/07-3input-and-missing/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/08-parity-nand/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/08-parity-nand/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/09-mux-input-flipped/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/09-mux-input-flipped/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/10-decoder-missing/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/10-decoder-missing/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/11-encoder-priority/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/11-encoder-priority/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/12-nor-using-and/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/12-nor-using-and/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/13-2bit-no-carry/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/13-2bit-no-carry/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/14-eq-using-xor/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/14-eq-using-xor/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/15-mux-default-x/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/easy/15-mux-default-x/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/01-handshake-race/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/01-handshake-race/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/02-alu-overflow/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/02-alu-overflow/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/03-fifo-pointer-wrap/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/03-fifo-pointer-wrap/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/04-uart-start-bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/04-uart-start-bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/05-spi-misclock/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/05-spi-misclock/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/06-mult-sign-ext/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/06-mult-sign-ext/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/07-stack-pop-off/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/07-stack-pop-off/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/08-arbiter-starve/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/08-arbiter-starve/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/09-lfsr-tap/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/09-lfsr-tap/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/10-crc-poly/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/10-crc-poly/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/11-manchester-sample/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/11-manchester-sample/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/12-booth-shift/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/12-booth-shift/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/13-hamming-parity/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/13-hamming-parity/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/14-pwm-off-by-one/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/14-pwm-off-by-one/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/15-cordic-dir/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/hard/15-cordic-dir/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/01-counter-no-reset/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/01-counter-no-reset/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/02-shift-wrong-dir/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/02-shift-wrong-dir/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/03-fsm-unreachable/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/03-fsm-unreachable/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/04-async-as-sync/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/04-async-as-sync/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/05-alu-op-missing/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/05-alu-op-missing/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/06-adder-sign-ext/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/06-adder-sign-ext/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/07-bcd-missing-digit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/07-bcd-missing-digit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/08-tff-no-enable/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/08-tff-no-enable/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/09-edge-falling/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/09-edge-falling/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/10-mux-sel-narrow/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/10-mux-sel-narrow/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/11-comparator-eq-bug/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/11-comparator-eq-bug/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/12-up-down-ignore-dir/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/12-up-down-ignore-dir/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/13-load-wrong-edge/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/13-load-wrong-edge/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/14-divider-by-8/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/14-divider-by-8/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/15-graycode-double/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m2-fix-bug/medium/15-graycode-double/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/01-counter-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/01-counter-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/02-and-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/02-and-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/03-or-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/03-or-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/04-xor-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/04-xor-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/05-not-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/05-not-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/06-mux-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/06-mux-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/07-comparator-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/07-comparator-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/08-parity-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/08-parity-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/09-half-cout-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/09-half-cout-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/10-half-sum-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/10-half-sum-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/11-nand-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/11-nand-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/12-nor-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/12-nor-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/13-xnor-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/13-xnor-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/14-decoder-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/14-decoder-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/15-buffer-fill/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/easy/15-buffer-fill/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/01-traffic-table/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/01-traffic-table/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/02-alu-shift/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/02-alu-shift/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/03-pwm-comp/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/03-pwm-comp/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/04-fifo-rd-ptr/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/04-fifo-rd-ptr/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/05-crc-update/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/05-crc-update/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/06-uart-sample/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/06-uart-sample/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/07-spi-edge/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/07-spi-edge/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/08-booth-step/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/08-booth-step/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/09-stack-pop/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/09-stack-pop/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/10-arbiter-grant/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/10-arbiter-grant/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/11-lfsr-tap/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/11-lfsr-tap/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/12-hamming-syndrome/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/12-hamming-syndrome/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/13-manchester-trans/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/13-manchester-trans/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/14-cordic-step/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/14-cordic-step/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/15-rr-token/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/hard/15-rr-token/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/01-counter-wrap/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/01-counter-wrap/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/02-shift-fill-bit/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/02-shift-fill-bit/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/03-fsm-next/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/03-fsm-next/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/04-edge-pulse/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/04-edge-pulse/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/05-adder-carry-link/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/05-adder-carry-link/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/06-bcd-digit5/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/06-bcd-digit5/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/07-tff-toggle/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/07-tff-toggle/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/08-mux-block/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/08-mux-block/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/09-load-line/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/09-load-line/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/10-comp-gt/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/10-comp-gt/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/11-up-down-dir/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/11-up-down-dir/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/12-clk-divider-toggle/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/12-clk-divider-toggle/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/13-graycode-next/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/13-graycode-next/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/14-toggle-feedback/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/14-toggle-feedback/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/15-prio-default/solution.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Practice/m3-fill-gap/medium/15-prio-default/starter.vhdl	OK
+App/Kmila/Kmila.Shared/wwwroot/Templates/academic/en/files/src/main.vhd	ERR 9
+App/Kmila/Kmila.Shared/wwwroot/Templates/academic/en/files/tb/main_tb.vhd	ERR 9
+App/Kmila/Kmila.Shared/wwwroot/Templates/counter/en/files/main.vhd	ERR 10
+App/Kmila/Kmila.Shared/wwwroot/Templates/counter/en/files/tb/main_tb.vhd	ERR 7
+App/Kmila/Kmila.Shared/wwwroot/Templates/empty/en/files/main.vhd	ERR 8
+App/Kmila/Kmila.Shared/wwwroot/Templates/fsm/en/files/main.vhd	ERR 9
+App/Kmila/Kmila.Shared/wwwroot/Templates/fsm/en/files/tb/main_tb.vhd	ERR 8
+App/Kmila/Kmila.Shared/wwwroot/Templates/library/en/files/pkg_body.vhd	OK
+App/Kmila/Kmila.Shared/wwwroot/Templates/library/en/files/pkg.vhd	OK
+Debugger/Codes/c1.vhdl	OK
+Debugger/Codes/test1.vhdl	OK
+Debugger/Codes/test2.vhdl	ERR 16
+Debugger/Codes/test21.vhdl	OK
+Debugger/Codes/test22.vhdl	OK
+Debugger/Codes/test23.vhdl	OK
+Debugger/Codes/test24.vhdl	OK
+Debugger/Codes/test25.vhdl	OK
+Debugger/Codes/test26.vhdl	OK
+Debugger/Codes/test27.vhdl	OK
+Debugger/Codes/test28.vhdl	OK
+Debugger/Codes/test29.vhdl	OK
+Debugger/Codes/test3.vhdl	OK
+Debugger/Codes/test30.vhdl	OK
+Debugger/Codes/test31.vhdl	OK
+Debugger/Codes/test32.vhdl	OK
+Debugger/Codes/test33.vhdl	OK
+Debugger/Codes/test34.vhdl	OK
+Debugger/Codes/test35.vhdl	OK
+Debugger/Codes/test36.vhdl	OK
+Debugger/Codes/test37.vhdl	OK
+Debugger/Codes/test38.vhdl	OK
+Debugger/Codes/test39.vhdl	OK
+Debugger/Codes/test4.vhdl	OK
+Debugger/Codes/test40.vhdl	OK
+Debugger/Codes/test41_fpga_killer.vhdl	OK
+Debugger/Codes/test5.vhdl	OK
+Debugger/Codes/test6.vhdl	OK
+Debugger/Codes/test7.vhdl	OK
+Debugger/Codes/test8.vhdl	OK
+Debugger/Codes/test9.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC10Precise/invalid_01_cross.vhdl	ERR 11
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC10Precise/invalid_02_cross_alt.vhdl	ERR 10
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC10Precise/valid_01_plain.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC10Precise/valid_02_same_alts.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_01_str_operand.vhdl	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_02_id_operand.vhdl	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_03_and_operand.vhdl	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_04_le_cond_stmt.vhdl	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_05_waveform_le.vhdl	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_gen_01_missing.vhdl	ERR 11
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_gen_02_input_port.vhdl	ERR 10
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_gen_03_whenelse.vhdl	ERR 12
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_gws_01_missing.vhdl	ERR 10
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_gws_02_inport.vhdl	ERR 9
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_idx_01_indexed.vhdl	ERR 1
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/invalid_idx_02_ranged.vhdl	ERR 1
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_01_cmp_le.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_02_and_before_le.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_03_or_before_le.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_04_mod_before_le.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_05_not_paren.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_06_paren_two_cmp.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_07_index_operand.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_08_attr_length.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_09_le_no_else_semi.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_10_phys_literal.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_11_bare_bool.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_12_multibranch.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gen_01_plain.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gen_02_whenelse.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gen_03_nested_decls.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gen_04_proc.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gws_01_basic.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_gws_02_labeled.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_idx_01_parencmp.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewC11Guard/valid_idx_02_indexcmp.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S1_missing_semicolon_end_process.vhd	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S10_missing_is_architecture.vhd	ERR 14
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S11_downto_typo.vhd	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S12_stray_token_body.vhd	ERR 14
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S2_missing_semicolon_between_ports.vhd	ERR 7
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S3_missing_then.vhd	ERR 21
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S4_missing_arrow_case.vhd	ERR 16
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S5_equals_instead_of_assign.vhd	ERR 14
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S6_varassign_on_signal.vhd	ERR 13
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S7_missing_close_paren_port.vhd	ERR 9
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S8_mismatched_end_label.vhd	ERR 14
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewSyntaxGap/S9_missing_end_if.vhd	ERR 18
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C1_undeclared_case_choice.vhd	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C10_enum_literal_not_in_type.vhd	ERR 19
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C11_missing_semicolon.vhd	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C12_wrong_clock_edge.vhd	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C2_undeclared_rhs_signal.vhd	ERR 13
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C3_undeclared_lhs_signal.vhd	ERR 18
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C4_type_mismatch.vhd	ERR 13
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C5_width_mismatch.vhd	ERR 12
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C6_nonexhaustive_case.vhd	ERR 18
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C7_duplicate_case_choice.vhd	ERR 19
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C8_assign_input_port.vhd	ERR 13
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewValidationGap/C9_undefined_function.vhd	ERR 13
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_01_concat_wide.vhdl	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_02_concat3.vhdl	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_03_concat_scalar.vhdl	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_04_slice_wide.vhdl	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_05_hexconcat.vhdl	ERR 17
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_hex_01_wide.vhdl	ERR 3
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/invalid_hex_02_narrow.vhdl	ERR 3
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_01_concat_match.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_02_charslice.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_03_nonlit_slice.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_04_generic_operand.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_05_arith.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_06_resize.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_07_aggregate.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_08_hexconcat.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_09_slice_match.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_hex_01_match.vhdl	OK
+Documentacion/auditorias/validacion_hardening_2026-10/ReviewWidthModel/valid_hex_02_wide.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r1.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r2.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r2b.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r3.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r4.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/elab/r5.vhd	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/c1.vhdl	ERR 22
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v1.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v10.vhdl	ERR 12
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v11.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v12.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v13.vhdl	ERR 12
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v14.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v15.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v16.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v17.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v18.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v2.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v3.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v4.vhdl	ERR 16
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v5.vhdl	ERR 17
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v6.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v7.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v8.vhdl	ERR 19
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/v9.vhdl	ERR 12
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w0.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w1.vhdl	ERR 15
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w2.vhdl	ERR 18
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w3.vhdl	ERR 21
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w4.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w5.vhdl	ERR 21
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w6.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w7.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w8.vhdl	ERR 21
+Documentacion/handoffs/repros_gaps_2026-11-16/parser/w9.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/aggnamed.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/aggpos.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/idlist.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/nested.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/rec_p.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/rec.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_aggnamed.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_aggpos.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_idlist.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_nested.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_rec.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/tb_vecfield.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/rec/vecfield.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/slice/slice_p.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/slice/slice.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/after_slice.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/oob_static.vhdl	ERR 8
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/ram.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/rom_range.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/sel_bit.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/tb_v311.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v311/var_bits.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/arr_asc.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/arr_rec.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/inst_rec.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/int_vcd.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/qualified.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_agg_proc.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_int_enum.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_nested.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_pkg.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_var.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/rec_vecconst.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v312/tb_v312.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/conc_assert.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/conc_proc.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/env_fail.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/env_finish.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/env_stop.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/exit_bad.vhdl	ERR 15
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/exit_next.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/gen_body.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/label_bad.vhdl	ERR 14
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/labels.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/seq2008.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/tb_v313.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/textio_out.vhdl	OK
+Documentacion/handoffs/repros_gaps_2026-11-16/v313/undeclared.vhdl	ERR 9
+Documentacion/TT2/evidence_2026-09-14/vcd/001-and-gate/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/001-and-gate/reference/and_gate_tb.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/001-and-gate/reference/and_gate.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/002-decoder-3to8/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/002-decoder-3to8/reference/dec3x8_concurrent_test.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/002-decoder-3to8/reference/dec3x8_concurrent.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/003-counter-8bit/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/003-counter-8bit/reference/counter.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/003-counter-8bit/reference/counter.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/004-dff/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/004-dff/reference/DFF.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/004-dff/reference/TB_DFF.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/005-encoder-8to3/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/005-encoder-8to3/reference/enc8x3_sel_test.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/005-encoder-8to3/reference/enc8x3_sel.vhd	ERR 16
+Documentacion/TT2/evidence_2026-09-14/vcd/008-seqdet-fsm/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/008-seqdet-fsm/reference/SeqDetecTFSM.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/008-seqdet-fsm/reference/TestBenchFSM.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/010-mux-8to1/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/010-mux-8to1/reference/mux8x1_test.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/010-mux-8to1/reference/mux8x1.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/020-xor-gate/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/020-xor-gate/reference/tb_xor_gate.vhd	ERR 65
+Documentacion/TT2/evidence_2026-09-14/vcd/020-xor-gate/reference/xor_gate.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/024-flipflop-jk/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/024-flipflop-jk/reference/jk_flip_flop.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/024-flipflop-jk/reference/tb_jk_flip_flop.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/026-shift-register/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/026-shift-register/reference/shift_register.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/026-shift-register/reference/tb_shift_register.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/027-add-sub/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/027-add-sub/reference/adder_subtractor.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/027-add-sub/reference/tb_adder_subtractor.vhd	ERR 72
+Documentacion/TT2/evidence_2026-09-14/vcd/029-lfsr/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/029-lfsr/reference/lsfr.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/029-lfsr/reference/tb_lsfr.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/030-half-adder/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/030-half-adder/reference/half_adder.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/030-half-adder/reference/tb_half_adder.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/031-full-adder/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/031-full-adder/reference/full_adder.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/031-full-adder/reference/half_adder.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/031-full-adder/reference/tb_full_adder.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/033-priority/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/033-priority/reference/priority.vhd	ERR 17
+Documentacion/TT2/evidence_2026-09-14/vcd/033-priority/reference/tb_priority.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/048-ring-counter/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/048-ring-counter/reference/ring_counter_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/048-ring-counter/reference/ring_counter.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/057-barrel/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/057-barrel/reference/barrel_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/057-barrel/reference/barrel.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/076-johnson8/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/076-johnson8/reference/JohnsonM8_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/076-johnson8/reference/JohnsonM8.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/081-latch-d/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/081-latch-d/reference/LatchD_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/081-latch-d/reference/LatchD.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/086-sec-moore/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/086-sec-moore/reference/Sec1011MooreCS_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/086-sec-moore/reference/Sec1011MooreCS.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/092-sec-mealy/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/092-sec-mealy/reference/Sec1011MealyCS_tb.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/092-sec-mealy/reference/Sec1011MealyCS.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/100-traffic/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/100-traffic/reference/traffic_light_system_moore_tb.vhdl	ERR 1
+Documentacion/TT2/evidence_2026-09-14/vcd/100-traffic/reference/traffic_light_system_moore.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/114-seven-seg/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/114-seven-seg/reference/Seven_Segment_TB.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/114-seven-seg/reference/Seven_Segment.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/115-ud-cnt8/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/115-ud-cnt8/reference/Ex_2_3_TB.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/115-ud-cnt8/reference/Ex_2_3.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/122-rom-array-lookup/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/122-rom-array-lookup/reference/rom_array_lookup.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/122-rom-array-lookup/reference/rom_array_lookup.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/135-mul-width-tripwire/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/135-mul-width-tripwire/reference/mul_width_tripwire.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/135-mul-width-tripwire/reference/mul_width_tripwire.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/137-entity-work-generic-map/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/137-entity-work-generic-map/reference/gen_inst_top.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/137-entity-work-generic-map/reference/gen_inst_top.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/139-lfsr-through-fn/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/139-lfsr-through-fn/reference/lfsr_fn.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/139-lfsr-through-fn/reference/tb_lfsr_fn.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/146-procedure-time-formal/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/146-procedure-time-formal/reference/procedure_time_formal.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/146-procedure-time-formal/reference/tb_procedure_time_formal.vhd	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/147-case-matching/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/147-case-matching/reference/case_matching.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/147-case-matching/reference/case_matching.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/148-signal-event-in-wait/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/148-signal-event-in-wait/reference/event_in_wait.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/148-signal-event-in-wait/reference/event_in_wait.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/149-signal-last-value/kmila.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/149-signal-last-value/reference/last_value_write.test.vhdl	OK
+Documentacion/TT2/evidence_2026-09-14/vcd/149-signal-last-value/reference/last_value_write.vhdl	OK
+Interpreter/test_combinational_tb.vhdl	OK
+Interpreter/test_combinational.vhdl	OK
+Interpreter/test_delta_chain.vhdl	OK
+Interpreter/test_delta_swap_tb.vhdl	OK
+Interpreter/test_delta_swap.vhdl	OK
+Interpreter/test_gtkwave_counter.vhdl	OK
+Interpreter/test_shift_reg_tb.vhdl	OK
+Interpreter/test_shift_reg.vhdl	OK
+Interpreter/test_simple_counter_tb.vhdl	OK
+Interpreter/test_simple_counter.vhdl	OK
+Interpreter/test1.vhdl	OK
+Interpreter/test10.vhdl	OK
+Interpreter/test11.vhdl	OK
+Interpreter/test12.vhdl	OK
+Interpreter/test13.vhdl	OK
+Interpreter/test14.vhdl	OK
+Interpreter/test15.vhdl	OK
+Interpreter/test16.vhdl	OK
+Interpreter/test17.vhdl	OK
+Interpreter/test18.vhdl	OK
+Interpreter/test19.vhdl	OK
+Interpreter/test2.vhdl	OK
+Interpreter/test20.vhdl	OK
+Interpreter/test21_1.vhdl	OK
+Interpreter/test21_2.vhdl	OK
+Interpreter/test21_3.vhdl	OK
+Interpreter/test21.vhdl	OK
+Interpreter/test22.vhdl	OK
+Interpreter/test23.vhdl	OK
+Interpreter/test24.vhdl	OK
+Interpreter/test25.vhdl	OK
+Interpreter/test26.vhdl	OK
+Interpreter/test27.vhdl	OK
+Interpreter/test28.vhdl	OK
+Interpreter/test29.vhdl	OK
+Interpreter/test3.vhdl	OK
+Interpreter/test30.vhdl	OK
+Interpreter/test31.vhdl	OK
+Interpreter/test32.vhdl	OK
+Interpreter/test33.vhdl	OK
+Interpreter/test34.vhdl	OK
+Interpreter/test35.vhdl	OK
+Interpreter/test36.vhdl	OK
+Interpreter/test37.vhdl	OK
+Interpreter/test38.vhdl	OK
+Interpreter/test39.vhdl	OK
+Interpreter/test4.vhdl	OK
+Interpreter/test40.vhdl	OK
+Interpreter/test41_fpga_killer.vhdl	OK
+Interpreter/test5.vhdl	OK
+Interpreter/test6.vhdl	OK
+Interpreter/test7.vhdl	OK
+Interpreter/test8.vhdl	OK
+Interpreter/test9.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/01_BitManipulator.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/02_LogicUnit.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/03_Comparator8Bit.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/04_Decoder4to16.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/05_PriorityArbiter.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/06_BarrelShifter.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/07_GrayCodec.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/08_SevenSegController.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/09_LookupTableGen.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/10_ReconfigurableLogic.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_01_BitManipulator.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_02_LogicUnit.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_03_Comparator8Bit.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_04_Decoder4to16.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_05_PriorityArbiter.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_06_BarrelShifter.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_07_GrayCodec.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_08_SevenSegController.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_09_LookupTableGen.vhdl	OK
+Interpreter/vhdl_projects/cat1_digital_logic/test_10_ReconfigurableLogic.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/11_ClockDivider.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/12_PulseGenerator.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/13_EdgeDetector.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/14_Debouncer.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/15_PWMGenerator.vhdl	ERR 258
+Interpreter/vhdl_projects/cat2_timing_sync/16_WatchdogTimer.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/17_TimestampCapture.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/18_PhaseDetector.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/19_ClockCrossingSync.vhdl	OK
+Interpreter/vhdl_projects/cat2_timing_sync/20_GlitchFreeSwitch.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/21_AdderSubtractor.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/22_LeadingZeroCount.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/23_PopulationCount.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/24_FixedPointMul.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/25_FixedPointDiv.vhdl	ERR 263
+Interpreter/vhdl_projects/cat3_arithmetic/26_SquareRoot.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/27_CORDICRotator.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/28_MACUnit.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/29_FloatingPointAdd.vhdl	OK
+Interpreter/vhdl_projects/cat3_arithmetic/30_CRCCalculator.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/31_MooreMachine.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/32_MealyMachine.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/33_SequenceDetector.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/34_TrafficLight.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/35_VendingController.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/36_ElevatorSystem.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/37_WashingMachine.vhdl	ERR 139
+Interpreter/vhdl_projects/cat4_state_machines/38_RobotArmControl.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/39_ProtocolParser.vhdl	OK
+Interpreter/vhdl_projects/cat4_state_machines/40_GameStateMachine.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/41_SinglePortRAM.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/42_DualPortRAM.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/43_SyncFIFO.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/44_AsyncFIFO.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/45_CacheController.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/46_ContentAddressableMemory.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/47_RegisterFile.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/48_StackMemory.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/49_CircularBuffer.vhdl	OK
+Interpreter/vhdl_projects/cat5_memory/50_MemoryController.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/51_UARTTransceiver.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/52_SPIMaster.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/53_I2CMaster.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/54_PS2Controller.vhdl	ERR 49
+Interpreter/vhdl_projects/cat6_communication/55_ParallelInterface.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/56_OneWireInterface.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/57_Manchester.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/58_RS485Driver.vhdl	OK
+Interpreter/vhdl_projects/cat6_communication/59_VGAController.vhdl	ERR 47
+Interpreter/vhdl_projects/cat6_communication/60_EthernetMAC.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/61_FIRFilter.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/62_IIRFilter.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/63_FFTProcessor.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/64_Decimator.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/65_Interpolator.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/66_NoiseGenerator.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/67_SignalMixer.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/68_DigitalOscillator.vhdl	ERR 1
+Interpreter/vhdl_projects/cat7_signal_processing/69_WaveformGenerator.vhdl	OK
+Interpreter/vhdl_projects/cat7_signal_processing/70_AudioProcessor.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/71_ALU.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/72_ControlUnit.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/73_RegisterFile.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/74_InstructionDecoder.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/75_PipelineRegisters.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/76_ProgramCounter.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/77_SimpleCPU.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/78_StackProcessor.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/79_MicroSequencer.vhdl	OK
+Interpreter/vhdl_projects/cat8_processors/80_RISCVCore.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/81_SystemOnChip.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/82_DMAController.vhdl	ERR 191
+Interpreter/vhdl_projects/cat9_advanced_systems/83_InterruptController.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/84_BusArbiter.vhdl	ERR 50
+Interpreter/vhdl_projects/cat9_advanced_systems/85_WatchdogTimer.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/86_ClockManager.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/87_DebugController.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/88_CryptoCore.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/89_ErrorCorrection.vhdl	OK
+Interpreter/vhdl_projects/cat9_advanced_systems/90_SystemIntegration.vhdl	OK
+LibraryCompiler/Builtins/IEEE/math_real.vhd	OK
+LibraryCompiler/Builtins/IEEE/numeric_std.vhd	OK
+LibraryCompiler/Builtins/IEEE/std_logic_1164.vhd	OK
+LibraryCompiler/Builtins/IEEE/std_logic_arith.vhd	OK
+LibraryCompiler/Builtins/IEEE/std_logic_signed.vhd	OK
+LibraryCompiler/Builtins/IEEE/std_logic_unsigned.vhd	OK
+SimulatorBench/Cases/000-smoke-and/kmila.vhdl	OK
+SimulatorBench/Cases/000-smoke-and/reference/and_gate_tb.vhdl	OK
+SimulatorBench/Cases/000-smoke-and/reference/and_gate.vhdl	OK
+SimulatorBench/Cases/000-smoke-and/results/ghdl/and_gate_tb.vhdl	OK
+SimulatorBench/Cases/000-smoke-and/results/ghdl/and_gate.vhdl	OK
+SimulatorBench/Cases/000-smoke-and/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/001-and-gate/kmila.vhdl	OK
+SimulatorBench/Cases/001-and-gate/reference/and_gate_tb.vhd	OK
+SimulatorBench/Cases/001-and-gate/reference/and_gate.vhd	OK
+SimulatorBench/Cases/001-and-gate/results/ghdl/and_gate_tb.vhd	OK
+SimulatorBench/Cases/001-and-gate/results/ghdl/and_gate.vhd	OK
+SimulatorBench/Cases/001-and-gate/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/002-decoder-3to8/kmila.vhdl	OK
+SimulatorBench/Cases/002-decoder-3to8/reference/dec3x8_concurrent_test.vhd	OK
+SimulatorBench/Cases/002-decoder-3to8/reference/dec3x8_concurrent.vhd	OK
+SimulatorBench/Cases/002-decoder-3to8/results/ghdl/dec3x8_concurrent_test.vhd	OK
+SimulatorBench/Cases/002-decoder-3to8/results/ghdl/dec3x8_concurrent.vhd	OK
+SimulatorBench/Cases/002-decoder-3to8/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/kmila.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/reference/counter.test.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/reference/counter.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/results/ghdl/counter.test.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/results/ghdl/counter.vhdl	OK
+SimulatorBench/Cases/003-counter-8bit/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/004-dff/kmila.vhdl	OK
+SimulatorBench/Cases/004-dff/reference/DFF.vhd	OK
+SimulatorBench/Cases/004-dff/reference/TB_DFF.vhd	OK
+SimulatorBench/Cases/004-dff/results/ghdl/DFF.vhd	OK
+SimulatorBench/Cases/004-dff/results/ghdl/TB_DFF.vhd	OK
+SimulatorBench/Cases/004-dff/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/005-encoder-8to3/kmila.vhdl	OK
+SimulatorBench/Cases/005-encoder-8to3/reference/enc8x3_sel_test.vhd	OK
+SimulatorBench/Cases/005-encoder-8to3/reference/enc8x3_sel.vhd	ERR 16
+SimulatorBench/Cases/005-encoder-8to3/results/ghdl/enc8x3_sel_test.vhd	OK
+SimulatorBench/Cases/005-encoder-8to3/results/ghdl/enc8x3_sel.vhd	ERR 16
+SimulatorBench/Cases/005-encoder-8to3/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/006-demux-1to8/kmila.vhdl	OK
+SimulatorBench/Cases/006-demux-1to8/reference/demux1x8_test.vhdl	OK
+SimulatorBench/Cases/006-demux-1to8/reference/demux1x8.vhd	ERR 16
+SimulatorBench/Cases/006-demux-1to8/results/ghdl/demux1x8_test.vhdl	OK
+SimulatorBench/Cases/006-demux-1to8/results/ghdl/demux1x8.vhd	ERR 16
+SimulatorBench/Cases/006-demux-1to8/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/007-boolfn-4bit/kmila.vhdl	OK
+SimulatorBench/Cases/007-boolfn-4bit/reference/problem_5_2_1_test.vhd	OK
+SimulatorBench/Cases/007-boolfn-4bit/reference/problem_5_2_1.vhd	OK
+SimulatorBench/Cases/007-boolfn-4bit/results/ghdl/problem_5_2_1_test.vhd	OK
+SimulatorBench/Cases/007-boolfn-4bit/results/ghdl/problem_5_2_1.vhd	OK
+SimulatorBench/Cases/007-boolfn-4bit/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/008-seqdet-fsm/kmila.vhdl	OK
+SimulatorBench/Cases/008-seqdet-fsm/reference/SeqDetecTFSM.vhd	OK
+SimulatorBench/Cases/008-seqdet-fsm/reference/TestBenchFSM.vhd	OK
+SimulatorBench/Cases/008-seqdet-fsm/results/ghdl/SeqDetecTFSM.vhd	OK
+SimulatorBench/Cases/008-seqdet-fsm/results/ghdl/TestBenchFSM.vhd	OK
+SimulatorBench/Cases/008-seqdet-fsm/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/009-boolfn-minset/kmila.vhdl	OK
+SimulatorBench/Cases/009-boolfn-minset/reference/problem_5_2_3_test.vhd	OK
+SimulatorBench/Cases/009-boolfn-minset/reference/problem_5_2_3.vhd	OK
+SimulatorBench/Cases/009-boolfn-minset/results/ghdl/problem_5_2_3_test.vhd	OK
+SimulatorBench/Cases/009-boolfn-minset/results/ghdl/problem_5_2_3.vhd	OK
+SimulatorBench/Cases/009-boolfn-minset/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/010-mux-8to1/kmila.vhdl	OK
+SimulatorBench/Cases/010-mux-8to1/reference/mux8x1_test.vhd	OK
+SimulatorBench/Cases/010-mux-8to1/reference/mux8x1.vhd	OK
+SimulatorBench/Cases/010-mux-8to1/results/ghdl/mux8x1_test.vhd	OK
+SimulatorBench/Cases/010-mux-8to1/results/ghdl/mux8x1.vhd	OK
+SimulatorBench/Cases/010-mux-8to1/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/011-decoder-cond/kmila.vhdl	OK
+SimulatorBench/Cases/011-decoder-cond/reference/dec3x8_conditional_test.vhd	OK
+SimulatorBench/Cases/011-decoder-cond/reference/dec3x8_conditional.vhd	OK
+SimulatorBench/Cases/011-decoder-cond/results/ghdl/dec3x8_conditional_test.vhd	OK
+SimulatorBench/Cases/011-decoder-cond/results/ghdl/dec3x8_conditional.vhd	OK
+SimulatorBench/Cases/011-decoder-cond/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/012-decoder-sel/kmila.vhdl	OK
+SimulatorBench/Cases/012-decoder-sel/reference/dec3x8_sel_test.vhd	OK
+SimulatorBench/Cases/012-decoder-sel/reference/dec3x8_sel.vhd	ERR 14
+SimulatorBench/Cases/012-decoder-sel/results/ghdl/dec3x8_sel_test.vhd	OK
+SimulatorBench/Cases/012-decoder-sel/results/ghdl/dec3x8_sel.vhd	ERR 14
+SimulatorBench/Cases/012-decoder-sel/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/013-mux-cond/kmila.vhdl	OK
+SimulatorBench/Cases/013-mux-cond/reference/mux8x1_conditional_test.vhd	OK
+SimulatorBench/Cases/013-mux-cond/reference/mux8x1_conditional.vhd	OK
+SimulatorBench/Cases/013-mux-cond/results/ghdl/mux8x1_conditional_test.vhd	OK
+SimulatorBench/Cases/013-mux-cond/results/ghdl/mux8x1_conditional.vhd	OK
+SimulatorBench/Cases/013-mux-cond/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/014-mux-sel/kmila.vhdl	OK
+SimulatorBench/Cases/014-mux-sel/reference/mux8x1_sel_test.vhd	OK
+SimulatorBench/Cases/014-mux-sel/reference/mux8x1_sel.vhd	ERR 17
+SimulatorBench/Cases/014-mux-sel/results/ghdl/mux8x1_sel_test.vhd	OK
+SimulatorBench/Cases/014-mux-sel/results/ghdl/mux8x1_sel.vhd	ERR 17
+SimulatorBench/Cases/014-mux-sel/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/015-encoder-16to4/kmila.vhdl	OK
+SimulatorBench/Cases/015-encoder-16to4/reference/enc16x4_test.vhd	OK
+SimulatorBench/Cases/015-encoder-16to4/reference/enc16x4.vhd	OK
+SimulatorBench/Cases/015-encoder-16to4/results/ghdl/enc16x4_test.vhd	OK
+SimulatorBench/Cases/015-encoder-16to4/results/ghdl/enc16x4.vhd	OK
+SimulatorBench/Cases/015-encoder-16to4/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/016-demux-1to32/kmila.vhdl	OK
+SimulatorBench/Cases/016-demux-1to32/reference/demux1x32_test.vhdl	OK
+SimulatorBench/Cases/016-demux-1to32/reference/demux1x32.vhd	OK
+SimulatorBench/Cases/016-demux-1to32/results/ghdl/demux1x32_test.vhdl	OK
+SimulatorBench/Cases/016-demux-1to32/results/ghdl/demux1x32.vhd	OK
+SimulatorBench/Cases/016-demux-1to32/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/017-fsm-2state/kmila.vhdl	OK
+SimulatorBench/Cases/017-fsm-2state/reference/problem_9_2_3_test.vhd	OK
+SimulatorBench/Cases/017-fsm-2state/reference/problem_9_2_3.vhd	OK
+SimulatorBench/Cases/017-fsm-2state/results/ghdl/problem_9_2_3_test.vhd	OK
+SimulatorBench/Cases/017-fsm-2state/results/ghdl/problem_9_2_3.vhd	OK
+SimulatorBench/Cases/017-fsm-2state/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/018-or-gate/kmila.vhdl	OK
+SimulatorBench/Cases/018-or-gate/reference/or_gate.vhd	OK
+SimulatorBench/Cases/018-or-gate/reference/tb_or_gate.vhd	OK
+SimulatorBench/Cases/018-or-gate/results/ghdl/or_gate.vhd	OK
+SimulatorBench/Cases/018-or-gate/results/ghdl/tb_or_gate.vhd	OK
+SimulatorBench/Cases/018-or-gate/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/019-not-gate/kmila.vhdl	OK
+SimulatorBench/Cases/019-not-gate/reference/not_gate.vhd	OK
+SimulatorBench/Cases/019-not-gate/reference/tb_not_gate.vhd	OK
+SimulatorBench/Cases/019-not-gate/results/ghdl/not_gate.vhd	OK
+SimulatorBench/Cases/019-not-gate/results/ghdl/tb_not_gate.vhd	OK
+SimulatorBench/Cases/019-not-gate/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/020-xor-gate/kmila.vhdl	OK
+SimulatorBench/Cases/020-xor-gate/reference/tb_xor_gate.vhd	ERR 65
+SimulatorBench/Cases/020-xor-gate/reference/xor_gate.vhd	OK
+SimulatorBench/Cases/020-xor-gate/results/ghdl/tb_xor_gate.vhd	ERR 65
+SimulatorBench/Cases/020-xor-gate/results/ghdl/xor_gate.vhd	OK
+SimulatorBench/Cases/020-xor-gate/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/021-adder/kmila.vhdl	OK
+SimulatorBench/Cases/021-adder/reference/adder.vhd	OK
+SimulatorBench/Cases/021-adder/reference/tb_adder.vhd	ERR 71
+SimulatorBench/Cases/021-adder/results/ghdl/adder.vhd	OK
+SimulatorBench/Cases/021-adder/results/ghdl/tb_adder.vhd	ERR 71
+SimulatorBench/Cases/021-adder/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/022-mux4x1/kmila.vhdl	OK
+SimulatorBench/Cases/022-mux4x1/reference/mux4x1.vhd	OK
+SimulatorBench/Cases/022-mux4x1/reference/tb_mux4x1.vhd	OK
+SimulatorBench/Cases/022-mux4x1/results/ghdl/mux4x1.vhd	OK
+SimulatorBench/Cases/022-mux4x1/results/ghdl/tb_mux4x1.vhd	OK
+SimulatorBench/Cases/022-mux4x1/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/023-flipflop-d/kmila.vhdl	OK
+SimulatorBench/Cases/023-flipflop-d/reference/flip_flop.vhd	OK
+SimulatorBench/Cases/023-flipflop-d/reference/tb_flip_flop.vhd	OK
+SimulatorBench/Cases/023-flipflop-d/results/ghdl/flip_flop.vhd	OK
+SimulatorBench/Cases/023-flipflop-d/results/ghdl/tb_flip_flop.vhd	OK
+SimulatorBench/Cases/023-flipflop-d/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/024-flipflop-jk/kmila.vhdl	OK
+SimulatorBench/Cases/024-flipflop-jk/reference/jk_flip_flop.vhd	OK
+SimulatorBench/Cases/024-flipflop-jk/reference/tb_jk_flip_flop.vhd	OK
+SimulatorBench/Cases/024-flipflop-jk/results/ghdl/jk_flip_flop.vhd	OK
+SimulatorBench/Cases/024-flipflop-jk/results/ghdl/tb_jk_flip_flop.vhd	OK
+SimulatorBench/Cases/024-flipflop-jk/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/025-counter-pmas/kmila.vhdl	OK
+SimulatorBench/Cases/025-counter-pmas/reference/counter.vhd	OK
+SimulatorBench/Cases/025-counter-pmas/reference/tb_counter.vhd	OK
+SimulatorBench/Cases/025-counter-pmas/results/ghdl/counter.vhd	OK
+SimulatorBench/Cases/025-counter-pmas/results/ghdl/tb_counter.vhd	OK
+SimulatorBench/Cases/025-counter-pmas/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/026-shift-register/kmila.vhdl	OK
+SimulatorBench/Cases/026-shift-register/reference/shift_register.vhd	OK
+SimulatorBench/Cases/026-shift-register/reference/tb_shift_register.vhd	OK
+SimulatorBench/Cases/026-shift-register/results/ghdl/shift_register.vhd	OK
+SimulatorBench/Cases/026-shift-register/results/ghdl/tb_shift_register.vhd	OK
+SimulatorBench/Cases/026-shift-register/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/027-add-sub/kmila.vhdl	OK
+SimulatorBench/Cases/027-add-sub/reference/adder_subtractor.vhd	OK
+SimulatorBench/Cases/027-add-sub/reference/tb_adder_subtractor.vhd	ERR 72
+SimulatorBench/Cases/027-add-sub/results/ghdl/adder_subtractor.vhd	OK
+SimulatorBench/Cases/027-add-sub/results/ghdl/tb_adder_subtractor.vhd	ERR 72
+SimulatorBench/Cases/027-add-sub/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/028-state-machine/kmila.vhdl	OK
+SimulatorBench/Cases/028-state-machine/reference/state_machine.vhd	OK
+SimulatorBench/Cases/028-state-machine/reference/tb_state_machine.vhd	OK
+SimulatorBench/Cases/028-state-machine/results/ghdl/state_machine.vhd	OK
+SimulatorBench/Cases/028-state-machine/results/ghdl/tb_state_machine.vhd	OK
+SimulatorBench/Cases/028-state-machine/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/029-lfsr/kmila.vhdl	OK
+SimulatorBench/Cases/029-lfsr/reference/lsfr.vhd	OK
+SimulatorBench/Cases/029-lfsr/reference/tb_lsfr.vhd	OK
+SimulatorBench/Cases/029-lfsr/results/ghdl/lsfr.vhd	OK
+SimulatorBench/Cases/029-lfsr/results/ghdl/tb_lsfr.vhd	OK
+SimulatorBench/Cases/029-lfsr/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/030-half-adder/kmila.vhdl	OK
+SimulatorBench/Cases/030-half-adder/reference/half_adder.vhd	OK
+SimulatorBench/Cases/030-half-adder/reference/tb_half_adder.vhd	OK
+SimulatorBench/Cases/030-half-adder/results/ghdl/half_adder.vhd	OK
+SimulatorBench/Cases/030-half-adder/results/ghdl/tb_half_adder.vhd	OK
+SimulatorBench/Cases/030-half-adder/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/031-full-adder/kmila.vhdl	OK
+SimulatorBench/Cases/031-full-adder/reference/full_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/reference/half_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/reference/tb_full_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/results/ghdl/full_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/results/ghdl/half_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/results/ghdl/tb_full_adder.vhd	OK
+SimulatorBench/Cases/031-full-adder/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/032-parity/kmila.vhdl	OK
+SimulatorBench/Cases/032-parity/reference/parity.vhd	ERR 20
+SimulatorBench/Cases/032-parity/reference/tb_parity.vhd	OK
+SimulatorBench/Cases/032-parity/results/ghdl/parity.vhd	ERR 20
+SimulatorBench/Cases/032-parity/results/ghdl/tb_parity.vhd	OK
+SimulatorBench/Cases/032-parity/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/033-priority/kmila.vhdl	OK
+SimulatorBench/Cases/033-priority/reference/priority.vhd	ERR 17
+SimulatorBench/Cases/033-priority/reference/tb_priority.vhd	OK
+SimulatorBench/Cases/033-priority/results/ghdl/priority.vhd	ERR 17
+SimulatorBench/Cases/033-priority/results/ghdl/tb_priority.vhd	OK
+SimulatorBench/Cases/033-priority/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/034-hamming/kmila.vhdl	OK
+SimulatorBench/Cases/034-hamming/reference/hamming.vhd	OK
+SimulatorBench/Cases/034-hamming/reference/tb_hamming.vhd	ERR 28
+SimulatorBench/Cases/034-hamming/results/ghdl/hamming.vhd	OK
+SimulatorBench/Cases/034-hamming/results/ghdl/tb_hamming.vhd	ERR 28
+SimulatorBench/Cases/034-hamming/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/035-fsm-fcayci/kmila.vhdl	OK
+SimulatorBench/Cases/035-fsm-fcayci/reference/fsm.vhd	ERR 24
+SimulatorBench/Cases/035-fsm-fcayci/reference/tb_fsm.vhd	OK
+SimulatorBench/Cases/035-fsm-fcayci/results/ghdl/fsm.vhd	ERR 24
+SimulatorBench/Cases/035-fsm-fcayci/results/ghdl/tb_fsm.vhd	OK
+SimulatorBench/Cases/035-fsm-fcayci/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/036-fsm-counter/kmila.vhdl	OK
+SimulatorBench/Cases/036-fsm-counter/reference/fsm_counter.vhd	ERR 28
+SimulatorBench/Cases/036-fsm-counter/reference/tb_fsm_counter.vhd	OK
+SimulatorBench/Cases/036-fsm-counter/results/ghdl/fsm_counter.vhd	ERR 28
+SimulatorBench/Cases/036-fsm-counter/results/ghdl/tb_fsm_counter.vhd	OK
+SimulatorBench/Cases/036-fsm-counter/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/037-adder4/kmila.vhdl	OK
+SimulatorBench/Cases/037-adder4/reference/adder4.vhd	OK
+SimulatorBench/Cases/037-adder4/reference/full_adder.vhd	OK
+SimulatorBench/Cases/037-adder4/reference/half_adder.vhd	OK
+SimulatorBench/Cases/037-adder4/reference/tb_adder4.vhd	OK
+SimulatorBench/Cases/037-adder4/results/ghdl/adder4.vhd	OK
+SimulatorBench/Cases/037-adder4/results/ghdl/full_adder.vhd	OK
+SimulatorBench/Cases/037-adder4/results/ghdl/half_adder.vhd	OK
+SimulatorBench/Cases/037-adder4/results/ghdl/tb_adder4.vhd	OK
+SimulatorBench/Cases/037-adder4/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/042-prio4/kmila.vhdl	OK
+SimulatorBench/Cases/042-prio4/reference/priority_encoder_4in_tb.vhd	OK
+SimulatorBench/Cases/042-prio4/reference/priority_encoder_4in.vhd	OK
+SimulatorBench/Cases/042-prio4/results/ghdl/priority_encoder_4in_tb.vhd	OK
+SimulatorBench/Cases/042-prio4/results/ghdl/priority_encoder_4in.vhd	OK
+SimulatorBench/Cases/042-prio4/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/045-compar/kmila.vhdl	OK
+SimulatorBench/Cases/045-compar/reference/compar_tb.vhdl	OK
+SimulatorBench/Cases/045-compar/reference/compar.vhdl	OK
+SimulatorBench/Cases/045-compar/results/ghdl/compar_tb.vhdl	OK
+SimulatorBench/Cases/045-compar/results/ghdl/compar.vhdl	OK
+SimulatorBench/Cases/045-compar/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/kmila.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/reference/dff_tb.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/reference/dff.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/results/ghdl/dff_tb.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/results/ghdl/dff.vhdl	OK
+SimulatorBench/Cases/046-dff-lemur/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/kmila.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/reference/counter_tb.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/reference/counter.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/results/ghdl/counter_tb.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/results/ghdl/counter.vhdl	OK
+SimulatorBench/Cases/047-counter-lemur/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/kmila.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/reference/ring_counter_tb.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/reference/ring_counter.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/results/ghdl/ring_counter_tb.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/results/ghdl/ring_counter.vhdl	OK
+SimulatorBench/Cases/048-ring-counter/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/049-grey/kmila.vhdl	OK
+SimulatorBench/Cases/049-grey/reference/grey_tb.vhdl	OK
+SimulatorBench/Cases/049-grey/reference/grey.vhdl	OK
+SimulatorBench/Cases/049-grey/results/ghdl/grey_tb.vhdl	OK
+SimulatorBench/Cases/049-grey/results/ghdl/grey.vhdl	OK
+SimulatorBench/Cases/049-grey/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/050-one-hot/kmila.vhdl	OK
+SimulatorBench/Cases/050-one-hot/reference/one_hot_tb.vhdl	OK
+SimulatorBench/Cases/050-one-hot/reference/one_hot.vhdl	OK
+SimulatorBench/Cases/050-one-hot/results/ghdl/one_hot_tb.vhdl	OK
+SimulatorBench/Cases/050-one-hot/results/ghdl/one_hot.vhdl	OK
+SimulatorBench/Cases/050-one-hot/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/kmila.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/reference/multiplex_1_tb.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/reference/multiplex_1.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/results/ghdl/multiplex_1_tb.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/results/ghdl/multiplex_1.vhdl	OK
+SimulatorBench/Cases/051-mux1-lemur/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/052-piso/kmila.vhdl	OK
+SimulatorBench/Cases/052-piso/reference/piso_tb.vhdl	OK
+SimulatorBench/Cases/052-piso/reference/piso.vhdl	ERR 12
+SimulatorBench/Cases/052-piso/results/ghdl/piso_tb.vhdl	OK
+SimulatorBench/Cases/052-piso/results/ghdl/piso.vhdl	ERR 12
+SimulatorBench/Cases/052-piso/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/053-sipo/kmila.vhdl	OK
+SimulatorBench/Cases/053-sipo/reference/sipo_tb.vhdl	OK
+SimulatorBench/Cases/053-sipo/reference/sipo.vhdl	ERR 11
+SimulatorBench/Cases/053-sipo/results/ghdl/sipo_tb.vhdl	OK
+SimulatorBench/Cases/053-sipo/results/ghdl/sipo.vhdl	ERR 11
+SimulatorBench/Cases/053-sipo/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/054-abs1/kmila.vhdl	OK
+SimulatorBench/Cases/054-abs1/reference/abs_1_tb.vhdl	ERR 31
+SimulatorBench/Cases/054-abs1/reference/abs_1.vhdl	OK
+SimulatorBench/Cases/054-abs1/results/ghdl/abs_1_tb.vhdl	ERR 31
+SimulatorBench/Cases/054-abs1/results/ghdl/abs_1.vhdl	OK
+SimulatorBench/Cases/054-abs1/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/kmila.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/reference/seq_det_tb.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/reference/seq_det.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/results/ghdl/seq_det_tb.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/results/ghdl/seq_det.vhdl	OK
+SimulatorBench/Cases/055-seqdet-lemur/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/056-code-det/kmila.vhdl	OK
+SimulatorBench/Cases/056-code-det/reference/code_det_tb.vhdl	OK
+SimulatorBench/Cases/056-code-det/reference/code_det.vhdl	OK
+SimulatorBench/Cases/056-code-det/results/ghdl/code_det_tb.vhdl	OK
+SimulatorBench/Cases/056-code-det/results/ghdl/code_det.vhdl	OK
+SimulatorBench/Cases/056-code-det/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/057-barrel/kmila.vhdl	OK
+SimulatorBench/Cases/057-barrel/reference/barrel_tb.vhdl	OK
+SimulatorBench/Cases/057-barrel/reference/barrel.vhdl	OK
+SimulatorBench/Cases/057-barrel/results/ghdl/barrel_tb.vhdl	OK
+SimulatorBench/Cases/057-barrel/results/ghdl/barrel.vhdl	OK
+SimulatorBench/Cases/057-barrel/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/kmila.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/reference/reg_adder_tb.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/reference/reg_adder.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/results/ghdl/reg_adder_tb.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/results/ghdl/reg_adder.vhdl	OK
+SimulatorBench/Cases/059-reg-adder/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/060-trans/kmila.vhdl	OK
+SimulatorBench/Cases/060-trans/reference/trans_tb.vhdl	OK
+SimulatorBench/Cases/060-trans/reference/trans.vhdl	OK
+SimulatorBench/Cases/060-trans/results/ghdl/trans_tb.vhdl	OK
+SimulatorBench/Cases/060-trans/results/ghdl/trans.vhdl	OK
+SimulatorBench/Cases/060-trans/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/kmila.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/reference/compar_fsm_tb.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/reference/compar_fsm.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/results/ghdl/compar_fsm_tb.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/results/ghdl/compar_fsm.vhdl	OK
+SimulatorBench/Cases/061-compar-fsm/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/kmila.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/reference/Cod4a2_tb.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/reference/Cod4a2.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/results/ghdl/Cod4a2_tb.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/results/ghdl/Cod4a2.vhdl	OK
+SimulatorBench/Cases/062-cod4a2/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/063-comp-n/kmila.vhdl	OK
+SimulatorBench/Cases/063-comp-n/reference/CompEntN_tb.vhdl	ERR 1
+SimulatorBench/Cases/063-comp-n/reference/CompEntN.vhdl	OK
+SimulatorBench/Cases/063-comp-n/results/ghdl/CompEntN_tb.vhdl	ERR 1
+SimulatorBench/Cases/063-comp-n/results/ghdl/CompEntN.vhdl	OK
+SimulatorBench/Cases/063-comp-n/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/kmila.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/reference/Mux4_tb.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/reference/Mux4.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/results/ghdl/Mux4_tb.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/results/ghdl/Mux4.vhdl	OK
+SimulatorBench/Cases/065-mux4-suc/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/066-gray2bin/kmila.vhdl	OK
+SimulatorBench/Cases/066-gray2bin/reference/Gray2BinN_tb.vhdl	ERR 1
+SimulatorBench/Cases/066-gray2bin/reference/Gray2BinN.vhdl	OK
+SimulatorBench/Cases/066-gray2bin/results/ghdl/Gray2BinN_tb.vhdl	ERR 1
+SimulatorBench/Cases/066-gray2bin/results/ghdl/Gray2BinN.vhdl	OK
+SimulatorBench/Cases/066-gray2bin/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/067-paridad/kmila.vhdl	OK
+SimulatorBench/Cases/067-paridad/reference/ParidadN_tb.vhdl	ERR 1
+SimulatorBench/Cases/067-paridad/reference/ParidadN.vhdl	ERR 18
+SimulatorBench/Cases/067-paridad/results/ghdl/ParidadN_tb.vhdl	ERR 1
+SimulatorBench/Cases/067-paridad/results/ghdl/ParidadN.vhdl	ERR 18
+SimulatorBench/Cases/067-paridad/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/068-summag/kmila.vhdl	OK
+SimulatorBench/Cases/068-summag/reference/SumMagN_tb.vhdl	ERR 1
+SimulatorBench/Cases/068-summag/reference/SumMagN.vhdl	OK
+SimulatorBench/Cases/068-summag/results/ghdl/SumMagN_tb.vhdl	ERR 1
+SimulatorBench/Cases/068-summag/results/ghdl/SumMagN.vhdl	OK
+SimulatorBench/Cases/068-summag/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/071-nat2aik/kmila.vhdl	OK
+SimulatorBench/Cases/071-nat2aik/reference/Nat2Aik_tb.vhdl	ERR 1
+SimulatorBench/Cases/071-nat2aik/reference/Nat2Aik.vhdl	OK
+SimulatorBench/Cases/071-nat2aik/results/ghdl/Nat2Aik_tb.vhdl	ERR 1
+SimulatorBench/Cases/071-nat2aik/results/ghdl/Nat2Aik.vhdl	OK
+SimulatorBench/Cases/071-nat2aik/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/kmila.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/reference/FFD_tb.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/reference/FFD.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/results/ghdl/FFD_tb.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/results/ghdl/FFD.vhdl	OK
+SimulatorBench/Cases/072-ffd-susi/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/kmila.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/reference/FFD_cl_en_tb.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/reference/FFD_cl_en.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/results/ghdl/FFD_cl_en_tb.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/results/ghdl/FFD_cl_en.vhdl	OK
+SimulatorBench/Cases/073-ffd-clen/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/074-contm/kmila.vhdl	OK
+SimulatorBench/Cases/074-contm/reference/ContM_tb.vhdl	OK
+SimulatorBench/Cases/074-contm/reference/ContM.vhdl	OK
+SimulatorBench/Cases/074-contm/results/ghdl/ContM_tb.vhdl	OK
+SimulatorBench/Cases/074-contm/results/ghdl/ContM.vhdl	OK
+SimulatorBench/Cases/074-contm/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/075-cont-anillo/kmila.vhdl	OK
+SimulatorBench/Cases/075-cont-anillo/reference/ContAnillo_tb.vhdl	OK
+SimulatorBench/Cases/075-cont-anillo/reference/ContAnillo.vhdl	ERR 31
+SimulatorBench/Cases/075-cont-anillo/results/ghdl/ContAnillo_tb.vhdl	OK
+SimulatorBench/Cases/075-cont-anillo/results/ghdl/ContAnillo.vhdl	ERR 31
+SimulatorBench/Cases/075-cont-anillo/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/076-johnson8/kmila.vhdl	OK
+SimulatorBench/Cases/076-johnson8/reference/JohnsonM8_tb.vhdl	OK
+SimulatorBench/Cases/076-johnson8/reference/JohnsonM8.vhdl	OK
+SimulatorBench/Cases/076-johnson8/results/ghdl/JohnsonM8_tb.vhdl	OK
+SimulatorBench/Cases/076-johnson8/results/ghdl/JohnsonM8.vhdl	OK
+SimulatorBench/Cases/076-johnson8/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/077-contsec/kmila.vhdl	OK
+SimulatorBench/Cases/077-contsec/reference/ContadorSec_tb.vhdl	OK
+SimulatorBench/Cases/077-contsec/reference/ContadorSec.vhdl	OK
+SimulatorBench/Cases/077-contsec/results/ghdl/ContadorSec_tb.vhdl	OK
+SimulatorBench/Cases/077-contsec/results/ghdl/ContadorSec.vhdl	OK
+SimulatorBench/Cases/077-contsec/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/079-ffjk/kmila.vhdl	OK
+SimulatorBench/Cases/079-ffjk/reference/FFJK_cl_ps_tb.vhdl	OK
+SimulatorBench/Cases/079-ffjk/reference/FFJK_cl_ps.vhdl	OK
+SimulatorBench/Cases/079-ffjk/results/ghdl/FFJK_cl_ps_tb.vhdl	OK
+SimulatorBench/Cases/079-ffjk/results/ghdl/FFJK_cl_ps.vhdl	OK
+SimulatorBench/Cases/079-ffjk/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/kmila.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/reference/ContMpot2Q_rs_tb.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/reference/ContMpot2Q_rs.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/results/ghdl/ContMpot2Q_rs_tb.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/results/ghdl/ContMpot2Q_rs.vhdl	OK
+SimulatorBench/Cases/080-contmpot2/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/081-latch-d/kmila.vhdl	OK
+SimulatorBench/Cases/081-latch-d/reference/LatchD_tb.vhdl	OK
+SimulatorBench/Cases/081-latch-d/reference/LatchD.vhdl	OK
+SimulatorBench/Cases/081-latch-d/results/ghdl/LatchD_tb.vhdl	OK
+SimulatorBench/Cases/081-latch-d/results/ghdl/LatchD.vhdl	OK
+SimulatorBench/Cases/081-latch-d/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/kmila.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/reference/LatchSR_rstPr_tb.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/reference/LatchSR_rstPr.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/results/ghdl/LatchSR_rstPr_tb.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/results/ghdl/LatchSR_rstPr.vhdl	OK
+SimulatorBench/Cases/082-latch-sr/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/kmila.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/reference/AND2ecu_tb.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/reference/AND2ecu.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/results/ghdl/AND2ecu_tb.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/results/ghdl/AND2ecu.vhdl	OK
+SimulatorBench/Cases/084-and2ecu/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/085-compnandn/kmila.vhdl	OK
+SimulatorBench/Cases/085-compnandn/reference/CompNANDn_tb.vhdl	OK
+SimulatorBench/Cases/085-compnandn/reference/CompNANDn.vhdl	OK
+SimulatorBench/Cases/085-compnandn/results/ghdl/CompNANDn_tb.vhdl	OK
+SimulatorBench/Cases/085-compnandn/results/ghdl/CompNANDn.vhdl	OK
+SimulatorBench/Cases/085-compnandn/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/kmila.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/reference/Sec1011MooreCS_tb.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/reference/Sec1011MooreCS.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/results/ghdl/Sec1011MooreCS_tb.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/results/ghdl/Sec1011MooreCS.vhdl	OK
+SimulatorBench/Cases/086-sec-moore/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/kmila.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/reference/Deco3a8_tb.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/reference/Deco3a8.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/results/ghdl/Deco3a8_tb.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/results/ghdl/Deco3a8.vhdl	OK
+SimulatorBench/Cases/087-deco3a8/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/088-decon/kmila.vhdl	OK
+SimulatorBench/Cases/088-decon/reference/DecoN_tb.vhdl	OK
+SimulatorBench/Cases/088-decon/reference/DecoN.vhdl	ERR 20
+SimulatorBench/Cases/088-decon/results/ghdl/DecoN_tb.vhdl	OK
+SimulatorBench/Cases/088-decon/results/ghdl/DecoN.vhdl	ERR 20
+SimulatorBench/Cases/088-decon/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/089-muxn/kmila.vhdl	OK
+SimulatorBench/Cases/089-muxn/reference/MuxN_tb.vhdl	OK
+SimulatorBench/Cases/089-muxn/reference/MuxN.vhdl	OK
+SimulatorBench/Cases/089-muxn/results/ghdl/MuxN_tb.vhdl	OK
+SimulatorBench/Cases/089-muxn/results/ghdl/MuxN.vhdl	OK
+SimulatorBench/Cases/089-muxn/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/091-compnorn/kmila.vhdl	OK
+SimulatorBench/Cases/091-compnorn/reference/CompNORn_tb.vhdl	OK
+SimulatorBench/Cases/091-compnorn/reference/CompNORn.vhdl	OK
+SimulatorBench/Cases/091-compnorn/results/ghdl/CompNORn_tb.vhdl	OK
+SimulatorBench/Cases/091-compnorn/results/ghdl/CompNORn.vhdl	OK
+SimulatorBench/Cases/091-compnorn/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/kmila.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/reference/Sec1011MealyCS_tb.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/reference/Sec1011MealyCS.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/results/ghdl/Sec1011MealyCS_tb.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/results/ghdl/Sec1011MealyCS.vhdl	OK
+SimulatorBench/Cases/092-sec-mealy/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/kmila.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/reference/Sec1011MooreSS_tb.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/reference/Sec1011MooreSS.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/results/ghdl/Sec1011MooreSS_tb.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/results/ghdl/Sec1011MooreSS.vhdl	OK
+SimulatorBench/Cases/093-sec-mooress/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/095-regsinc/kmila.vhdl	OK
+SimulatorBench/Cases/095-regsinc/reference/RegSinc_tb.vhd	OK
+SimulatorBench/Cases/095-regsinc/reference/RegSinc.vhd	OK
+SimulatorBench/Cases/095-regsinc/results/ghdl/RegSinc_tb.vhd	OK
+SimulatorBench/Cases/095-regsinc/results/ghdl/RegSinc.vhd	OK
+SimulatorBench/Cases/095-regsinc/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/097-bidir/kmila.vhdl	OK
+SimulatorBench/Cases/097-bidir/reference/ContMpot2BiDir_tb.vhdl	OK
+SimulatorBench/Cases/097-bidir/reference/ContMpot2BiDir.vhdl	OK
+SimulatorBench/Cases/097-bidir/results/ghdl/ContMpot2BiDir_tb.vhdl	OK
+SimulatorBench/Cases/097-bidir/results/ghdl/ContMpot2BiDir.vhdl	OK
+SimulatorBench/Cases/097-bidir/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/kmila.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/reference/ContMpot2TcQ_rs_en_tb.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/reference/ContMpot2TcQ_rs_en.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/results/ghdl/ContMpot2TcQ_rs_en_tb.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/results/ghdl/ContMpot2TcQ_rs_en.vhdl	OK
+SimulatorBench/Cases/098-tcqrs/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/kmila.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/reference/Sec1011MealySS_tb.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/reference/Sec1011MealySS.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/results/ghdl/Sec1011MealySS_tb.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/results/ghdl/Sec1011MealySS.vhdl	OK
+SimulatorBench/Cases/099-sec-mealyss/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/100-traffic/kmila.vhdl	OK
+SimulatorBench/Cases/100-traffic/reference/traffic_light_system_moore_tb.vhdl	ERR 1
+SimulatorBench/Cases/100-traffic/reference/traffic_light_system_moore.vhdl	OK
+SimulatorBench/Cases/100-traffic/results/ghdl/traffic_light_system_moore_tb.vhdl	ERR 1
+SimulatorBench/Cases/100-traffic/results/ghdl/traffic_light_system_moore.vhdl	OK
+SimulatorBench/Cases/100-traffic/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/101-johnson7/kmila.vhdl	OK
+SimulatorBench/Cases/101-johnson7/reference/JohnsonM7Auto_tb.vhdl	OK
+SimulatorBench/Cases/101-johnson7/reference/JohnsonM7Auto.vhdl	OK
+SimulatorBench/Cases/101-johnson7/results/ghdl/JohnsonM7Auto_tb.vhdl	OK
+SimulatorBench/Cases/101-johnson7/results/ghdl/JohnsonM7Auto.vhdl	OK
+SimulatorBench/Cases/101-johnson7/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/102-counter-arst/kmila.vhdl	OK
+SimulatorBench/Cases/102-counter-arst/reference/counter.vhd	OK
+SimulatorBench/Cases/102-counter-arst/reference/tb_counter.vhd	OK
+SimulatorBench/Cases/102-counter-arst/results/ghdl/counter.vhd	OK
+SimulatorBench/Cases/102-counter-arst/results/ghdl/tb_counter.vhd	OK
+SimulatorBench/Cases/102-counter-arst/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/103-dff-qbar/kmila.vhdl	OK
+SimulatorBench/Cases/103-dff-qbar/reference/d_ff.vhd	ERR 49
+SimulatorBench/Cases/103-dff-qbar/reference/tb_ff.vhd	ERR 56
+SimulatorBench/Cases/103-dff-qbar/results/ghdl/d_ff.vhd	ERR 49
+SimulatorBench/Cases/103-dff-qbar/results/ghdl/tb_ff.vhd	ERR 56
+SimulatorBench/Cases/103-dff-qbar/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/105-ha-marq/kmila.vhdl	OK
+SimulatorBench/Cases/105-ha-marq/reference/ex02_half_adder.vhd	OK
+SimulatorBench/Cases/105-ha-marq/reference/tb_ex02_half_adder.vhd	OK
+SimulatorBench/Cases/105-ha-marq/results/ghdl/ex02_half_adder.vhd	OK
+SimulatorBench/Cases/105-ha-marq/results/ghdl/tb_ex02_half_adder.vhd	OK
+SimulatorBench/Cases/105-ha-marq/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/106-comb-marq/kmila.vhdl	OK
+SimulatorBench/Cases/106-comb-marq/reference/ex03_comb_logic.vhd	OK
+SimulatorBench/Cases/106-comb-marq/reference/tb_ex03_comb_logic.vhd	OK
+SimulatorBench/Cases/106-comb-marq/results/ghdl/ex03_comb_logic.vhd	OK
+SimulatorBench/Cases/106-comb-marq/results/ghdl/tb_ex03_comb_logic.vhd	OK
+SimulatorBench/Cases/106-comb-marq/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/107-deco-marq/kmila.vhdl	OK
+SimulatorBench/Cases/107-deco-marq/reference/ex04_decoder_2to4.vhd	OK
+SimulatorBench/Cases/107-deco-marq/reference/tb_ex04_decoder_2to4.vhd	OK
+SimulatorBench/Cases/107-deco-marq/results/ghdl/ex04_decoder_2to4.vhd	OK
+SimulatorBench/Cases/107-deco-marq/results/ghdl/tb_ex04_decoder_2to4.vhd	OK
+SimulatorBench/Cases/107-deco-marq/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/108-demux-marq/kmila.vhdl	OK
+SimulatorBench/Cases/108-demux-marq/reference/ex05_demux_1to4.vhd	OK
+SimulatorBench/Cases/108-demux-marq/reference/tb_ex05_demux_1to4.vhd	OK
+SimulatorBench/Cases/108-demux-marq/results/ghdl/ex05_demux_1to4.vhd	OK
+SimulatorBench/Cases/108-demux-marq/results/ghdl/tb_ex05_demux_1to4.vhd	OK
+SimulatorBench/Cases/108-demux-marq/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/109-cnt9-marq/kmila.vhdl	OK
+SimulatorBench/Cases/109-cnt9-marq/reference/ex06_counter_9bit.vhd	OK
+SimulatorBench/Cases/109-cnt9-marq/reference/tb_ex06_counter_9bit.vhd	OK
+SimulatorBench/Cases/109-cnt9-marq/results/ghdl/ex06_counter_9bit.vhd	OK
+SimulatorBench/Cases/109-cnt9-marq/results/ghdl/tb_ex06_counter_9bit.vhd	OK
+SimulatorBench/Cases/109-cnt9-marq/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/112-ser-fsm/kmila.vhdl	OK
+SimulatorBench/Cases/112-ser-fsm/reference/ex09_serializer_fsm.vhd	OK
+SimulatorBench/Cases/112-ser-fsm/reference/tb_ex09_serializer_fsm.vhd	OK
+SimulatorBench/Cases/112-ser-fsm/results/ghdl/ex09_serializer_fsm.vhd	OK
+SimulatorBench/Cases/112-ser-fsm/results/ghdl/tb_ex09_serializer_fsm.vhd	OK
+SimulatorBench/Cases/112-ser-fsm/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/113-edges-det/kmila.vhdl	OK
+SimulatorBench/Cases/113-edges-det/reference/edges_detection_tb.vhd	OK
+SimulatorBench/Cases/113-edges-det/reference/edges_detection.vhd	OK
+SimulatorBench/Cases/113-edges-det/results/ghdl/edges_detection_tb.vhd	OK
+SimulatorBench/Cases/113-edges-det/results/ghdl/edges_detection.vhd	OK
+SimulatorBench/Cases/113-edges-det/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/114-seven-seg/kmila.vhdl	OK
+SimulatorBench/Cases/114-seven-seg/reference/Seven_Segment_TB.vhd	OK
+SimulatorBench/Cases/114-seven-seg/reference/Seven_Segment.vhd	OK
+SimulatorBench/Cases/114-seven-seg/results/ghdl/Seven_Segment_TB.vhd	OK
+SimulatorBench/Cases/114-seven-seg/results/ghdl/Seven_Segment.vhd	OK
+SimulatorBench/Cases/114-seven-seg/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/115-ud-cnt8/kmila.vhdl	OK
+SimulatorBench/Cases/115-ud-cnt8/reference/Ex_2_3_TB.vhd	OK
+SimulatorBench/Cases/115-ud-cnt8/reference/Ex_2_3.vhd	OK
+SimulatorBench/Cases/115-ud-cnt8/results/ghdl/Ex_2_3_TB.vhd	OK
+SimulatorBench/Cases/115-ud-cnt8/results/ghdl/Ex_2_3.vhd	OK
+SimulatorBench/Cases/115-ud-cnt8/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/116-7seg-mux/kmila.vhdl	OK
+SimulatorBench/Cases/116-7seg-mux/reference/Ex_2_2_TB.vhd	OK
+SimulatorBench/Cases/116-7seg-mux/reference/Ex_2_2.vhd	OK
+SimulatorBench/Cases/116-7seg-mux/results/ghdl/Ex_2_2_TB.vhd	OK
+SimulatorBench/Cases/116-7seg-mux/results/ghdl/Ex_2_2.vhd	OK
+SimulatorBench/Cases/116-7seg-mux/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/117-buffer/kmila.vhdl	OK
+SimulatorBench/Cases/117-buffer/reference/ex01_signal_assignment.vhd	OK
+SimulatorBench/Cases/117-buffer/reference/tb_ex01_signal_assignment.vhd	OK
+SimulatorBench/Cases/117-buffer/results/ghdl/ex01_signal_assignment.vhd	OK
+SimulatorBench/Cases/117-buffer/results/ghdl/tb_ex01_signal_assignment.vhd	OK
+SimulatorBench/Cases/117-buffer/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/118-comparator2/kmila.vhdl	OK
+SimulatorBench/Cases/118-comparator2/reference/comparator_tb.vhd	ERR 42
+SimulatorBench/Cases/118-comparator2/reference/comparator.vhd	OK
+SimulatorBench/Cases/118-comparator2/results/ghdl/comparator_tb.vhd	ERR 42
+SimulatorBench/Cases/118-comparator2/results/ghdl/comparator.vhd	OK
+SimulatorBench/Cases/118-comparator2/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/119-demorgan/kmila.vhdl	OK
+SimulatorBench/Cases/119-demorgan/reference/demorgan_tb.vhd	ERR 50
+SimulatorBench/Cases/119-demorgan/reference/demorgan.vhd	OK
+SimulatorBench/Cases/119-demorgan/results/ghdl/demorgan_tb.vhd	ERR 50
+SimulatorBench/Cases/119-demorgan/results/ghdl/demorgan.vhd	OK
+SimulatorBench/Cases/119-demorgan/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/kmila.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/reference/multi_hop_pure.test.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/reference/multi_hop_pure.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/results/ghdl/multi_hop_pure.test.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/results/ghdl/multi_hop_pure.vhdl	OK
+SimulatorBench/Cases/120-multi-hop-pure/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/kmila.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/reference/multi_hop_synced_rom.test.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/reference/multi_hop_synced_rom.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/results/ghdl/multi_hop_synced_rom.test.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/results/ghdl/multi_hop_synced_rom.vhdl	OK
+SimulatorBench/Cases/121-multi-hop-synced-rom/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/kmila.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/reference/rom_array_lookup.test.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/reference/rom_array_lookup.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/results/ghdl/rom_array_lookup.test.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/results/ghdl/rom_array_lookup.vhdl	OK
+SimulatorBench/Cases/122-rom-array-lookup/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/kmila.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/reference/rom_literal_lookup.test.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/reference/rom_literal_lookup.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/results/ghdl/rom_literal_lookup.test.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/results/ghdl/rom_literal_lookup.vhdl	OK
+SimulatorBench/Cases/123-rom-literal-lookup/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/kmila.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/reference/named_aggregate_funcs.test.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/reference/named_aggregate_funcs.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/results/ghdl/named_aggregate_funcs.test.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/results/ghdl/named_aggregate_funcs.vhdl	OK
+SimulatorBench/Cases/124-named-aggregate-funcs/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/kmila.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/reference/case_ident_match.test.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/reference/case_ident_match.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/results/ghdl/case_ident_match.test.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/results/ghdl/case_ident_match.vhdl	OK
+SimulatorBench/Cases/125-case-ident-match/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/kmila.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/reference/case_ident_hex.test.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/reference/case_ident_hex.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/results/ghdl/case_ident_hex.test.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/results/ghdl/case_ident_hex.vhdl	OK
+SimulatorBench/Cases/126-case-ident-hex/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/kmila.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/reference/case_slice_selector.test.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/reference/case_slice_selector.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/results/ghdl/case_slice_selector.test.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/results/ghdl/case_slice_selector.vhdl	OK
+SimulatorBench/Cases/127-case-slice-selector/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/kmila.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/reference/unsigned_slice_assign.test.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/reference/unsigned_slice_assign.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/results/ghdl/unsigned_slice_assign.test.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/results/ghdl/unsigned_slice_assign.vhdl	OK
+SimulatorBench/Cases/128-unsigned-slice-assign/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/kmila.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/reference/enum_eq_conditional.test.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/reference/enum_eq_conditional.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/results/ghdl/enum_eq_conditional.test.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/results/ghdl/enum_eq_conditional.vhdl	OK
+SimulatorBench/Cases/129-enum-eq-conditional/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/kmila.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/reference/arith_range.test.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/reference/arith_range.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/results/ghdl/arith_range.test.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/results/ghdl/arith_range.vhdl	OK
+SimulatorBench/Cases/130-arith-in-vector-range/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/kmila.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/reference/indexed_lhs_write.test.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/reference/indexed_lhs_write.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/results/ghdl/indexed_lhs_write.test.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/results/ghdl/indexed_lhs_write.vhdl	OK
+SimulatorBench/Cases/131-indexed-lhs-write/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/kmila.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/reference/ent_inst_top.test.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/reference/ent_inst_top.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/results/ghdl/ent_inst_top.test.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/results/ghdl/ent_inst_top.vhdl	OK
+SimulatorBench/Cases/132-entity-work-inst/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/kmila.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/reference/others_init_readback.test.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/reference/others_init_readback.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/results/ghdl/others_init_readback.test.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/results/ghdl/others_init_readback.vhdl	OK
+SimulatorBench/Cases/133-others-init-readback/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/kmila.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/reference/others_rhs_clocked_reset.test.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/reference/others_rhs_clocked_reset.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/results/ghdl/others_rhs_clocked_reset.test.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/results/ghdl/others_rhs_clocked_reset.vhdl	OK
+SimulatorBench/Cases/134-others-rhs-clocked-reset/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/kmila.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/reference/mul_width_tripwire.test.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/reference/mul_width_tripwire.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/results/ghdl/mul_width_tripwire.test.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/results/ghdl/mul_width_tripwire.vhdl	OK
+SimulatorBench/Cases/135-mul-width-tripwire/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/kmila.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/reference/multi_caller_top.test.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/reference/multi_caller_top.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/results/ghdl/multi_caller_top.test.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/results/ghdl/multi_caller_top.vhdl	OK
+SimulatorBench/Cases/136-fn-multi-caller-scope/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/kmila.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/reference/gen_inst_top.test.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/reference/gen_inst_top.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/results/ghdl/gen_inst_top.test.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/results/ghdl/gen_inst_top.vhdl	OK
+SimulatorBench/Cases/137-entity-work-generic-map/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/kmila.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/reference/two_stage_top.test.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/reference/two_stage_top.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/results/ghdl/two_stage_top.test.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/results/ghdl/two_stage_top.vhdl	OK
+SimulatorBench/Cases/138-multi-level-elab/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/139-lfsr-through-fn/kmila.vhdl	OK
+SimulatorBench/Cases/139-lfsr-through-fn/reference/lfsr_fn.vhd	OK
+SimulatorBench/Cases/139-lfsr-through-fn/reference/tb_lfsr_fn.vhd	OK
+SimulatorBench/Cases/139-lfsr-through-fn/results/ghdl/lfsr_fn.vhd	OK
+SimulatorBench/Cases/139-lfsr-through-fn/results/ghdl/tb_lfsr_fn.vhd	OK
+SimulatorBench/Cases/139-lfsr-through-fn/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/140-multiarg-userfn/kmila.vhdl	OK
+SimulatorBench/Cases/140-multiarg-userfn/reference/multiarg_fn.vhd	OK
+SimulatorBench/Cases/140-multiarg-userfn/reference/tb_multiarg_fn.vhd	OK
+SimulatorBench/Cases/140-multiarg-userfn/results/ghdl/multiarg_fn.vhd	OK
+SimulatorBench/Cases/140-multiarg-userfn/results/ghdl/tb_multiarg_fn.vhd	OK
+SimulatorBench/Cases/140-multiarg-userfn/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/141-wait-in-if-body/kmila.vhdl	OK
+SimulatorBench/Cases/141-wait-in-if-body/reference/if_wait.vhd	OK
+SimulatorBench/Cases/141-wait-in-if-body/reference/tb_if_wait.vhd	OK
+SimulatorBench/Cases/141-wait-in-if-body/results/ghdl/if_wait.vhd	OK
+SimulatorBench/Cases/141-wait-in-if-body/results/ghdl/tb_if_wait.vhd	OK
+SimulatorBench/Cases/141-wait-in-if-body/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/142-wait-in-case-arm/kmila.vhdl	OK
+SimulatorBench/Cases/142-wait-in-case-arm/reference/case_wait.vhd	OK
+SimulatorBench/Cases/142-wait-in-case-arm/reference/tb_case_wait.vhd	OK
+SimulatorBench/Cases/142-wait-in-case-arm/results/ghdl/case_wait.vhd	OK
+SimulatorBench/Cases/142-wait-in-case-arm/results/ghdl/tb_case_wait.vhd	OK
+SimulatorBench/Cases/142-wait-in-case-arm/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/kmila.vhdl	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/reference/nested_loop_wait.vhd	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/reference/tb_nested_loop_wait.vhd	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/results/ghdl/nested_loop_wait.vhd	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/results/ghdl/tb_nested_loop_wait.vhd	OK
+SimulatorBench/Cases/143-wait-in-nested-loop/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/144-procedure-wait/kmila.vhdl	OK
+SimulatorBench/Cases/144-procedure-wait/reference/procedure_wait.vhd	OK
+SimulatorBench/Cases/144-procedure-wait/reference/tb_procedure_wait.vhd	OK
+SimulatorBench/Cases/144-procedure-wait/results/ghdl/procedure_wait.vhd	OK
+SimulatorBench/Cases/144-procedure-wait/results/ghdl/tb_procedure_wait.vhd	OK
+SimulatorBench/Cases/144-procedure-wait/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/145-procedure-if-branch/kmila.vhdl	OK
+SimulatorBench/Cases/145-procedure-if-branch/reference/procedure_if_branch.vhd	OK
+SimulatorBench/Cases/145-procedure-if-branch/reference/tb_procedure_if_branch.vhd	OK
+SimulatorBench/Cases/145-procedure-if-branch/results/ghdl/procedure_if_branch.vhd	OK
+SimulatorBench/Cases/145-procedure-if-branch/results/ghdl/tb_procedure_if_branch.vhd	OK
+SimulatorBench/Cases/145-procedure-if-branch/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/146-procedure-time-formal/kmila.vhdl	OK
+SimulatorBench/Cases/146-procedure-time-formal/reference/procedure_time_formal.vhd	OK
+SimulatorBench/Cases/146-procedure-time-formal/reference/tb_procedure_time_formal.vhd	OK
+SimulatorBench/Cases/146-procedure-time-formal/results/ghdl/procedure_time_formal.vhd	OK
+SimulatorBench/Cases/146-procedure-time-formal/results/ghdl/tb_procedure_time_formal.vhd	OK
+SimulatorBench/Cases/146-procedure-time-formal/results/kmila.roundtripped.vhdl	OK
+SimulatorBench/Cases/147-case-matching/kmila.vhdl	OK
+SimulatorBench/Cases/147-case-matching/reference/case_matching.test.vhdl	OK
+SimulatorBench/Cases/147-case-matching/reference/case_matching.vhdl	OK
+SimulatorBench/Cases/147-case-matching/results/ghdl/case_matching.test.vhdl	OK
+SimulatorBench/Cases/147-case-matching/results/ghdl/case_matching.vhdl	OK
+SimulatorBench/Cases/148-signal-event-in-wait/kmila.vhdl	OK
+SimulatorBench/Cases/148-signal-event-in-wait/reference/event_in_wait.test.vhdl	OK
+SimulatorBench/Cases/148-signal-event-in-wait/reference/event_in_wait.vhdl	OK
+SimulatorBench/Cases/148-signal-event-in-wait/results/ghdl/event_in_wait.test.vhdl	OK
+SimulatorBench/Cases/148-signal-event-in-wait/results/ghdl/event_in_wait.vhdl	OK
+SimulatorBench/Cases/149-signal-last-value/kmila.vhdl	OK
+SimulatorBench/Cases/149-signal-last-value/reference/last_value_write.test.vhdl	OK
+SimulatorBench/Cases/149-signal-last-value/reference/last_value_write.vhdl	OK
+SimulatorBench/Cases/149-signal-last-value/results/ghdl/last_value_write.test.vhdl	OK
+SimulatorBench/Cases/149-signal-last-value/results/ghdl/last_value_write.vhdl	OK
+SimulatorBench/Cases/150-signal-stable-time-arg/kmila.vhdl	OK
+SimulatorBench/Cases/150-signal-stable-time-arg/reference/stable_gate.test.vhdl	OK
+SimulatorBench/Cases/150-signal-stable-time-arg/reference/stable_gate.vhdl	OK
+SimulatorBench/Cases/150-signal-stable-time-arg/results/ghdl/stable_gate.test.vhdl	OK
+SimulatorBench/Cases/150-signal-stable-time-arg/results/ghdl/stable_gate.vhdl	OK
+SimulatorBench/Cases/151-fn-inline-and2/kmila.vhdl	OK
+SimulatorBench/Cases/151-fn-inline-and2/reference/fn_inline_and2.test.vhdl	OK
+SimulatorBench/Cases/151-fn-inline-and2/reference/fn_inline_and2.vhdl	OK
+SimulatorBench/Cases/151-fn-inline-and2/results/ghdl/fn_inline_and2.test.vhdl	OK
+SimulatorBench/Cases/151-fn-inline-and2/results/ghdl/fn_inline_and2.vhdl	OK
+SimulatorBench/Cases/152-fn-inline-mux2/kmila.vhdl	OK
+SimulatorBench/Cases/152-fn-inline-mux2/reference/fn_inline_mux2.test.vhdl	OK
+SimulatorBench/Cases/152-fn-inline-mux2/reference/fn_inline_mux2.vhdl	OK
+SimulatorBench/Cases/152-fn-inline-mux2/results/ghdl/fn_inline_mux2.test.vhdl	OK
+SimulatorBench/Cases/152-fn-inline-mux2/results/ghdl/fn_inline_mux2.vhdl	OK
+SimulatorBench/Cases/153-proc-inline-signal-assign/kmila.vhdl	OK
+SimulatorBench/Cases/153-proc-inline-signal-assign/reference/proc_inline_signal_assign.test.vhdl	OK
+SimulatorBench/Cases/153-proc-inline-signal-assign/reference/proc_inline_signal_assign.vhdl	OK
+SimulatorBench/Cases/153-proc-inline-signal-assign/results/ghdl/proc_inline_signal_assign.test.vhdl	OK
+SimulatorBench/Cases/153-proc-inline-signal-assign/results/ghdl/proc_inline_signal_assign.vhdl	OK
+SimulatorBench/Cases/154-fn-local-var/kmila.vhdl	OK
+SimulatorBench/Cases/154-fn-local-var/reference/fn_local_var.test.vhdl	OK
+SimulatorBench/Cases/154-fn-local-var/reference/fn_local_var.vhdl	OK
+SimulatorBench/Cases/154-fn-local-var/results/ghdl/fn_local_var.test.vhdl	OK
+SimulatorBench/Cases/154-fn-local-var/results/ghdl/fn_local_var.vhdl	OK
+SimulatorBench/Cases/155-fn-case-mux/kmila.vhdl	OK
+SimulatorBench/Cases/155-fn-case-mux/reference/fn_case_mux.test.vhdl	OK
+SimulatorBench/Cases/155-fn-case-mux/reference/fn_case_mux.vhdl	OK
+SimulatorBench/Cases/155-fn-case-mux/results/ghdl/fn_case_mux.test.vhdl	OK
+SimulatorBench/Cases/155-fn-case-mux/results/ghdl/fn_case_mux.vhdl	OK
+SimulatorBench/Cases/156-proc-in-fn/kmila.vhdl	OK
+SimulatorBench/Cases/156-proc-in-fn/reference/proc_in_fn.test.vhdl	OK
+SimulatorBench/Cases/156-proc-in-fn/reference/proc_in_fn.vhdl	OK
+SimulatorBench/Cases/156-proc-in-fn/results/ghdl/proc_in_fn.test.vhdl	OK
+SimulatorBench/Cases/156-proc-in-fn/results/ghdl/proc_in_fn.vhdl	OK
+SimulatorBench/Cases/157-fn-two-callsites/kmila.vhdl	OK
+SimulatorBench/Cases/157-fn-two-callsites/reference/fn_two_callsites.test.vhdl	OK
+SimulatorBench/Cases/157-fn-two-callsites/reference/fn_two_callsites.vhdl	OK
+SimulatorBench/Cases/157-fn-two-callsites/results/ghdl/fn_two_callsites.test.vhdl	OK
+SimulatorBench/Cases/157-fn-two-callsites/results/ghdl/fn_two_callsites.vhdl	OK
+SimulatorBench/Cases/158-process-local-ram/kmila.vhdl	OK
+SimulatorBench/Cases/158-process-local-ram/reference/process_local_ram.test.vhdl	OK
+SimulatorBench/Cases/158-process-local-ram/reference/process_local_ram.vhdl	OK
+SimulatorBench/Cases/158-process-local-ram/results/ghdl/process_local_ram.test.vhdl	OK
+SimulatorBench/Cases/158-process-local-ram/results/ghdl/process_local_ram.vhdl	OK
+SimulatorBench/Cases/159-fn-early-return-simple/kmila.vhdl	OK
+SimulatorBench/Cases/159-fn-early-return-simple/reference/fn_early_return_simple.test.vhdl	OK
+SimulatorBench/Cases/159-fn-early-return-simple/reference/fn_early_return_simple.vhdl	OK
+SimulatorBench/Cases/159-fn-early-return-simple/results/ghdl/fn_early_return_simple.test.vhdl	OK
+SimulatorBench/Cases/159-fn-early-return-simple/results/ghdl/fn_early_return_simple.vhdl	OK
+SimulatorBench/Cases/160-fn-early-return-chain/kmila.vhdl	OK
+SimulatorBench/Cases/160-fn-early-return-chain/reference/fn_early_return_chain.test.vhdl	OK
+SimulatorBench/Cases/160-fn-early-return-chain/reference/fn_early_return_chain.vhdl	OK
+SimulatorBench/Cases/160-fn-early-return-chain/results/ghdl/fn_early_return_chain.test.vhdl	OK
+SimulatorBench/Cases/160-fn-early-return-chain/results/ghdl/fn_early_return_chain.vhdl	OK
+SimulatorBench/Cases/161-fn-branch-local-var/kmila.vhdl	OK
+SimulatorBench/Cases/161-fn-branch-local-var/reference/fn_branch_local_var.test.vhdl	OK
+SimulatorBench/Cases/161-fn-branch-local-var/reference/fn_branch_local_var.vhdl	OK
+SimulatorBench/Cases/161-fn-branch-local-var/results/ghdl/fn_branch_local_var.test.vhdl	OK
+SimulatorBench/Cases/161-fn-branch-local-var/results/ghdl/fn_branch_local_var.vhdl	OK
+SimulatorBench/Cases/162-fn-case-arm-local-var/kmila.vhdl	OK
+SimulatorBench/Cases/162-fn-case-arm-local-var/reference/fn_case_arm_local_var.test.vhdl	OK
+SimulatorBench/Cases/162-fn-case-arm-local-var/reference/fn_case_arm_local_var.vhdl	OK
+SimulatorBench/Cases/162-fn-case-arm-local-var/results/ghdl/fn_case_arm_local_var.test.vhdl	OK
+SimulatorBench/Cases/162-fn-case-arm-local-var/results/ghdl/fn_case_arm_local_var.vhdl	OK
+SimulatorBench/Cases/163-fn-early-return-with-tail-ops/kmila.vhdl	OK
+SimulatorBench/Cases/163-fn-early-return-with-tail-ops/reference/fn_early_return_tail_ops.test.vhdl	OK
+SimulatorBench/Cases/163-fn-early-return-with-tail-ops/reference/fn_early_return_tail_ops.vhdl	OK
+SimulatorBench/Cases/163-fn-early-return-with-tail-ops/results/ghdl/fn_early_return_tail_ops.test.vhdl	OK
+SimulatorBench/Cases/163-fn-early-return-with-tail-ops/results/ghdl/fn_early_return_tail_ops.vhdl	OK
+SimulatorBench/Cases/164-fn-xor-literal-vector/kmila.vhdl	OK
+SimulatorBench/Cases/164-fn-xor-literal-vector/reference/fn_xor_literal_vector.test.vhdl	OK
+SimulatorBench/Cases/164-fn-xor-literal-vector/reference/fn_xor_literal_vector.vhdl	OK
+SimulatorBench/Cases/164-fn-xor-literal-vector/results/ghdl/fn_xor_literal_vector.test.vhdl	OK
+SimulatorBench/Cases/164-fn-xor-literal-vector/results/ghdl/fn_xor_literal_vector.vhdl	OK
+SimulatorBench/Cases/165-fn-for-loop-count-ones/kmila.vhdl	OK
+SimulatorBench/Cases/165-fn-for-loop-count-ones/reference/fn_for_loop_count_ones.test.vhdl	OK
+SimulatorBench/Cases/165-fn-for-loop-count-ones/reference/fn_for_loop_count_ones.vhdl	OK
+SimulatorBench/Cases/165-fn-for-loop-count-ones/results/ghdl/fn_for_loop_count_ones.test.vhdl	OK
+SimulatorBench/Cases/165-fn-for-loop-count-ones/results/ghdl/fn_for_loop_count_ones.vhdl	OK
+SimulatorBench/Cases/166-case-expr-selector/kmila.vhdl	OK
+SimulatorBench/Cases/166-case-expr-selector/reference/case_expr_selector.test.vhdl	OK
+SimulatorBench/Cases/166-case-expr-selector/reference/case_expr_selector.vhdl	OK
+SimulatorBench/Cases/166-case-expr-selector/results/ghdl/case_expr_selector.test.vhdl	OK
+SimulatorBench/Cases/166-case-expr-selector/results/ghdl/case_expr_selector.vhdl	OK
+Tests/Playwright/data/lib/test_lib.vhd	OK
+Tests/Playwright/data/vhdl/half-adder-broken.vhdl	OK
+Tests/Playwright/data/vhdl/half-adder-ok.vhdl	OK
+Tests/Playwright/data/vhdl/practice/half-adder-cheat-hardcode.vhdl	OK
+Tests/Playwright/data/vhdl/practice/half-adder-half.vhdl	OK
+Tests/Playwright/data/vhdl/practice/half-adder-right.vhdl	OK
+Tests/Playwright/data/vhdl/practice/half-adder-wrong.vhdl	OK
+Tests/Playwright/data/vhdl/visual/and_gate.vhdl	OK
+Tests/Playwright/data/vhdl/visual/counter4.vhdl	OK
+Tests/Playwright/data/vhdl/visual/inverter.vhdl	OK
+Tests/Playwright/data/vhdl/visual/passthrough.vhdl	OK
+Tests/Playwright/data/vhdl/visual/sr_latch.vhdl	OK
+Tests/Playwright/data/vhdl/visual/stepper_phases.vhdl	OK
+Tests/Playwright/data/vhdl/visual/toggle_led.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test_negative_garbage_in_body.vhdl	ERR 22
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test_negative_missing_port_semi.vhdl	ERR 15
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test_negative_unknown_type.vhdl	ERR 15
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test1.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test10.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test11.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test12.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test13.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test14.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test15.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test16.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test17.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test18.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test19.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test2.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test20.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test21.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test22.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test23.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test24.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test25.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test26.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test27.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test28.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test29.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test3.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test30.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test31.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test32.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test33.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test34.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test35.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test36.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test37.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test38.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test39.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test4.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test40.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test5.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test6.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test7.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test8.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/ParserCorpus/test9.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/c1.vhdl	ERR 22
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/exit_bad.vhdl	ERR 15
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/label_bad.vhdl	ERR 14
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/undeclared.vhdl	ERR 9
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v1.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v10.vhdl	ERR 12
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v11.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v12.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v13.vhdl	ERR 12
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v14.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v15.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v16.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v17.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v18.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v2.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v3.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v4.vhdl	ERR 16
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v5.vhdl	ERR 17
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v6.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v7.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v8.vhdl	ERR 19
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/v9.vhdl	ERR 12
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w0.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w1.vhdl	ERR 15
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w2.vhdl	ERR 18
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w3.vhdl	ERR 21
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w4.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w5.vhdl	ERR 21
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w6.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w7.vhdl	OK
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w8.vhdl	ERR 21
+Tests/Unit/Kmila.Engine.Tests/Fixtures/StrictStatements/w9.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/adder8.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/default_top.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/generic_top.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/reg_n.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/reg8.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/struct_top.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Hierarchy/two_regs.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/arr_asc.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/arr_rec.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/inst_rec.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/int_vcd.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/qualified.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_agg_proc.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_aggnamed.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_aggpos.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_concurrent.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_cross_fields.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_idlist.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_int_enum.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_nested.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_pkg.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_process.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_var.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_vecconst.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Records/rec_vecfield.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/buzzer_scale.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/counter_clock.vhd	ERR 14
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/dip_adder.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/keypad_display.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/kitchen_sink.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/lcd_hello.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/matrix_plus.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/p19_subprograms.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/process_with_procedure.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/rgb_rainbow.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/sample_main.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/shift_register.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/RoundTripFidelity/traffic_light.vhd	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/conc_assert.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/conc_proc.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/env_fail.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/env_finish.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/env_stop.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/exit_next.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/gen_body.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/labels.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/seq2008.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Sequential/textio_out.vhdl	OK
+Tests/Unit/Kmila.Shared.Tests/Fixtures/Stress/self_retriggering_clock.vhd	OK
