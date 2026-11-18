@@ -1,0 +1,25 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+entity counter4 is
+    port ( clk : in STD_LOGIC; reset : in STD_LOGIC; q : out STD_LOGIC_VECTOR(3 downto 0));
+end entity counter4;
+architecture behavioral of counter4 is
+    signal count : unsigned(3 downto 0) := (others => '0');
+    signal a, b : std_logic;
+begin
+    process(clk, reset)
+    begin
+        if rising_edge(clk) then
+          case reset is
+            when '1' => count <= (others => '0'); 
+            when others =>
+              for i in 0 to 0 loop
+                count <= count + 1; 
+              end loop;
+          end case;
+          (a, b) <= std_logic_vector'("10");
+        end if;
+    end process;
+    q <= std_logic_vector(count);
+end architecture behavioral;

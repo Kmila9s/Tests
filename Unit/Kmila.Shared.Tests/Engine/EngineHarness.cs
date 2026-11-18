@@ -23,6 +23,14 @@ internal static class EngineHarness
     /// </summary>
     public static async Task<HeadlessRunResult> RunAsync(string vhdl, string entry, int totalNs, params PortMomentConfiguration[] moments)
     {
+        var run = await RunAllowingEngineErrorAsync(vhdl, entry, totalNs, moments);
+        Assert.Null(run.EngineError);
+        return run;
+    }
+
+    /// <summary><see cref="RunAsync"/> for a design expected to fail at run time (<c>severity failure</c>).</summary>
+    public static async Task<HeadlessRunResult> RunAllowingEngineErrorAsync(string vhdl, string entry, int totalNs, params PortMomentConfiguration[] moments)
+    {
         var store = new SandboxProjectStore();
         var project = store.Create("engine-harness", retain: false);
         try
@@ -36,7 +44,6 @@ internal static class EngineHarness
                 SystemClockMhz = 50,
                 PortMoments = [.. moments],
             });
-            Assert.Null(run.EngineError);
             return run;
         }
         finally { store.Delete(project.Id); }
