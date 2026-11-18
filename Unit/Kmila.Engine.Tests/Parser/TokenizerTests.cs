@@ -74,4 +74,60 @@ public class TokenizerTests
         var joined = string.Join(" ", new Tokenizer().TokenizeLineReturn(line));
         Assert.Contains(fragment, joined);
     }
+
+    private static List<Token> Tokens(string line)
+    {
+        var tokenizer = new Tokenizer();
+        tokenizer.ReadString(line);
+        tokenizer.Evaluate();
+        return tokenizer.GetDictionaryType();
+    }
+
+    /// <summary>
+    /// G56 (v3.1.4): a string, bit-string or character literal is one token —
+    /// never split on its blanks or punctuation — and stays a literal.
+    /// </summary>
+    [Theory]
+    [InlineData("report \"a: b\";", "\"a: b\"")]
+    [InlineData("report \"x;y, z\" severity note;", "\"x;y, z\"")]
+    [InlineData("report \"say \"\"hi\"\"\";", "\"say \"\"hi\"\"\"")]
+    [InlineData("report \"  two  spaces\";", "\"  two  spaces\"")]
+    [InlineData("write(l, string'(\"t = 1, ok\"));", "\"t = 1, ok\"")]
+    [InlineData("c := ' ';", "' '")]
+    [InlineData("c := ';';", "';'")]
+    [InlineData("y <= x\"F_F\";", "x\"FF\"")]
+    [InlineData("case? s is when \"10--\" =>", "\"10--\"")]
+    public void A_literal_is_one_token(string line, string literal)
+    {
+        var token = Assert.Single(Tokens(line), t => t.Value == literal);
+        Assert.Equal(Constants.TYPE.LITERALS, token.Type);
+    }
+
+    /// <summary>A tick after a name is an attribute or a qualification, not a character literal.</summary>
+    [Theory]
+    [InlineData("if clk'event and clk = '1' then", "clk'event")]
+    [InlineData("y <= std_logic_vector'(\"10\");", "std_logic_vector'")]
+    public void A_tick_after_a_name_is_not_a_character_literal(string line, string head)
+    {
+        Assert.Contains(Tokens(line), t => t.Value == head);
+    }
+
+    /// <summary>The <c>.field</c> suffix after a name with selectors is its own token type.</summary>
+    [Fact]
+    public void A_field_selector_after_an_index_is_a_FIELD_SELECTOR()
+    {
+        var tokens = Tokens("m(i).lo <= '1';");
+        Assert.Equal(Constants.TYPE.FIELD_SELECTOR, Assert.Single(tokens, t => t.Value == ".lo").Type);
+        Assert.Equal(Constants.TYPE.QUALIFIED_IDENTIFIERS, Tokens("p.lo <= '1';")[0].Type);
+    }
+
+    /// <summary>A time unit name is a unit only after an abstract literal; elsewhere it is an identifier (label <c>us:</c>).</summary>
+    [Theory]
+    [InlineData("us: entity work.s port map (n => n);", "us", Constants.TYPE.IDENTIFIERS)]
+    [InlineData("wait for 10 ns;", "ns", Constants.TYPE.TIME_VARIABLES)]
+    [InlineData("y <= a after 1.5 us;", "us", Constants.TYPE.TIME_VARIABLES)]
+    public void A_time_unit_is_a_unit_only_after_a_number(string line, string word, Constants.TYPE type)
+    {
+        Assert.Equal(type, Assert.Single(Tokens(line), t => t.Value == word).Type);
+    }
 }

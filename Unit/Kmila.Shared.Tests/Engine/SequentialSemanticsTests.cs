@@ -1,4 +1,3 @@
-using System.Text.RegularExpressions;
 using Kmila.Shared.Models;
 using static Kmila.Shared.Tests.Engine.EngineHarness;
 
@@ -21,21 +20,7 @@ public class SequentialSemanticsTests
     private static string[] GhdlOutput => Fixture("tb_v313.expected.txt").Split('\n', StringSplitOptions.RemoveEmptyEntries);
 
     /// <summary>GHDL's samples: "prefix.output" → (time ns → bits).</summary>
-    private static readonly Lazy<Dictionary<string, Dictionary<int, string>>> Expected = new(() =>
-    {
-        var result = new Dictionary<string, Dictionary<int, string>>();
-        foreach (var line in GhdlOutput.Where(l => l.Contains("): t=")))
-        {
-            var parts = line[(line.IndexOf("): t=") + 3)..].Trim().Split(' ');
-            int t = int.Parse(parts[0][2..]);
-            foreach (var kv in parts.Skip(1).Select(p => p.Split('=')))
-            {
-                if (!result.TryGetValue(kv[0], out var series)) result[kv[0]] = series = [];
-                series[t] = kv[1];
-            }
-        }
-        return result;
-    });
+    private static readonly Lazy<Dictionary<string, Dictionary<int, string>>> Expected = new(() => GhdlSamples(GhdlOutput));
 
     /// <summary>The testbench stimulus every design receives (tb_v313.vhdl).</summary>
     private static PortMomentConfiguration Drive(string port) => port switch
@@ -54,9 +39,7 @@ public class SequentialSemanticsTests
         { "exit_next", "en", "y z w u", "n" },
         { "conc_assert", "ca", "y z", "a b sel" },
         { "conc_proc", "cp", "y z", "a b" },
-        // gen_body.y comes from an entity instance inside the generate: instances in
-        // generate bodies share one inlined copy (G57, elaboration — v3.1.4).
-        { "gen_body", "gb", "z", "n" },
+        { "gen_body", "gb", "y z", "n" },   // y: an entity instance per iteration (G57, v3.1.4)
         { "seq2008", "s8", "y z w", "a b sel" },
     };
 
@@ -65,30 +48,24 @@ public class SequentialSemanticsTests
     public async Task Each_output_matches_GHDL(string entry, string prefix, string outputs, string inputs)
     {
         var wf = await SimulateAsync(Fixture($"{entry}.vhdl"), entry, inputs.Split(' ').Select(Drive).ToArray());
-        foreach (var port in outputs.Split(' '))
-            foreach (var (t, bits) in Expected.Value[$"{prefix}.{port}"])
-                Assert.True(Convert.ToInt64(bits, 2) == ValueAt(wf, port, t), $"{entry}.{port} @ {t} ns: GHDL {bits}, Kmila {ValueAt(wf, port, t)}");
+        AssertMatchesGhdl(wf, Expected.Value, entry, prefix, outputs);
     }
-
-    /// <summary>Report/textio text compared without blanks (string literals are tokenized in pieces).</summary>
-    private static string Squeeze(string s) => Regex.Replace(s, @"\s+", "");
 
     [Fact]
     public async Task Concurrent_asserts_report_like_GHDL()
     {
         var run = await RunAsync(Fixture("conc_assert.vhdl"), "conc_assert", 70, Drive("a"), Drive("b"), Drive("sel"));
-        var log = Squeeze(string.Join('\n', run.Log));
-        Assert.Contains(Squeeze("conc_assert: a is low"), log);
-        Assert.Contains(Squeeze("conc_assert: b is high"), log);
+        var log = string.Join('\n', run.Log);
+        Assert.Contains("conc_assert: a is low", log);
+        Assert.Contains("conc_assert: b is high", log);
     }
 
     [Fact]
     public async Task Textio_writeline_prints_each_line_like_GHDL()
     {
         var run = await RunAsync(Fixture("textio_out.vhdl"), "textio_out", 70, Drive("a"), Drive("n"));
-        var log = run.Log.Select(Squeeze).ToList();
         foreach (var expected in GhdlOutput.Where(l => l.StartsWith("textio_out:") && !l.Contains("n=0 ")))
-            Assert.Contains(log, l => l.Contains(Squeeze(expected)));
+            Assert.Contains(run.Log, l => l.Contains(expected.TrimEnd('\r')));
     }
 
     [Theory]
@@ -108,7 +85,7 @@ public class SequentialSemanticsTests
     {
         var run = await RunAllowingEngineErrorAsync(Fixture("env_fail.vhdl"), "env_fail", 200);
         Assert.NotNull(run.EngineError);
-        Assert.Contains(Squeeze("env_fail: c reached 3"), Squeeze(run.EngineError!));
+        Assert.Contains("env_fail: c reached 3", run.EngineError!);
         var wf = WaveformData.FromSignalHistory(run.History, 1);
         Assert.Equal(40UL, wf.TotalTicks - 1);   // GHDL: assertion failure @40ns
         Assert.Equal(0b0011, ValueAt(wf, "q", 40));

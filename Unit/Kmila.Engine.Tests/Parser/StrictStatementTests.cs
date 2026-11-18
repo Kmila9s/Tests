@@ -33,6 +33,8 @@ public class StrictStatementTests
         { "undeclared.vhdl", 9 },   // foo(n(k)); in a generate body
         { "label_bad.vhdl", 14 },   // end if other;  (label chk)
         { "exit_bad.vhdl", 15 },    // exit l1; outside loop l1
+        { "agg_undeclared.vhdl", 7 }, // (a, zz) <= v;  no declaration for "zz"
+        { "agg_width.vhdl", 7 },    // (a, b) <= v(2 downto 0);  GHDL: bound check failure at line 7
     };
 
     [Theory]
@@ -47,6 +49,7 @@ public class StrictStatementTests
     [Theory]
     [InlineData("w0.vhdl")]   // case + for, valid base
     [InlineData("w4.vhdl")]   // lbl: count <= count + 1;
+    [InlineData("w5.vhdl")]   // (a, b) <= std_logic_vector'("10");  aggregate target (G55, v3.1.4)
     [InlineData("w6.vhdl")]   // std.env.stop;
     [InlineData("w7.vhdl")]   // a <= '1' after 1 ns, '0' after 2 ns;
     [InlineData("w9.vhdl")]   // lbl: a <= not a;
@@ -57,13 +60,14 @@ public class StrictStatementTests
 
     /// <summary>
     /// Valid VHDL that Kmila does not simulate yet is reported as such at its line
-    /// (never dropped): the VHDL-2008 aggregate target (G55).
+    /// (never dropped): the named aggregate target, which GHDL 6.0.0 itself cannot
+    /// compile (internal error), so there is no reference to check it against.
     /// </summary>
     [Fact]
-    public void An_aggregate_target_is_reported_as_not_supported_yet()
+    public void A_named_aggregate_target_is_reported_as_not_supported_yet()
     {
-        var result = Analyze("w5.vhdl");   // (a, b) <= std_logic_vector'("10");
+        var result = Analyze("agg_named.vhdl");   // (1 => a, 0 => b) <= v;
         Assert.Contains("not supported yet", result.Error!.Message);
-        Assert.Equal(21, result.Diagnostic!.Line);
+        Assert.Equal(7, result.Diagnostic!.Line);
     }
 }
