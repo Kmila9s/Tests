@@ -54,8 +54,13 @@ public class FastRunnerEquivalenceTests
         var fast      = await RunVcdAsync(vhdl, entity, totalNs, tickResNs, RunnerKind.Fast);
 
         Assert.False(string.IsNullOrWhiteSpace(reference));
-        Assert.Equal(reference, fast);
+        Assert.Equal(WithoutDate(reference), WithoutDate(fast));
     }
+
+    /// <summary>The VCD without its <c>$date … $end</c> block: the two runs may straddle a second.</summary>
+    private static string WithoutDate(string vcd) =>
+        System.Text.RegularExpressions.Regex.Replace(vcd, @"\$date.*?\$end", "$$date $$end",
+            System.Text.RegularExpressions.RegexOptions.Singleline);
 
     // Clock-only design: exercises clock-edge jumping. The auto-clock drives
     // `clk`; the fast runner must land on every rising/falling edge tick.

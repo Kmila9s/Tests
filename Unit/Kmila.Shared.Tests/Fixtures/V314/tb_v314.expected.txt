@@ -1,0 +1,9 @@
+strings.vhdl:13:5:@0ms:(report note): strings: a: b
+strings.vhdl:14:5:@0ms:(report note): strings: x;y, z
+strings.vhdl:15:5:@0ms:(report note): strings: say "hi"
+strings.vhdl:16:5:@0ms:(report note): strings:  two  spaces
+strings: t = 1, ok
+tb_v314.vhdl:26:7:@7ns:(report note): t=7 ag.a=0 ag.b=1 ag.c=1 ag.d=0 ag.e=1 ag.f=1 ag.g=1 ag.h=0 ag.p=1 ag.q=0 ag.r=1 ag.s=0 ag.hi=01 ag.lo=01 st.y=0001 gi.y=0101 gi.w=0000 gi.z=10 gi.e=0
+tb_v314.vhdl:26:7:@27ns:(report note): t=27 ag.a=1 ag.b=1 ag.c=1 ag.d=0 ag.e=1 ag.f=0 ag.g=0 ag.h=1 ag.p=1 ag.q=1 ag.r=0 ag.s=1 ag.hi=10 ag.lo=11 st.y=0011 gi.y=1011 gi.w=1110 gi.z=01 gi.e=0
+tb_v314.vhdl:26:7:@47ns:(report note): t=47 ag.a=1 ag.b=0 ag.c=1 ag.d=1 ag.e=1 ag.f=1 ag.g=1 ag.h=1 ag.p=0 ag.q=1 ag.r=1 ag.s=1 ag.hi=11 ag.lo=10 st.y=0011 gi.y=0001 gi.w=1011 gi.z=00 gi.e=1
+tb_v314.vhdl:26:7:@67ns:(report note): t=67 ag.a=1 ag.b=1 ag.c=0 ag.d=1 ag.e=1 ag.f=1 ag.g=1 ag.h=1 ag.p=1 ag.q=0 ag.r=1 ag.s=1 ag.hi=01 ag.lo=11 st.y=0011 gi.y=0111 gi.w=0010 gi.z=10 gi.e=0

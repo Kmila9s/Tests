@@ -174,4 +174,71 @@ public sealed class FrontendTests : IDisposable
         }
         Assert.Null(HdlLanguages.FromPath("x.fk"));
     }
+
+    /// <summary>
+    /// G21 (v3.1.4): without elaboration (editor, <c>kmila check</c>) an architecture
+    /// whose entity lives in another file — and an entity whose architecture does —
+    /// parses with the project's other files as companions.
+    /// </summary>
+    [Fact]
+    public void AnalyzeEach_resolves_units_split_across_files()
+    {
+        var ent = Write("a_and2_ent.vhd", """
+            library ieee; use ieee.std_logic_1164.all;
+            entity and2 is port (a, b : in std_logic; y : out std_logic); end entity;
+            """);
+        var arch = Write("b_and2_arch.vhd", """
+            library ieee; use ieee.std_logic_1164.all;
+            architecture rtl of and2 is begin y <= a and b; end architecture;
+            """);
+        var analyzed = Frontends.ForPath(ent).AnalyzeEach([ent, arch]);
+        Assert.All(analyzed, a => Assert.Null(a.Unit.Error));
+        Assert.All(analyzed, a => Assert.NotNull(Assert.Single(a.Unit.Entities, e => e.Name == "and2").Architecture));
+    }
+
+    /// <summary>G21: an architecture with no entity anywhere is an error at its line, not a bare exception.</summary>
+    [Fact]
+    public void An_architecture_without_its_entity_is_a_located_error()
+    {
+        var arch = Write("orphan.vhd", "library ieee; use ieee.std_logic_1164.all;\narchitecture rtl of ghost is begin end architecture;\n");
+        var error = Frontends.ForPath(arch).AnalyzeEach([arch]).Single().Unit.Error;
+        var located = Assert.IsAssignableFrom<global::Parser.Models.ParserException>(error);
+        Assert.Contains("entity \"ghost\" not found", located.Message);
+        Assert.Equal(2, located.Line);
+    }
+
+    /// <summary>
+    /// G20/G24 without elaboration: a <c>component</c>/<c>configuration</c> instance
+    /// and a configuration declaration (nested <c>end for;</c>) parse.
+    /// </summary>
+    [Fact]
+    public void Component_and_configuration_units_parse_without_elaboration()
+    {
+        var path = Write("cfg.vhd", AndGate + """
+
+            library ieee; use ieee.std_logic_1164.all;
+            entity top is port (x, z : in std_logic; q, r : out std_logic); end top;
+            architecture structural of top is
+              component and2 port (a, b : in std_logic; y : out std_logic); end component;
+              for u0 : and2 use entity work.and2(rtl);
+            begin
+              u0 : component and2 port map (a => x, b => z, y => q);
+              u1 : configuration work.cfg_and port map (a => x, b => z, y => r);
+            end structural;
+
+            configuration cfg_and of and2 is
+              for rtl
+              end for;
+            end configuration;
+
+            configuration cfg_top of top is
+              for structural
+                for u0 : and2 use entity work.and2(rtl); end for;
+              end for;
+            end cfg_top;
+            """);
+        var unit = Frontends.ForPath(path).AnalyzeEach([path]).Single().Unit;
+        Assert.Null(unit.Error);
+        Assert.NotNull(Assert.Single(unit.Entities, e => e.Name == "top").Architecture);
+    }
 }

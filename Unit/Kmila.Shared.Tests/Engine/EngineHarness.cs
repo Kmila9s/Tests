@@ -29,22 +29,32 @@ internal static class EngineHarness
     }
 
     /// <summary><see cref="RunAsync"/> for a design expected to fail at run time (<c>severity failure</c>).</summary>
-    public static async Task<HeadlessRunResult> RunAllowingEngineErrorAsync(string vhdl, string entry, int totalNs, params PortMomentConfiguration[] moments)
+    public static Task<HeadlessRunResult> RunAllowingEngineErrorAsync(string vhdl, string entry, int totalNs, params PortMomentConfiguration[] moments) =>
+        RunFilesAsync(new Dictionary<string, string> { [$"{entry}.vhdl"] = vhdl }, entry, totalNs, moments: moments);
+
+    /// <summary>
+    /// Simulates a multi-file project: <paramref name="files"/> (relative path →
+    /// text) written to a sandbox, analysed in <paramref name="order"/> when given
+    /// (else sorted by path), top unit <paramref name="entry"/>.
+    /// </summary>
+    public static async Task<HeadlessRunResult> RunFilesAsync(IReadOnlyDictionary<string, string> files, string entry,
+        int totalNs, IReadOnlyList<string>? order = null, bool entryIsExplicit = true, params PortMomentConfiguration[] moments)
     {
         var store = new SandboxProjectStore();
         var project = store.Create("engine-harness", retain: false);
         try
         {
-            project.WriteFile($"{entry}.vhdl", vhdl);
-            var run = await HeadlessSimulator.RunProjectAsync(project.Path, new HeadlessRunOptions
+            foreach (var (name, text) in files) project.WriteFile(name, text);
+            return await HeadlessSimulator.RunProjectAsync(project.Path, new HeadlessRunOptions
             {
                 EntryPoint = entry,
+                EntryIsExplicit = entryIsExplicit,
+                Files = order,
                 TotalNs = totalNs,
                 TickResNs = 1,
                 SystemClockMhz = 50,
                 PortMoments = [.. moments],
             });
-            return run;
         }
         finally { store.Delete(project.Id); }
     }
@@ -52,6 +62,35 @@ internal static class EngineHarness
     /// <summary><see cref="RunAsync"/> for 100 ns, as a waveform.</summary>
     public static async Task<WaveformData> SimulateAsync(string vhdl, string entry, params PortMomentConfiguration[] moments) =>
         WaveformData.FromSignalHistory((await RunAsync(vhdl, entry, 100, moments)).History, 1);
+
+    /// <summary>
+    /// The samples a GHDL testbench printed as <c>report "t=N p.o=bits …"</c>:
+    /// "prefix.output" → (time ns → bits).
+    /// </summary>
+    public static Dictionary<string, Dictionary<int, string>> GhdlSamples(IEnumerable<string> ghdlOutput)
+    {
+        var result = new Dictionary<string, Dictionary<int, string>>();
+        foreach (var line in ghdlOutput.Where(l => l.Contains("): t=")))
+        {
+            var parts = line[(line.IndexOf("): t=") + 3)..].Trim().Split(' ');
+            int t = int.Parse(parts[0][2..]);
+            foreach (var kv in parts.Skip(1).Select(p => p.Split('=')))
+            {
+                if (!result.TryGetValue(kv[0], out var series)) result[kv[0]] = series = [];
+                series[t] = kv[1];
+            }
+        }
+        return result;
+    }
+
+    /// <summary>Asserts every output of <paramref name="outputs"/> matches GHDL's samples <c>prefix.output</c>.</summary>
+    public static void AssertMatchesGhdl(WaveformData wf, Dictionary<string, Dictionary<int, string>> samples,
+        string entry, string prefix, string outputs)
+    {
+        foreach (var port in outputs.Split(' '))
+            foreach (var (t, bits) in samples[$"{prefix}.{port}"])
+                Assert.True(Convert.ToInt64(bits, 2) == ValueAt(wf, port, t), $"{entry}.{port} @ {t} ns: GHDL {bits}, Kmila {ValueAt(wf, port, t)}");
+    }
 
     /// <summary>Value of <paramref name="signal"/> at <paramref name="ns"/> (bits as a number).</summary>
     public static double? ValueAt(WaveformData wf, string signal, long ns) =>
