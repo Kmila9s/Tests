@@ -82,4 +82,26 @@ public class V316Tests
         catch (Exception e) { error = e.Message; }
         Assert.Contains("cannot assign to input port \"a\"", error);
     }
+
+    /// <summary>
+    /// G62/G67/G72/G73: implicit sensitivity counts only the signals named in the statement (not
+    /// those read inside a called function), for simple, conditional and selected assignments,
+    /// process (all) and a concurrent procedure call; each instance has its own subprograms.
+    /// </summary>
+    [Fact]
+    public async Task Implicit_sensitivity_is_the_statement_text()
+    {
+        var run = await RunTestbenchAsync("tb_sens", 40, "sens.vhdl", "tb_sens.vhdl");
+        AssertSamples(run, "tb_sens.expected.txt", "se", "o1 o2 oc os oa op pc_out");
+    }
+
+    /// <summary>G72: a process with neither a sensitivity list nor a wait never suspends: an error with its line, not a hang.</summary>
+    [Fact]
+    public async Task Process_without_sensitivity_or_wait_is_an_error()
+    {
+        var run = await RunAllowingEngineErrorAsync(Fixture("nowait.vhdl"), "nowait", 10, Port("a", At(0, "0")));
+        Assert.NotNull(run.EngineError);
+        Assert.Contains("never suspends", run.EngineError);
+        Assert.Contains("Line 11", run.EngineError);
+    }
 }
