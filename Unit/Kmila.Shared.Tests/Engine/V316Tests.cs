@@ -189,4 +189,16 @@ public class V316Tests
         Assert.Equal("2147483647", RawAt(run, "y", 5));
         Assert.Equal("-2147483648", RawAt(run, "y", 15));
     }
+
+    /// <summary>
+    /// G64/G78: the time type and <c>now</c> (<c>while now &lt; 30 ns</c>), <c>wait until … for</c>
+    /// timing out and satisfied, <c>after</c> with a time expression over a time signal, and time
+    /// arithmetic and comparison.
+    /// </summary>
+    [Fact]
+    public async Task Time_and_now_match_GHDL()
+    {
+        var run = await RunTestbenchAsync("tb_time", 46, "time_now.vhdl", "tb_time.vhdl");
+        AssertSamples(run, "tb_time.expected.txt", "tn", "y_loop y_to y_hit y_after y_cmp");
+    }
 }
