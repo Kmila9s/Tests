@@ -209,4 +209,53 @@ public class V316Tests
         var run = await RunTestbenchAsync("tb_mixed", 50, "mixed_case.vhdl", "tb_mixed.vhdl");
         AssertSamples(run, "tb_mixed.expected.txt", "mc", "q n");
     }
+
+    /// <summary>
+    /// G54/G77/G79/G80: a constant initialised by a user function, conditional and selected variable
+    /// assignments, a nested aggregate target, a binding with generic and port maps, and if/case
+    /// generate with instances.
+    /// </summary>
+    [Theory]
+    [InlineData("y_init")]
+    [InlineData("y_cv")]
+    [InlineData("y_sv")]
+    [InlineData("y_agg")]
+    [InlineData("y_bind")]
+    [InlineData("z_bind")]
+    [InlineData("y_gen")]
+    [InlineData("y_case")]
+    public async Task Constructs_match_GHDL(string signal)
+    {
+        var run = await RunTestbenchAsync("tb_constructs", 40, "constructs.vhdl", "tb_constructs.vhdl");
+        AssertSamples(run, "tb_constructs.expected.txt", "co", signal);
+    }
+
+    /// <summary>G81: report evaluates <c>integer'image(e)</c> and <c>std_logic'image(x)(2)</c>; the text is GHDL's.</summary>
+    [Fact]
+    public async Task Report_images_match_GHDL()
+    {
+        var run = await RunTestbenchAsync("tb_sens", 40, "sens.vhdl", "tb_sens.vhdl");
+        var expected = Lines("tb_sens.expected.txt").Where(l => l.Contains("(report note): t=")).Select(l => l[(l.IndexOf("(report note): ", StringComparison.Ordinal) + 15)..].TrimEnd('\r'));
+        foreach (var line in expected)
+            Assert.Contains(run.Log, l => l.EndsWith(line, StringComparison.Ordinal));
+    }
+
+    /// <summary>
+    /// G80: textio input — <c>endfile</c>, <c>readline</c> and <c>read</c> of an integer and a vector
+    /// from a file of the project — and a <c>report</c> inside a procedure printed as GHDL does.
+    /// </summary>
+    [Fact]
+    public async Task Textio_input_and_procedure_report_match_GHDL()
+    {
+        var run = await RunFilesAsync(new Dictionary<string, string>
+        {
+            ["textio_in.vhdl"] = Fixture("textio_in.vhdl"),
+            ["textio_in.txt"] = Fixture("textio_in.txt"),
+        }, "textio_in", 40);
+        Assert.Null(run.EngineError);
+        Assert.Equal(["0011", "0101", "1110"], new[] { 5, 15, 25 }.Select(t => RawAt(run, "y", t)));
+        Assert.Equal(["1", "2", "3"], new[] { 5, 15, 25 }.Select(t => RawAt(run, "n", t)));
+        foreach (var text in Lines("textio_in.expected.txt").Where(l => l.Contains("say: ")).Select(l => l[l.IndexOf("say: ", StringComparison.Ordinal)..].TrimEnd('\r')))
+            Assert.Contains(run.Log, l => l.EndsWith(text, StringComparison.Ordinal));
+    }
 }
