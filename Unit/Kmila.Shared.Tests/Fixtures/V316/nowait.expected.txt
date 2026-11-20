@@ -1,0 +1,4 @@
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/nowait.vhdl:11:3:warning: infinite loop for this process without a wait statement [-Wmissing-wait]
+  process
+  ^
+ghdl -r: no termina (bucle infinito en t=0; se interrumpe a mano)

@@ -1,0 +1,5 @@
+Signal .unres_bit(rtl).s is driven by :
+.unres_bit(rtl).P0
+.unres_bit(rtl).P1
+./unres_bit:error: several sources for unresolved signal
+./unres_bit:error: error during elaboration

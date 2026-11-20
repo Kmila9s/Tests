@@ -1,0 +1,3 @@
+./tb_sub:error: bound check failure at /Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/int_range.vhdl:53
+  instance: .tb_sub(sim).dut@sub_rng(rtl).P0
+./tb_sub:error: simulation failed

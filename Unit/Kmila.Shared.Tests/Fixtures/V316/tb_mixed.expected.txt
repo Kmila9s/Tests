@@ -1,0 +1,6 @@
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_mixed.vhdl:18:7:@2ns:(report note): t=2 mc.q=0 mc.n=UU
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_mixed.vhdl:18:7:@12ns:(report note): t=12 mc.q=0 mc.n=01
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_mixed.vhdl:18:7:@22ns:(report note): t=22 mc.q=1 mc.n=10
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_mixed.vhdl:18:7:@32ns:(report note): t=32 mc.q=1 mc.n=11
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_mixed.vhdl:18:7:@42ns:(report note): t=42 mc.q=0 mc.n=00
+./tb_mixed:info: simulation stopped by --stop-time @60ns

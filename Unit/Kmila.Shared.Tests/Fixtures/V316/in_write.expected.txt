@@ -1,0 +1,4 @@
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/in_write.vhdl:11:3:error: port "a" can't be assigned
+  a <= '1';
+  ^
+ghdl:error: compilation error
