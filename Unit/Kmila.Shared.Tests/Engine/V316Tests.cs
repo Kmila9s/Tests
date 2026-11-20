@@ -104,4 +104,89 @@ public class V316Tests
         Assert.Contains("never suspends", run.EngineError);
         Assert.Contains("Line 11", run.EngineError);
     }
+
+    /// <summary>
+    /// G44/G59/G65/G68/G69: signed and unsigned arithmetic of any width, numeric_std result widths,
+    /// std_logic_signed/unsigned/arith, to_integer selecting a ROM entry and a case choice, and
+    /// <c>&amp;</c> inside a function argument (tb_v316f: entities that print integers print them as bits).
+    /// </summary>
+    [Theory]
+    [InlineData("ns", "rz8 rz2 sr sl ab ng lt gt0 eqw mi dv md rm")]
+    [InlineData("ar", "sx ex")]
+    [InlineData("wd", "s40 p80 lt40 s64 s96 neg64")]
+    [InlineData("wi", "y8 y9 yi")]
+    [InlineData("lt10", "d c")]
+    [InlineData("ca", "y z")]
+    public async Task Numeric_operators_match_GHDL(string prefix, string signals)
+    {
+        var run = await RunTestbenchAsync("tb_v316f", 40, Numeric);
+        var names = new Dictionary<string, string>
+        {
+            ["ar.sx"] = "ssx", ["ar.ex"] = "sex", ["lt10.d"] = "dd", ["lt10.c"] = "cc", ["ca.y"] = "cy", ["ca.z"] = "cz",
+        };
+        Assert.Null(run.EngineError);
+        var samples = GhdlSamples(Lines("tb_v316f.expected.txt"));
+        foreach (var signal in signals.Split(' '))
+        {
+            string key = $"{prefix}.{signal}";
+            string name = names.GetValueOrDefault(key, signal);
+            foreach (var (t, bits) in samples[key])
+                Assert.True(bits == RawAt(run, name, t), $"{key} @ {t} ns: GHDL {bits}, Kmila {RawAt(run, name, t)}");
+        }
+    }
+
+    /// <summary>G59: the integers of tb_v316f (to_integer of signed, conv_integer under std_logic_signed/unsigned, a 31-bit to_integer).</summary>
+    [Theory]
+    [InlineData("ns.ti", "ti", true)]
+    [InlineData("sg.i", "si", true)]
+    [InlineData("us.i", "ui", true)]
+    [InlineData("wd.i31", "i31", false)]
+    [InlineData("sg.s", "ss", false)]
+    [InlineData("us.s", "us", false)]
+    [InlineData("sg.lt", "slt", false)]
+    [InlineData("us.lt", "ult", false)]
+    public async Task Integer_conversions_match_GHDL(string key, string signal, bool signedBits)
+    {
+        var run = await RunTestbenchAsync("tb_v316f", 40, Numeric);
+        Assert.Null(run.EngineError);
+        foreach (var (t, bits) in GhdlSamples(Lines("tb_v316f.expected.txt"))[key])
+        {
+            string? kmila = RawAt(run, signal, t);
+            string expected = bits.Length > 1 && (signedBits || signal == "i31")
+                ? (signedBits ? (Convert.ToInt64(bits, 2) - (bits[0] == '1' ? 1L << bits.Length : 0)) : Convert.ToInt64(bits, 2)).ToString()
+                : bits;
+            Assert.True(expected == kmila, $"{key} @ {t} ns: GHDL {bits} ({expected}), Kmila {kmila}");
+        }
+    }
+
+    private static readonly string[] Numeric =
+        ["numeric_signed.vhdl", "slv_pkgs.vhdl", "wide.vhdl", "widths.vhdl", "lit10.vhdl", "concat_arg.vhdl", "tb_v316f.vhdl"];
+
+    /// <summary>
+    /// G66/G68: a subtype range violation and a length mismatch stop the run with GHDL's
+    /// «bound check failure» at the statement's line (the entities simulated directly, as GHDL's
+    /// testbenches drive them: <c>go</c> rises at 10 ns).
+    /// </summary>
+    [Theory]
+    [InlineData("nat_neg", "int_range.vhdl", "go", "1", "Line 34")]
+    [InlineData("sub_rng", "int_range.vhdl", "go", "1", "Line 53")]
+    [InlineData("len_err", "widths.vhdl", "a", "0010", "Line 31")]
+    public async Task Bound_check_failures_stop_the_run(string entity, string design, string input, string value, string line)
+    {
+        var run = await RunFilesAsync(new Dictionary<string, string> { [design] = Fixture(design) }, entity, 30,
+            moments: [Port(input, At(0, input == "go" ? "0" : "0001"), At(10, value))]);
+        Assert.NotNull(run.EngineError);
+        Assert.True(run.EngineError.Contains("bound check failure") && run.EngineError.Contains(line), run.EngineError);
+    }
+
+    /// <summary>G66: the base type integer wraps at 32 bits without an error (GHDL does not check it).</summary>
+    [Fact]
+    public async Task Integer_overflow_wraps_like_GHDL()
+    {
+        var run = await RunFilesAsync(new Dictionary<string, string> { ["int_range.vhdl"] = Fixture("int_range.vhdl"), ["tb_v316err.vhdl"] = Fixture("tb_v316err.vhdl") },
+            "tb_ovf", 30, order: ["int_range.vhdl", "tb_v316err.vhdl"]);
+        Assert.Null(run.EngineError);
+        Assert.Equal("2147483647", RawAt(run, "y", 5));
+        Assert.Equal("-2147483648", RawAt(run, "y", 15));
+    }
 }
