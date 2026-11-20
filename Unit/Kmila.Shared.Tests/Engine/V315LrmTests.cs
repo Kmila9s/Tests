@@ -101,15 +101,14 @@ public class V315LrmTests
     }
 
     /// <summary>
-    /// numeric_std warnings carry GHDL's text; arithmetic on metavalues does not warn. The
-    /// <c>"="</c> warning is left out: Kmila does not tell <c>unsigned</c> from
-    /// <c>std_logic_vector</c> yet (G59), so equality of two vectors is the predefined one.
+    /// numeric_std warnings carry GHDL's text, the <c>"="</c> one included (v3.1.6: unsigned
+    /// operands compare numerically, G59); arithmetic on metavalues does not warn.
     /// </summary>
     [Fact]
     public async Task Numeric_std_warnings_are_GHDLs()
     {
         var run = await RunAsync(Fixture("numeric_meta.vhdl"), "numeric_meta", 30, Drive("x"), Drive("y"));
-        foreach (var line in Lines("tb_v315.expected.txt").Where(l => l.Contains("NUMERIC_STD.") && !l.Contains("NUMERIC_STD.\"=\"")).Select(l => l[(l.IndexOf("NUMERIC_STD.", StringComparison.Ordinal))..].TrimEnd('\r')).Distinct())
+        foreach (var line in Lines("tb_v315.expected.txt").Where(l => l.Contains("NUMERIC_STD.")).Select(l => l[(l.IndexOf("NUMERIC_STD.", StringComparison.Ordinal))..].TrimEnd('\r')).Distinct())
             Assert.Contains(run.Log, l => l.EndsWith(line, StringComparison.Ordinal));
         Assert.DoesNotContain(run.Log, l => l.Contains("NUMERIC_STD.\"+\""));
     }

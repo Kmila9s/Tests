@@ -1,0 +1,6 @@
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@5ns:(report note): t=5 io.pad=Z io.q1=Z io.q2=Z io.bus4=ZZZZ io.q4=Z
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@15ns:(report note): t=15 io.pad=1 io.q1=1 io.q2=1 io.bus4=Z0ZZ io.q4=0
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@25ns:(report note): t=25 io.pad=X io.q1=X io.q2=X io.bus4=Z0ZZ io.q4=0
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@35ns:(report note): t=35 io.pad=Z io.q1=Z io.q2=Z io.bus4=ZZZZ io.q4=Z
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@45ns:(report note): t=45 io.pad=1 io.q1=1 io.q2=1 io.bus4=H0Z1 io.q4=0
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_inout.vhdl:30:7:@55ns:(report note): t=55 io.pad=X io.q1=X io.q2=X io.bus4=HXZ1 io.q4=X

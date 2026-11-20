@@ -55,12 +55,14 @@ public class SelectedAssignmentTests
     [Fact]
     public async Task WithSelect_AlternativeList_MatchesAnyMember()
     {
-        // sel = "0111" (7) — must match the {0,1,7} alternative list.
+        // sel = "0111" — must match the {"0000","0001","0111"} alternative list. The
+        // choices have the selector's type (integer choices on a vector selector are a
+        // type error in VHDL; v3.1.6 reads "0111" as a vector, never as decimal or bits by guess).
         var sel = Sig("sel", "0111", 4);
         var y = Sig("y", "0000", 4);
         var vars = new HashSet<Variable> { sel, y };
         var a = BuildAssignment("sel", "y", vars,
-            ("\"1010\"", new[] { "0", "1", "7" }),
+            ("\"1010\"", new[] { "\"0000\"", "\"0001\"", "\"0111\"" }),
             ("\"0000\"", new[] { "others" }));
 
         await a.ExecuteAsync();

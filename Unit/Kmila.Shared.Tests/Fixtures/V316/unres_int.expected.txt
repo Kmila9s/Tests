@@ -1,0 +1,5 @@
+Signal .unres_int(rtl).y is driven by :
+.unres_int(rtl).p1
+.unres_int(rtl).p2
+./unres_int:error: several sources for unresolved signal
+./unres_int:error: error during elaboration

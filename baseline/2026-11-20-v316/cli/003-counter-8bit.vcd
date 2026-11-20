@@ -1,0 +1,22 @@
+$date
+   2026-11-20 15:44:12
+$end
+$version
+   VHDL Interpreter v0.17.0
+$end
+$timescale
+   1ps
+$end
+$scope module counter $end
+$var wire 1 ! clk $end
+$var reg 8 " cnt $end
+$var reg 8 # cout $end
+$var wire 1 $ n_rst $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+U!
+b00000000 "
+b00000000 #
+U$
+$end

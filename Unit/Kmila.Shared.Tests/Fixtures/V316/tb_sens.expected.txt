@@ -1,0 +1,4 @@
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_sens.vhdl:26:7:@5ns:(report note): t=5 se.o1=XXXX se.o2=XXXX se.oc=XXXX se.os=XXXX se.oa=XXXX se.op=XXXX se.pc_out=XXXX
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_sens.vhdl:26:7:@15ns:(report note): t=15 se.o1=XXXX se.o2=XXXX se.oc=XXXX se.os=XXXX se.oa=XXXX se.op=XXXX se.pc_out=XXXX
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_sens.vhdl:26:7:@25ns:(report note): t=25 se.o1=0010 se.o2=0010 se.oc=0010 se.os=0010 se.oa=0010 se.op=0010 se.pc_out=0010
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_sens.vhdl:26:7:@35ns:(report note): t=35 se.o1=0010 se.o2=0010 se.oc=0001 se.os=0001 se.oa=0010 se.op=0010 se.pc_out=0010

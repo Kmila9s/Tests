@@ -1,0 +1,5 @@
+../../src/ieee2008/numeric_std-body.vhdl:3053:7:@0ms:(assertion warning): NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_constructs.vhdl:27:7:@5ns:(report note): t=5 co.y_init=0001 co.y_cv=0000 co.y_sv=0001 co.y_agg=010 co.y_bind=01 co.z_bind=0 co.y_gen=01 co.y_case=10
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_constructs.vhdl:27:7:@15ns:(report note): t=15 co.y_init=0100 co.y_cv=1010 co.y_sv=0010 co.y_agg=101 co.y_bind=10 co.z_bind=0 co.y_gen=10 co.y_case=01
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_constructs.vhdl:27:7:@25ns:(report note): t=25 co.y_init=0111 co.y_cv=1111 co.y_sv=0100 co.y_agg=111 co.y_bind=11 co.z_bind=0 co.y_gen=11 co.y_case=00
+/Users/miku/Documents/Kmila-9s/Documentacion/handoffs/repros_gaps_2026-11-16/v316/tb_constructs.vhdl:27:7:@35ns:(report note): t=35 co.y_init=1010 co.y_cv=1111 co.y_sv=1000 co.y_agg=000 co.y_bind=00 co.z_bind=0 co.y_gen=00 co.y_case=11
