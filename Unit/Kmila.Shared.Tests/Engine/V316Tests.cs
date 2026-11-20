@@ -201,4 +201,12 @@ public class V316Tests
         var run = await RunTestbenchAsync("tb_time", 46, "time_now.vhdl", "tb_time.vhdl");
         AssertSamples(run, "tb_time.expected.txt", "tn", "y_loop y_to y_hit y_after y_cmp");
     }
+
+    /// <summary>G74: identifiers in mixed case (entity, architecture, sensitivity list, labels, exit label, signals, functions) are one name.</summary>
+    [Fact]
+    public async Task Identifiers_are_case_insensitive()
+    {
+        var run = await RunTestbenchAsync("tb_mixed", 50, "mixed_case.vhdl", "tb_mixed.vhdl");
+        AssertSamples(run, "tb_mixed.expected.txt", "mc", "q n");
+    }
 }
