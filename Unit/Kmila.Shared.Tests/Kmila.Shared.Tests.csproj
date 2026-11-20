@@ -56,6 +56,9 @@
     <Content Include="Fixtures/V314/*.*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Fixtures/V315/*.*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Fixtures/Elaboration/**/*.*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

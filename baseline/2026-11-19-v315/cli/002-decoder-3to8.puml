@@ -1,0 +1,16 @@
+@startuml
+title Kmila — Control flow
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #f1f5f9
+  BorderColor #64748b
+  DiamondBackgroundColor #fae8ff
+  DiamondBorderColor #a855f7
+}
+
+start
+partition "entity dec3x8_concurrent / architecture rtl" {
+  :with input select output <= … (0 branches);
+}
+stop
+@enduml

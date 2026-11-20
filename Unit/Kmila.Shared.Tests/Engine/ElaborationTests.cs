@@ -28,7 +28,7 @@ public class ElaborationTests
     private static async Task<WaveformData> SimulateAsync(string fixture, string entry, IReadOnlyList<string>? order = null,
         params PortMomentConfiguration[] moments)
     {
-        var run = await RunFilesAsync(Files(fixture), entry, 10, order, true, moments);
+        var run = await RunFilesAsync(Files(fixture), entry, 10, order, true, moments: moments);
         Assert.Null(run.EngineError);
         return WaveformData.FromSignalHistory(run.History, 1);
     }

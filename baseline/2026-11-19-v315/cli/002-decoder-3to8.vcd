@@ -1,0 +1,18 @@
+$date
+   2026-11-19 22:25:09
+$end
+$version
+   VHDL Interpreter v0.17.0
+$end
+$timescale
+   1ps
+$end
+$scope module dec3x8_concurrent $end
+$var reg 3 ! input $end
+$var reg 8 " output $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+bUUU !
+b00000000 "
+$end
