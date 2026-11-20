@@ -1,0 +1,18 @@
+../../src/ieee2008/numeric_std-body.vhdl:1337:7:@0ms:(assertion warning): NUMERIC_STD."<": metavalue detected, returning FALSE
+../../src/ieee2008/numeric_std-body.vhdl:1793:7:@0ms:(assertion warning): NUMERIC_STD."=": metavalue detected, returning FALSE
+../../src/ieee2008/numeric_std-body.vhdl:3053:7:@0ms:(assertion warning): NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+strings_g58.vhdl:26:5:@0ms:(report note): g58: s=abd t=abdz
+strings_g58.vhdl:26:5:@0ms:(report note): g58: s=abc t=abcz
+tb_v315.vhdl:70:7:@7ns:(report note): t=7 nm.s_add=0100 nm.s_sub=0010 nm.s_mul=00000011 nm.lt=0 nm.eq=0 nm.ti=0011 nm.rs=000011 nm.sr=0001 ai.y_mod=00000010 ai.y_rem=11111111 ai.y_div=00000011 ai.y_abs=00000111 il.q=U il.s0=U il.pv=U il.pd=1 il.en=1 il.bo=0 il.bt=0 il.cnt=UUUU il.vi=UUUU il.iv=10000000000000000000000000000000 il.ir=100 il.nt=0000 ed.n_rise=0001 ed.n_fall=0001 ed.n_ev=0011 sg.ceq=1 sg.seq=1 sg.cat=1 sg.len3=1 sg.lex=1
+strings_g58.vhdl:26:5:@20ns:(report note): g58: s=abd t=abdz
+../../src/ieee2008/numeric_std-body.vhdl:3053:7:@20ns:(assertion warning): NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+../../src/ieee2008/numeric_std-body.vhdl:1793:7:@20ns:(assertion warning): NUMERIC_STD."=": metavalue detected, returning FALSE
+../../src/ieee2008/numeric_std-body.vhdl:1337:7:@20ns:(assertion warning): NUMERIC_STD."<": metavalue detected, returning FALSE
+tb_v315.vhdl:70:7:@27ns:(report note): t=27 nm.s_add=XXXX nm.s_sub=XXXX nm.s_mul=XXXXXXXX nm.lt=0 nm.eq=0 nm.ti=0000 nm.rs=0000U1 nm.sr=000U ai.y_mod=11111110 ai.y_rem=00000001 ai.y_div=00000010 ai.y_abs=00000111 il.q=1 il.s0=U il.pv=U il.pd=1 il.en=1 il.bo=0 il.bt=0 il.cnt=XXXX il.vi=UUUU il.iv=10000000000000000000000000000000 il.ir=100 il.nt=0000 ed.n_rise=0001 ed.n_fall=0010 ed.n_ev=0110 sg.ceq=1 sg.seq=0 sg.cat=1 sg.len3=1 sg.lex=0
+strings_g58.vhdl:26:5:@40ns:(report note): g58: s=abc t=abcz
+tb_v315.vhdl:70:7:@47ns:(report note): t=47 nm.s_add=1011 nm.s_sub=0111 nm.s_mul=00010010 nm.lt=0 nm.eq=0 nm.ti=1001 nm.rs=00HL01 nm.sr=0HL0 ai.y_mod=11111111 ai.y_rem=11111111 ai.y_div=00000000 ai.y_abs=00000111 il.q=0 il.s0=U il.pv=U il.pd=1 il.en=1 il.bo=0 il.bt=0 il.cnt=XXXX il.vi=UUUU il.iv=10000000000000000000000000000000 il.ir=100 il.nt=0000 ed.n_rise=0010 ed.n_fall=0010 ed.n_ev=1001 sg.ceq=1 sg.seq=1 sg.cat=1 sg.len3=1 sg.lex=1
+strings_g58.vhdl:26:5:@60ns:(report note): g58: s=abd t=abdz
+../../src/ieee2008/numeric_std-body.vhdl:1793:7:@60ns:(assertion warning): NUMERIC_STD."=": metavalue detected, returning FALSE
+../../src/ieee2008/numeric_std-body.vhdl:1337:7:@60ns:(assertion warning): NUMERIC_STD."<": metavalue detected, returning FALSE
+../../src/ieee2008/numeric_std-body.vhdl:3053:7:@60ns:(assertion warning): NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+tb_v315.vhdl:70:7:@67ns:(report note): t=67 nm.s_add=XXXX nm.s_sub=XXXX nm.s_mul=XXXXXXXX nm.lt=0 nm.eq=0 nm.ti=0000 nm.rs=000X10 nm.sr=00X1 ai.y_mod=00000001 ai.y_rem=00000001 ai.y_div=00000011 ai.y_abs=00000111 il.q=1 il.s0=U il.pv=U il.pd=1 il.en=1 il.bo=0 il.bt=0 il.cnt=XXXX il.vi=UUUU il.iv=10000000000000000000000000000000 il.ir=100 il.nt=0000 ed.n_rise=0010 ed.n_fall=0011 ed.n_ev=1100 sg.ceq=1 sg.seq=0 sg.cat=1 sg.len3=1 sg.lex=0

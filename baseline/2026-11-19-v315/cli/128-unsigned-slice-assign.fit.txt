@@ -1,0 +1,8 @@
+Resource estimate for 'unsigned_slice_assign':
+  Resource       Used    Avail    Util  Status
+  LUTs              0        -       -  -
+  FlipFlops         0        -       -  -
+  BRAM              0        -       -  -
+  DSP               0        -       -  -
+  IO               34        -       -  -
+  Clocks            1        -       -  -

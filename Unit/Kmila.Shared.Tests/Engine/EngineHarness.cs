@@ -1,4 +1,5 @@
 using Kmila.Shared.Models;
+using Kmila.Shared.Services;
 using Kmila.Shared.Services.Api;
 
 namespace Kmila.Shared.Tests.Engine;
@@ -38,7 +39,8 @@ internal static class EngineHarness
     /// (else sorted by path), top unit <paramref name="entry"/>.
     /// </summary>
     public static async Task<HeadlessRunResult> RunFilesAsync(IReadOnlyDictionary<string, string> files, string entry,
-        int totalNs, IReadOnlyList<string>? order = null, bool entryIsExplicit = true, params PortMomentConfiguration[] moments)
+        int totalNs, IReadOnlyList<string>? order = null, bool entryIsExplicit = true, StimulusOptions? stimulus = null,
+        params PortMomentConfiguration[] moments)
     {
         var store = new SandboxProjectStore();
         var project = store.Create("engine-harness", retain: false);
@@ -54,6 +56,7 @@ internal static class EngineHarness
                 TickResNs = 1,
                 SystemClockMhz = 50,
                 PortMoments = [.. moments],
+                Stimulus = stimulus,
             });
         }
         finally { store.Delete(project.Id); }
@@ -90,6 +93,16 @@ internal static class EngineHarness
         foreach (var port in outputs.Split(' '))
             foreach (var (t, bits) in samples[$"{prefix}.{port}"])
                 Assert.True(Convert.ToInt64(bits, 2) == ValueAt(wf, port, t), $"{entry}.{port} @ {t} ns: GHDL {bits}, Kmila {ValueAt(wf, port, t)}");
+    }
+
+    /// <summary>
+    /// The value <paramref name="signal"/> holds at <paramref name="ns"/> after its deltas settled, as
+    /// written (metavalues kept, upper case): <c>U</c>, <c>0X10</c>, <c>-4</c>… (1 ns ticks).
+    /// </summary>
+    public static string? RawAt(HeadlessRunResult run, string signal, long ns)
+    {
+        var v = run.History.GetTrackedSignals().Single(s => s.Name.Equals(signal, StringComparison.OrdinalIgnoreCase));
+        return run.History.GetValueAtTime(v, Interpreter.Services.SignalHistory.SettledMoment(ns))?.ToString()?.ToUpperInvariant();
     }
 
     /// <summary>Value of <paramref name="signal"/> at <paramref name="ns"/> (bits as a number).</summary>
