@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "id": "delta-delta-swap",
+  "title": "Two registers swapping on the clock edge: both read the old values (delta cycles)",
+  "sourceUrl": "Interpreter/test_*_tb.vhdl (project fixtures)",
+  "license": "project",
+  "fetchedAt": "2026-01-24",
+  "problemDescription": "Kmila simulates the testbench itself (no stimulus table); the testbench signals must match GHDL 6.0.0 exactly.",
+  "ports": [
+    {
+      "name": "clk",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "swap",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "a_out",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "b_out",
+      "dir": "out",
+      "width": 1
+    }
+  ],
+  "durationNs": 50,
+  "tickResNs": 1,
+  "stimulus": []
+}

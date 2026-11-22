@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "test_simple_counter.vhdl",
+    "test_simple_counter_tb.vhdl"
+  ],
+  "top": "simple_counter_tb",
+  "entity": "simple_counter_tb"
+}

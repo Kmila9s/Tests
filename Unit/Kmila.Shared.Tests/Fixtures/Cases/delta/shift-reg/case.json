@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "id": "delta-shift-reg",
+  "title": "4-bit shift register fed by the testbench",
+  "sourceUrl": "Interpreter/test_*_tb.vhdl (project fixtures)",
+  "license": "project",
+  "fetchedAt": "2026-01-24",
+  "problemDescription": "Kmila simulates the testbench itself (no stimulus table); the testbench signals must match GHDL 6.0.0 exactly.",
+  "ports": [
+    {
+      "name": "clk",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "din",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "dout",
+      "dir": "out",
+      "width": 4
+    }
+  ],
+  "durationNs": 80,
+  "tickResNs": 1,
+  "stimulus": []
+}

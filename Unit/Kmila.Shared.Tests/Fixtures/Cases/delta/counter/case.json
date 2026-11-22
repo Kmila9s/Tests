@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "id": "delta-counter",
+  "title": "4-bit counter with reset and enable (testbench clock)",
+  "sourceUrl": "Interpreter/test_*_tb.vhdl (project fixtures)",
+  "license": "project",
+  "fetchedAt": "2026-01-24",
+  "problemDescription": "Kmila simulates the testbench itself (no stimulus table); the testbench signals must match GHDL 6.0.0 exactly.",
+  "ports": [
+    {
+      "name": "clk",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "reset",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "enable",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "count",
+      "dir": "out",
+      "width": 4
+    }
+  ],
+  "durationNs": 100,
+  "tickResNs": 1,
+  "stimulus": []
+}

@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "test_combinational.vhdl",
+    "test_combinational_tb.vhdl"
+  ],
+  "top": "test_combinational_tb",
+  "entity": "test_combinational_tb"
+}

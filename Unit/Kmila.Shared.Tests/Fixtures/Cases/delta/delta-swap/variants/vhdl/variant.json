@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "test_delta_swap.vhdl",
+    "test_delta_swap_tb.vhdl"
+  ],
+  "top": "test_delta_swap_tb",
+  "entity": "test_delta_swap_tb"
+}
