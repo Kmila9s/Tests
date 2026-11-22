@@ -26,13 +26,7 @@ internal static class ContentRoot
     private static string Resolve(string relative) =>
         System.IO.Path.Combine(Path, relative.Replace('/', System.IO.Path.DirectorySeparatorChar));
 
-    private static string Locate()
-    {
-        for (var dir = new DirectoryInfo(AppContext.BaseDirectory); dir != null; dir = dir.Parent)
-        {
-            var candidate = System.IO.Path.Combine(dir.FullName, "App", "Kmila", "Kmila.Shared", "wwwroot");
-            if (Directory.Exists(candidate)) return candidate;
-        }
-        throw new DirectoryNotFoundException("App/Kmila/Kmila.Shared/wwwroot not found above " + AppContext.BaseDirectory);
-    }
+    private static string Locate() =>
+        Kmila.Shared.Services.SharedContentPaths.Find()
+        ?? throw new DirectoryNotFoundException("App/Kmila/Kmila.Shared/wwwroot not found above " + AppContext.BaseDirectory);
 }
