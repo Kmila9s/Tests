@@ -33,6 +33,7 @@
        the net9.0 target automatically because this project only targets net9.0. -->
   <ItemGroup>
     <ProjectReference Include="../../../App/Kmila/Kmila.Shared/Kmila.Shared.csproj" />
+    <ProjectReference Include="../../../App/Kmila/Kmila.TestKit/Kmila.TestKit.csproj" />
   </ItemGroup>
 
   <!-- Round-trip fidelity fixtures (2026-07-06) — .vhd files loaded at test

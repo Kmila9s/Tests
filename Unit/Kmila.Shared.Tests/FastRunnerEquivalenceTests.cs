@@ -57,10 +57,8 @@ public class FastRunnerEquivalenceTests
         Assert.Equal(WithoutDate(reference), WithoutDate(fast));
     }
 
-    /// <summary>The VCD without its <c>$date … $end</c> block: the two runs may straddle a second.</summary>
-    private static string WithoutDate(string vcd) =>
-        System.Text.RegularExpressions.Regex.Replace(vcd, @"\$date.*?\$end", "$$date $$end",
-            System.Text.RegularExpressions.RegexOptions.Singleline);
+    /// <summary>The VCD without its <c>$date</c> block (the two runs may straddle a second): the golden-master rule.</summary>
+    private static string WithoutDate(string vcd) => Kmila.TestKit.GoldenHashes.WithoutDate(vcd);
 
     // Clock-only design: exercises clock-edge jumping. The auto-clock drives
     // `clk`; the fast runner must land on every rising/falling edge tick.
