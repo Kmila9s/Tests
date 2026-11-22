@@ -1,0 +1,8 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "waittick.vhdl"
+  ],
+  "top": "waittick",
+  "entity": "waittick"
+}
