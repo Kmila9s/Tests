@@ -1,0 +1,44 @@
+{
+  "version": 2,
+  "id": "delta-combinational",
+  "title": "AND/OR/XOR/NOT of two inputs, stepped by the testbench",
+  "sourceUrl": "Interpreter/test_*_tb.vhdl (project fixtures)",
+  "license": "project",
+  "fetchedAt": "2026-01-24",
+  "problemDescription": "Kmila simulates the testbench itself (no stimulus table); the testbench signals must match GHDL 6.0.0 exactly.",
+  "ports": [
+    {
+      "name": "a",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "b",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "y_and",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "y_or",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "y_xor",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "y_not",
+      "dir": "out",
+      "width": 1
+    }
+  ],
+  "durationNs": 40,
+  "tickResNs": 1,
+  "stimulus": []
+}

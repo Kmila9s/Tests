@@ -68,6 +68,10 @@
     </Content>
     <!-- Long-run memory stress fixture (free-running counter). Loaded by
          LongRunMemoryStressTests to reproduce the long-running freeze/crash. -->
+    <!-- Multi-variant fixture cases (v3.0.10): case.json + variants/<lang>/{variant.json, reference/, expected.vcd}. -->
+    <Content Include="Fixtures/Cases/**/*.*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Fixtures/Stress/*.vhd">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

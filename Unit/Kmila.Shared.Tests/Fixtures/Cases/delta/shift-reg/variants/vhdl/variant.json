@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "test_shift_reg.vhdl",
+    "test_shift_reg_tb.vhdl"
+  ],
+  "top": "test_shift_reg_tb",
+  "entity": "test_shift_reg_tb"
+}
