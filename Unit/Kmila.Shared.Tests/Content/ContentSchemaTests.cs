@@ -9,12 +9,13 @@ namespace Kmila.Shared.Tests.Content;
 /// <summary>
 /// The bundled content (Practice, Templates, Learn, Concepts) uses schema v2:
 /// every item carries one variant per HDL language it must support, and the
-/// app's own loaders read it (v3.0.5). A missing variant is a failure.
+/// app's own loaders read it (v3.0.5). Missing variants are checked for all
+/// content at once by <see cref="LanguageCoverageTests"/>.
 /// </summary>
 public class ContentSchemaTests
 {
     [Fact]
-    public async Task Practice_every_exercise_loads_with_a_variant_per_supported_language()
+    public async Task Practice_every_exercise_loads_with_non_empty_solutions()
     {
         var catalog = new PracticeCatalog(ContentRoot.Open);
         var meta = await catalog.ListAsync();
@@ -24,8 +25,7 @@ public class ContentSchemaTests
         {
             var exercise = await catalog.GetAsync(m.Id);
             Assert.True(exercise != null, $"{m.Id} did not load");
-            Assert.Empty(exercise!.Variants.MissingFrom(HdlLanguages.Supported));
-            foreach (var language in exercise.Variants.Languages)
+            foreach (var language in exercise!.Variants.Languages)
                 Assert.False(string.IsNullOrWhiteSpace(exercise.Variant(language).Solution), $"{m.Id}/{language}: empty solution");
         }
     }
@@ -41,16 +41,13 @@ public class ContentSchemaTests
     }
 
     [Fact]
-    public async Task Templates_every_template_has_a_variant_per_supported_language_whose_files_exist()
+    public async Task Templates_every_variant_lists_files_that_exist()
     {
-        // Listing only touches the file-open delegate; the project stores are unused.
-        var service = new ProjectTemplateService(ContentRoot.Open, null!, null!, null!, null!, null!, null!);
-        var templates = await service.ListAsync();
+        var templates = await ContentRoot.Templates.ListAsync();
         Assert.Equal(5, templates.Count);
 
         foreach (var t in templates)
         {
-            Assert.Empty(t.Variants.MissingFrom(HdlLanguages.Supported));
             foreach (var language in t.Variants.Languages)
             {
                 var variant = t.Variants.For(language)!;
@@ -64,22 +61,19 @@ public class ContentSchemaTests
     }
 
     [Fact]
-    public async Task Learn_samples_have_the_variants_their_module_requires()
+    public async Task Learn_samples_are_in_their_language_and_not_empty()
     {
-        var manifest = await new LessonCatalog(ContentRoot.Open).GetManifestAsync();
+        var manifest = await ContentRoot.Lessons.GetManifestAsync();
         Assert.Equal(ContentSchema.Version, manifest.Version);
         Assert.Equal(14, manifest.Modules.Count);
 
         var samples = 0;
         foreach (var module in manifest.Modules)
         {
-            var required = module.RequiredLanguages();
-
             foreach (var lesson in module.Lessons.Where(l => l.Sample != null))
             {
                 samples++;
                 var variants = lesson.Sample!.ByLanguage;
-                Assert.Empty(variants.MissingFrom(required));
                 foreach (var language in variants.Languages)
                 {
                     var source = variants.For(language)!;

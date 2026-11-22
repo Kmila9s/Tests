@@ -28,7 +28,11 @@ internal static class TestDesigns
     }
 
     /// <summary>Loads <paramref name="vhdl"/> as a one-file project through the VHDL front-end.</summary>
-    public static DesignResult Load(string vhdl, string? entry = null)
+    public static DesignResult Load(string vhdl, string? entry = null) =>
+        Load(HdlLanguages.Vhdl, [((entry ?? "design") + HdlLanguages.Vhdl.PrimaryExtension, vhdl)], entry);
+
+    /// <summary>Loads <paramref name="files"/> (name, text) as a project through <paramref name="language"/>'s front-end.</summary>
+    public static DesignResult Load(HdlLanguage language, IEnumerable<(string Name, string Content)> files, string? entry = null)
     {
         // Per-run engine attribute state is not part of the design registries.
         SignalAttributeHandler.Instance.Reset();
@@ -36,8 +40,8 @@ internal static class TestDesigns
         Directory.CreateDirectory(dir);
         try
         {
-            File.WriteAllText(Path.Combine(dir, (entry ?? "design") + HdlLanguages.Vhdl.PrimaryExtension), vhdl);
-            return Frontends.For(HdlLanguages.Vhdl).LoadDesign(new DesignRequest { Root = dir, Entry = entry });
+            foreach (var (name, content) in files) File.WriteAllText(Path.Combine(dir, name), content);
+            return Frontends.For(language).LoadDesign(new DesignRequest { Root = dir, Entry = entry });
         }
         finally
         {

@@ -12,6 +12,15 @@ internal static class ContentRoot
     /// <summary>Absolute path of the <c>wwwroot</c> folder.</summary>
     public static string Path => _path.Value;
 
+    /// <summary>The project-template service over the bundled content, loaded once (listing and rendering only touch the file-open delegate).</summary>
+    public static Kmila.Shared.Services.ProjectTemplateService Templates => _templates.Value;
+    private static readonly Lazy<Kmila.Shared.Services.ProjectTemplateService> _templates =
+        new(() => new(Open, null!, null!, null!, null!, null!, null!));
+
+    /// <summary>The Learn catalog over the bundled content, loaded once.</summary>
+    public static Kmila.Shared.Services.LessonCatalog Lessons => _lessons.Value;
+    private static readonly Lazy<Kmila.Shared.Services.LessonCatalog> _lessons = new(() => new(Open));
+
     /// <summary>File-open delegate with the same contract the app's catalogs use (paths relative to wwwroot).</summary>
     public static Task<Stream> Open(string relative) =>
         Task.FromResult<Stream>(File.OpenRead(Resolve(relative)));
