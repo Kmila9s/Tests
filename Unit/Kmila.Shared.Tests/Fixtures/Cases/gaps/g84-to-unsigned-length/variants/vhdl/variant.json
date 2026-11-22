@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "problem_5_2_3.vhdl",
+    "tb.vhdl"
+  ],
+  "top": "tb",
+  "entity": "tb"
+}

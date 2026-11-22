@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "id": "gaps-g87-variable-others",
+  "title": "G87: v := (others => '0') in a process stores the vector, then a dynamic bit write",
+  "sourceUrl": "Documentacion/handoffs/repros_gaps_2026-11-16/v309/g87_variable_indexada",
+  "license": "project",
+  "fetchedAt": "2026-11-22",
+  "problemDescription": "A variable assigned (others => '0') in the process body must hold the 4-bit vector (not the aggregate marker); next_g(to_integer(idx)) := '1' then sets bit 1. Must match GHDL 6.0.0.",
+  "ports": [
+    { "name": "g", "dir": "out", "width": 4 }
+  ],
+  "durationNs": 5,
+  "tickResNs": 1,
+  "stimulus": []
+}
