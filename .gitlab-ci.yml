@@ -4,10 +4,15 @@
 include:
     - project: 'kmila-9s/ci-templates'
       file: '/auto-merge.yml'
+    - project: 'kmila-9s/ci-templates'
+      file: '/release.yml'
+    - project: 'kmila-9s/ci-templates'
+      file: '/commit-guard.yml'
 
 stages:
     - test
     - merge
+    - release
 
 variables:
     GIT_DEPTH: "20"
