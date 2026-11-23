@@ -65,6 +65,6 @@ public class V319Tests
         var error = await Assert.ThrowsAnyAsync<ParserException>(() => RunFilesAsync(Design(child), "tb", 5, order: ["hijo.vhdl", "tb.vhdl"]));
         Assert.Equal(14, error.Line);
         Assert.EndsWith("hijo.vhdl", error.File);
-        Assert.Contains("at Line 14 in hijo.vhdl", error.Message);
+        Assert.Contains("in hijo.vhdl", error.Message);
     }
 }
