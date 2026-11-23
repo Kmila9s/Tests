@@ -1,0 +1,9 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "child.vhdl",
+    "conv3.vhdl"
+  ],
+  "top": "conv3",
+  "entity": "conv3"
+}

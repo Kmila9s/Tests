@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "id": "gaps-g83-inout-conversion",
+  "title": "G83: inout formal with a type conversion on both sides (unsigned(b) => std_logic_vector(u))",
+  "sourceUrl": "Documentacion/handoffs/repros_gaps_2026-11-16/v319/g83_inout_conversion",
+  "license": "project",
+  "fetchedAt": "2026-11-22",
+  "problemDescription": "A type conversion between closely related vectors on both sides of an inout association keeps the bits: u is driven by the child's b (1010 once enabled). Must match GHDL 6.0.0.",
+  "ports": [
+    { "name": "en", "dir": "out", "width": 1 },
+    { "name": "u", "dir": "out", "width": 4 }
+  ],
+  "durationNs": 5,
+  "tickResNs": 1,
+  "stimulus": []
+}
