@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "id": "gaps-g85-others-indexed",
+  "title": "G85: (others => x(i)) aggregate whose element is an indexed signal",
+  "sourceUrl": "Documentacion/handoffs/repros_gaps_2026-11-16/v308/g85_others_indexado",
+  "license": "project",
+  "fetchedAt": "2026-11-22",
+  "problemDescription": "q <= (others => i(3)) must fill q with the current value of i(3) on every evaluation (1111, then 0000). Must match GHDL 6.0.0.",
+  "ports": [
+    {
+      "name": "i",
+      "dir": "out",
+      "width": 4
+    },
+    {
+      "name": "q",
+      "dir": "out",
+      "width": 4
+    }
+  ],
+  "durationNs": 5,
+  "tickResNs": 1
+}

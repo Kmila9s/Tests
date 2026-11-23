@@ -1,0 +1,8 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "g85.vhdl"
+  ],
+  "top": "g85",
+  "entity": "g85"
+}

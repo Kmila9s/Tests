@@ -175,7 +175,7 @@ public class RunWatchdogTests
             SignalAttributeHandler.Instance.Reset();
             var sw = System.Diagnostics.Stopwatch.StartNew();
             // 1 s of simulated time = 100M ticks: would take far longer than the test.
-            await builder.RunTestbenchAsync(project, "counter.vhd", TimeSpan.FromSeconds(1),
+            await builder.RunTestbenchAsync(project, "counter.vhd", 1_000_000_000,
                 tickResNs: TickResNs, fastRun: false);
             sw.Stop();
 

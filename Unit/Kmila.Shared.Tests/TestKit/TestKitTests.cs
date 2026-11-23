@@ -4,7 +4,6 @@ using Kmila.Shared.Services.Vcd;
 using Kmila.TestKit;
 using Kmila.TestKit.Reference;
 using Kmila.TestKit.Runners;
-using Kmila.TestKit.Stimulus;
 
 namespace Kmila.Shared.Tests.TestKit;
 
@@ -41,38 +40,6 @@ public class TestKitTests
         var current = new Dictionary<string, string> { ["001"] = "aa", ["002"] = "XX", ["004"] = "dd" };
         Assert.Equal(["002: changed", "003: missing (no VCD)", "004: not in the baseline"], GoldenHashes.Compare(baseline, current));
         Assert.Empty(GoldenHashes.Compare(baseline, baseline));
-    }
-
-    [Fact]
-    public void StimulusDeriver_TakesInputChangesAtTheNearestNanosecond()
-    {
-        var golden = VcdReader.Parse("$timescale 1 fs $end $scope module tb $end $var reg 1 ! a $end $var reg 1 \" y $end $upscope $end $enddefinitions $end " +
-                                     "#0 0! 0\" #7500000 1! 1\" #12400000 0!");
-        var moments = StimulusDeriver.FromGolden(golden, ["A"]);
-        Assert.Equal([(0, "0"), (8, "1"), (12, "0")], moments.Select(m => (m.Time, m.Value)));
-        Assert.All(moments, m => Assert.Equal("a", m.Port));
-    }
-
-    [Fact]
-    public void TestbenchInitials_FollowThePortMapToTheInitializedSignal()
-    {
-        string dir = Directory.CreateTempSubdirectory("kmila-testkit").FullName;
-        try
-        {
-            string tb = Path.Combine(dir, "tb.vhdl");
-            File.WriteAllText(tb, """
-                architecture t of tb is
-                  signal clk_t : std_logic := '1'; -- drives clk
-                  signal d : std_logic_vector(3 downto 0) := (others => '0');
-                  signal en : std_logic;
-                begin
-                  uut: entity work.dut port map (clk => clk_t, d => d, en => en);
-                end;
-                """);
-            var initials = TestbenchInitials.Read([tb], [("clk", 1), ("d", 4), ("en", 1)]);
-            Assert.Equal([("clk", "1"), ("d", "0000")], initials.Select(i => (i.Port, i.Value)));
-        }
-        finally { Directory.Delete(dir, recursive: true); }
     }
 
     [Fact]

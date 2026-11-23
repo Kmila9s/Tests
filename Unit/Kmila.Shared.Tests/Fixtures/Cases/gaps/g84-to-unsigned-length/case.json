@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "id": "gaps-g84-to-unsigned-length",
+  "title": "G84: to_unsigned(n, s'length) as a function argument (inside = comparisons)",
+  "sourceUrl": "Documentacion/handoffs/repros_gaps_2026-11-16/v308/g84_eq_sin_parentesis",
+  "license": "project",
+  "fetchedAt": "2026-11-22",
+  "problemDescription": "An attribute argument ('length) of to_unsigned must give the vector width, so f = 1 exactly for 4, 5, 7, 12, 13, 15. Kmila simulates the testbench; must match GHDL 6.0.0.",
+  "ports": [
+    {
+      "name": "abcd",
+      "dir": "out",
+      "width": 4
+    },
+    {
+      "name": "f",
+      "dir": "out",
+      "width": 1
+    }
+  ],
+  "durationNs": 20,
+  "tickResNs": 1
+}

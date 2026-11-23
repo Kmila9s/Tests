@@ -1,0 +1,41 @@
+@startuml
+title Kmila — Control flow
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #f1f5f9
+  BorderColor #64748b
+  DiamondBackgroundColor #fae8ff
+  DiamondBorderColor #a855f7
+}
+
+start
+partition "entity case_expr_selector / architecture rtl" {
+  partition "process #1 (sensitive to: val)" {
+    switch ("to_integer")
+    case ("0")
+      :seg <= "0000001";
+    case ("1")
+      :seg <= "1001111";
+    case ("2")
+      :seg <= "0010010";
+    case ("3")
+      :seg <= "0000110";
+    case ("4")
+      :seg <= "1001100";
+    case ("5")
+      :seg <= "0100100";
+    case ("6")
+      :seg <= "0100000";
+    case ("7")
+      :seg <= "0001111";
+    case ("8")
+      :seg <= "0000000";
+    case ("9")
+      :seg <= "0000100";
+    case ("others")
+      :seg <= "1111111";
+    endswitch
+  }
+}
+stop
+@enduml

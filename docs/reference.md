@@ -132,9 +132,10 @@ Rules: sources under test are never edited to make Kmila pass — a known gap is
 kept as a ratchet test that must still fail until the engine is fixed (see
 `ParserCorpusTests.KnownGaps`). The current golden master is the newest dated
 folder under `baseline/` with a `bench-kmila-vcd.sha256` — today
-`baseline/2026-11-20-v316/` (strict bench 149/149, `cli/` outputs,
-`strict_scan.txt`; its README lists every VCD that changed and how it was
-checked against GHDL). Older folders are kept as history; `baseline/2026-11-15/`
+`baseline/2026-11-22-v319/` (bench verbatim: each author's testbench, 147/149
+with G103 ratcheted; `cli/` outputs over `baseline/cli-designs/`;
+`strict_scan.txt`; its README lists what changed and how it was checked
+against GHDL). Older folders are kept as history; `baseline/2026-11-15/`
 is the pre-refactor golden master.
 
 `Kmila.Shared.Tests` exercises, e.g.:

@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "id": "gaps-wait-below-tick",
+  "title": "wait for 1 ns and after 3 ns under a 10 ns requested tick (effective tick narrowed to 1 ns)",
+  "sourceUrl": "Documentacion/handoffs/repros_gaps_2026-11-16/v319/wait_menor_que_tick",
+  "license": "project",
+  "fetchedAt": "2026-11-22",
+  "problemDescription": "The run tick is the GCD of the requested tick and the design's static delays, so wait for 1 ns and after 3 ns land exactly although 10 ns is requested. Must match GHDL 6.0.0.",
+  "ports": [
+    {
+      "name": "n",
+      "dir": "out",
+      "width": 5
+    },
+    {
+      "name": "q",
+      "dir": "out",
+      "width": 1
+    }
+  ],
+  "durationNs": 20,
+  "tickResNs": 10
+}
