@@ -18,8 +18,7 @@ trap 'rm -rf $OUT' EXIT
 
 cd $ROOT
 for c in 001-and-gate 002-decoder-3to8 003-counter-8bit 128-unsigned-slice-assign 166-case-expr-selector; do
-  f=SimulatorBench/Cases/$c/kmila.vhdl
-  [[ -f $f ]] || f=SimulatorBench/Cases/$c/legacy/kmila.vhdl   # bench layout v2
+  f=Tests/baseline/cli-designs/$c.vhdl   # single-file designs: entity entry + port stimulus
   $K check $f > $OUT/$c.check.txt 2>&1; echo "check=$?" > $OUT/$c.exit
   $K sim --top-file $f --duration 200ns --output-format vcd -o $OUT/$c.vcd > /dev/null 2>$OUT/$c.sim.err; echo "sim=$?" >> $OUT/$c.exit
   $K synth $f -o $OUT/$c.svg >/dev/null 2>&1; echo "synth=$?" >> $OUT/$c.exit

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1450" height="476" viewBox="0 0 1450 476" font-family="ui-monospace, Menlo, Consolas, monospace">
+<rect x="0" y="0" width="1450" height="476" fill="#ffffff" />
+<text x="40" y="44" font-size="16" font-weight="600" fill="#1f2937">counter</text>
+<rect x="175" y="68" width="110" height="100" rx="12" fill="rgba(60,130,246,.09)" stroke="rgba(60,130,246,.55)" stroke-width="1.5" /><text x="187" y="84" font-size="11" font-weight="600" font-family="var(--kmila-font-display, 'Archivo', system-ui, sans-serif)" fill="#1f2937">n_rst = &#39;0&#39;</text>
+<rect x="1165" y="188" width="116.4" height="100" rx="12" fill="rgba(245,158,11,.09)" stroke="rgba(245,158,11,.55)" stroke-width="1.5" /><text x="1177" y="204" font-size="11" font-weight="600" font-family="var(--kmila-font-display, 'Archivo', system-ui, sans-serif)" fill="#1f2937">cnt &lt;= cnt + 1</text>
+<rect x="505" y="308" width="440" height="100" rx="12" fill="rgba(16,185,129,.09)" stroke="rgba(16,185,129,.55)" stroke-width="1.5" /><text x="517" y="324" font-size="11" font-weight="600" font-family="var(--kmila-font-display, 'Archivo', system-ui, sans-serif)" fill="#1f2937">process: rising_edge(clk)</text>
+<path d="M 70 198.67 L 156.33 198.67 L 156.33 287 L 683 287 L 683 375.33 L 855 375.33 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<path d="M 70 295.33 L 173.67 295.33 L 173.67 118.67 L 195 118.67 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<path d="M 925 367 L 1055 367 L 1055 238.67 L 1185 238.67 " fill="none" stroke="#475569" stroke-width="4" stroke-linejoin="round" />
+<path d="M 925 367 L 1055 367 L 1055 307 L 1276.33 307 L 1276.33 247 L 1380 247 " fill="none" stroke="#475569" stroke-width="4" stroke-linejoin="round" />
+<path d="M 265 127 L 353 127 L 353 354.5 L 525 354.5 " fill="none" stroke="#475569" stroke-width="3" stroke-linejoin="round" />
+<path d="M 1255 247 L 1293.67 247 L 1293.67 436 L 437 436 L 437 379.5 L 525 379.5 " fill="none" stroke="#475569" stroke-width="4" stroke-linejoin="round" />
+<path d="M 595 367 L 767 367 L 767 358.67 L 855 358.67 " fill="none" stroke="#475569" stroke-width="4" stroke-linejoin="round" />
+<g transform="translate(195 102)"><path d="M 2 5 L 68 5 L 68 45 L 2 45 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5" /><text x="35" y="29" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">=</text></g>
+<g transform="translate(1185 222)"><path d="M 2 5 L 68 5 L 68 45 L 2 45 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5" /><text x="35" y="29" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">+</text></g>
+<g transform="translate(525 342)"><path d="M 8 5 L 60 19 L 60 31 L 8 45 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5" /><text x="35" y="29" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">mux</text></g>
+<g transform="translate(855 342)"><path d="M 2 5 L 68 5 L 68 45 L 2 45 Z" fill="#f8fafc" stroke="#1e293b" stroke-width="1.5" /><text x="35" y="29" text-anchor="middle" font-size="14" font-weight="600" fill="#1e293b">dff</text></g>
+<circle cx="70" cy="198.67" r="6" fill="#3c82f6" stroke="#1e293b" stroke-width="1.5" /><text x="82" y="202.67" text-anchor="start" font-size="14" font-weight="600" fill="#1e293b">clk</text>
+<circle cx="70" cy="295.33" r="6" fill="#3c82f6" stroke="#1e293b" stroke-width="1.5" /><text x="82" y="299.33" text-anchor="start" font-size="14" font-weight="600" fill="#1e293b">n_rst</text>
+<circle cx="1380" cy="247" r="6" fill="#f59e0b" stroke="#1e293b" stroke-width="1.5" /><text x="1368" y="251" text-anchor="end" font-size="14" font-weight="600" fill="#1e293b">cout[7:0]</text>
+</svg>

@@ -7,10 +7,17 @@
   "fetchedAt": "2026-11-22",
   "problemDescription": "An attribute argument ('length) of to_unsigned must give the vector width, so f = 1 exactly for 4, 5, 7, 12, 13, 15. Kmila simulates the testbench; must match GHDL 6.0.0.",
   "ports": [
-    { "name": "abcd", "dir": "out", "width": 4 },
-    { "name": "f", "dir": "out", "width": 1 }
+    {
+      "name": "abcd",
+      "dir": "out",
+      "width": 4
+    },
+    {
+      "name": "f",
+      "dir": "out",
+      "width": 1
+    }
   ],
   "durationNs": 20,
-  "tickResNs": 1,
-  "stimulus": []
+  "tickResNs": 1
 }

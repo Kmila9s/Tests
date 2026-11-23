@@ -25,7 +25,7 @@ public class CaseModelTests
         {
             File.WriteAllText(Path.Combine(dir, "case.json"), """
                 { "version": 2, "id": "001-and", "title": "AND", "ports": [ { "name": "a", "dir": "in", "width": 1 }, { "name": "y", "dir": "out", "width": 1 } ],
-                  "durationNs": 40, "stimulus": [ { "t": 0, "port": "a", "value": "1" } ] }
+                  "durationNs": 40 }
                 """);
             Directory.CreateDirectory(Path.Combine(dir, "variants", "vhdl"));
             File.WriteAllText(Path.Combine(dir, "variants", "vhdl", "variant.json"), """
@@ -35,7 +35,6 @@ public class CaseModelTests
             Assert.Equal("001-and", c.Spec.Id);
             Assert.Equal(["y"], c.Spec.Outputs);
             Assert.Equal("a", c.Spec.Inputs.Single().Name);
-            Assert.Equal(("1", 0), (c.Spec.Stimulus[0].Value, c.Spec.Stimulus[0].Time));
             var v = c.Variants.For(HdlLanguages.Vhdl)!;
             Assert.Same(HdlLanguages.Vhdl, v.Language);
             Assert.Equal(Path.Combine(dir, "variants", "vhdl", "reference", "tb.vhdl"), v.SourcePaths[1]);

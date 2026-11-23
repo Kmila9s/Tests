@@ -7,10 +7,17 @@
   "fetchedAt": "2026-11-22",
   "problemDescription": "A type conversion between closely related vectors on both sides of an inout association keeps the bits: u is driven by the child's b (1010 once enabled). Must match GHDL 6.0.0.",
   "ports": [
-    { "name": "en", "dir": "out", "width": 1 },
-    { "name": "u", "dir": "out", "width": 4 }
+    {
+      "name": "en",
+      "dir": "out",
+      "width": 1
+    },
+    {
+      "name": "u",
+      "dir": "out",
+      "width": 4
+    }
   ],
   "durationNs": 5,
-  "tickResNs": 1,
-  "stimulus": []
+  "tickResNs": 1
 }

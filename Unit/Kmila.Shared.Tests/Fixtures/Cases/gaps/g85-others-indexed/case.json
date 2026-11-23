@@ -7,10 +7,17 @@
   "fetchedAt": "2026-11-22",
   "problemDescription": "q <= (others => i(3)) must fill q with the current value of i(3) on every evaluation (1111, then 0000). Must match GHDL 6.0.0.",
   "ports": [
-    { "name": "i", "dir": "out", "width": 4 },
-    { "name": "q", "dir": "out", "width": 4 }
+    {
+      "name": "i",
+      "dir": "out",
+      "width": 4
+    },
+    {
+      "name": "q",
+      "dir": "out",
+      "width": 4
+    }
   ],
   "durationNs": 5,
-  "tickResNs": 1,
-  "stimulus": []
+  "tickResNs": 1
 }

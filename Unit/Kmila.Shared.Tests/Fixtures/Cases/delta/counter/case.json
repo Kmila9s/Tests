@@ -29,6 +29,5 @@
     }
   ],
   "durationNs": 100,
-  "tickResNs": 1,
-  "stimulus": []
+  "tickResNs": 1
 }
