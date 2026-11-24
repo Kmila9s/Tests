@@ -48,7 +48,7 @@ public class ElaborationRegressionTests
             });
 
             Assert.Contains(run.Log, l => l.StartsWith("[elab] inlined components for top"));
-            var wf = WaveformData.FromSignalHistory(run.History, 10);
+            var wf = WaveformData.FromSignalHistory(run.History, run.TickFs);
             var q = wf.Signals.Single(s => s.Name.Equals("q", StringComparison.OrdinalIgnoreCase));
             Assert.Equal(0, q.ValueAtNs(20).Value);   // x=0, z=1
             Assert.Equal(1, q.ValueAtNs(50).Value);   // x=1, z=1

@@ -65,7 +65,7 @@ public class ProcedureFrameTests
         Assert.Contains(tasks, t => t is WaitForStatement);
         var wait = tasks.OfType<WaitForStatement>().First();
         Assert.True(wait.IsTimed);
-        Assert.Equal(15, wait.DelayNs);
+        Assert.Equal(15 * Interpreter.Models.PhysicalTime.FsPerNs, wait.DelayFs);
     }
 
     // A wait nested inside an if branch in the procedure body must also

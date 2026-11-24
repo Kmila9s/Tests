@@ -21,6 +21,7 @@ namespace Kmila.Shared.Tests;
 public class RunWatchdogTests
 {
     private const int TickResNs = 10;
+    private const long TickFs = TickResNs * Interpreter.Models.PhysicalTime.FsPerNs;
 
     // ── Policy ───────────────────────────────────────────────────────────────
 
@@ -97,14 +98,13 @@ public class RunWatchdogTests
         try
         {
             var config = BuildConfig(edges);
-            trace = storage.StartSession(TickResNs);
+            trace = storage.StartSession(TickFs);
             var runner = new SimulationRunner();
             bool? completed = null;
             RunStopReason reason = RunStopReason.None;
             IDisposable? watch = null;
             runner.OnEngineReady += eng =>
             {
-                eng.TickResolutionNs = TickResNs;
                 eng.History.MaxSamplesPerSignal = 5000;
                 trace.Attach(eng.History);
                 watch = wd.Watch(trace, r => { reason = r; runner.Stop(); });
@@ -120,17 +120,17 @@ public class RunWatchdogTests
             Assert.True(await trace.CompleteAsync());
             Assert.False(trace.IsTruncated);
             Assert.Equal(0, trace.PendingSamples);
-            var capped = WaveformData.FromSignalHistory(history, TickResNs);
+            var capped = WaveformData.FromSignalHistory(history, TickFs);
             trace.AttachArchives(capped);
-            long stopNs = (long)capped.TotalTicks * TickResNs;
+            long stopNs = capped.TotalNs;
             runner.Dispose();
 
             // Same design, uncapped, run just past the stop point.
             var fullConfig = BuildConfig((int)(stopNs / 20) + 10);
             var full = new SimulationRunner();
-            full.OnEngineReady += eng => { eng.TickResolutionNs = TickResNs; eng.History.MaxSamplesPerSignal = 0; };
+            full.OnEngineReady += eng => { eng.History.MaxSamplesPerSignal = 0; };
             await full.RunAsync(fullConfig);
-            var reference = WaveformData.FromSignalHistory(full.Engine!.History, TickResNs);
+            var reference = WaveformData.FromSignalHistory(full.Engine!.History, TickFs);
             full.Dispose();
 
             foreach (var sig in capped.Signals)

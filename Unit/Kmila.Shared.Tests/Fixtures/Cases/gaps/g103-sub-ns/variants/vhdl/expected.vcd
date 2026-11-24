@@ -1,0 +1,71 @@
+$date
+  Tue Nov 24 15:47:50 2026
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module textio $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module numeric_std $end
+$upscope $end
+$scope module subns $end
+$var reg 1 ! clk $end
+$var reg 4 " n[3:0] $end
+$var reg 1 # q $end
+$var reg 1 $ d $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+b0000 "
+0#
+0$
+#500000
+b0001 "
+#1000000
+b0010 "
+#1500000
+b0011 "
+#2000000
+b0100 "
+#2500000
+b0101 "
+#3000000
+b0110 "
+#3500000
+b0111 "
+#4000000
+b1000 "
+#4500000
+b1001 "
+#5000000
+b1010 "
+#5263158
+1!
+#5513158
+1#
+#10526316
+0!
+#10776316
+0#
+#12500000
+1$
+#15789474
+1!
+#16039474
+1#
+#21052632
+0!
+#21302632
+0#
+#26315790
+1!
+#26565790
+1#

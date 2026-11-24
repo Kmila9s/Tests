@@ -19,7 +19,7 @@ public class SimulationSnapshotRetentionTests
         try
         {
             var store = new SimulationSnapshotStore(db);
-            var wf = WaveformData.CreateEmpty(10);
+            var wf = WaveformData.CreateEmpty(Interpreter.Models.PhysicalTime.DefaultTickFs);
             const int project = 1, other = 2;
 
             // 3 old runs, pinned.

@@ -1,0 +1,32 @@
+$date
+   2026-11-22 20:35:12
+$end
+$version
+   VHDL Interpreter v0.17.0
+$end
+$timescale
+   1ps
+$end
+$scope module unsigned_slice_assign $end
+$var wire 1 ! clk $end
+$var reg 8 " data $end
+$var reg 8 # data_reg $end
+$var wire 1 $ go $end
+$var reg 8 % mar_reg $end
+$var reg 8 & rom_addr $end
+$var reg 8 ' rom_data $end
+$var reg 3 ( state $end
+$var reg 24 ) word $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+U!
+b00000000 "
+b00000000 #
+U$
+b00000000 %
+b00000000 &
+b00000000 '
+b000 (
+bUUUUUUUUUUUUUUUUUUUUUUUU )
+$end

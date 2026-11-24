@@ -1,0 +1,8 @@
+{
+  "language": "vhdl",
+  "sources": [
+    "subns.vhdl"
+  ],
+  "top": "subns",
+  "entity": "subns"
+}

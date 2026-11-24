@@ -74,7 +74,7 @@ public class SequentialSemanticsTests
     public async Task Stop_and_finish_end_the_run_early_with_success(string entry, int endNs, string q)
     {
         var run = await RunAsync(Fixture($"{entry}.vhdl"), entry, 200);
-        var wf = WaveformData.FromSignalHistory(run.History, 1);
+        var wf = WaveformData.FromSignalHistory(run.History, run.TickFs);
         if (endNs > 0) Assert.Equal((ulong)endNs, wf.TotalTicks - 1);
         else Assert.True(wf.TotalTicks < 200, $"run did not stop early (ticks {wf.TotalTicks})");
         Assert.Equal(Convert.ToInt64(q, 2), ValueAt(wf, "q", (long)wf.TotalTicks - 1));
@@ -86,7 +86,7 @@ public class SequentialSemanticsTests
         var run = await RunAllowingEngineErrorAsync(Fixture("env_fail.vhdl"), "env_fail", 200);
         Assert.NotNull(run.EngineError);
         Assert.Contains("env_fail: c reached 3", run.EngineError!);
-        var wf = WaveformData.FromSignalHistory(run.History, 1);
+        var wf = WaveformData.FromSignalHistory(run.History, run.TickFs);
         Assert.Equal(40UL, wf.TotalTicks - 1);   // GHDL: assertion failure @40ns
         Assert.Equal(0b0011, ValueAt(wf, "q", 40));
     }

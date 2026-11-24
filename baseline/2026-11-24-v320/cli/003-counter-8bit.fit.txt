@@ -1,0 +1,8 @@
+Resource estimate for 'counter':
+  Resource       Used    Avail    Util  Status
+  LUTs              0        -       -  -
+  FlipFlops         8        -       -  -
+  BRAM              0        -       -  -
+  DSP               0        -       -  -
+  IO               10        -       -  -
+  Clocks            1        -       -  -

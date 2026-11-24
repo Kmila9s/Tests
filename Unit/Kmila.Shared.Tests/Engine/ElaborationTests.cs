@@ -30,7 +30,7 @@ public class ElaborationTests
     {
         var run = await RunFilesAsync(Files(fixture), entry, 10, order, true, moments: moments);
         Assert.Null(run.EngineError);
-        return WaveformData.FromSignalHistory(run.History, 1);
+        return WaveformData.FromSignalHistory(run.History, run.TickFs);
     }
 
     /// <summary>fixture, top unit, expected "port=bits" pairs at 5 ns (GHDL).</summary>

@@ -64,7 +64,7 @@ public class LongRunMemoryStressTests
         // that here — merge periodically DURING the run (not once at the end),
         // which is what makes WaveformData.Transitions accumulate cumulatively
         // in the live path.
-        var wf = WaveformData.CreateEmpty(tickResNs);
+        var wf = WaveformData.CreateEmpty(tickResNs * Interpreter.Models.PhysicalTime.FsPerNs);
         int frameCounter = 0;
 
         var runner = new SimulationRunner();
@@ -72,7 +72,6 @@ public class LongRunMemoryStressTests
         {
             runner.OnEngineReady += eng =>
             {
-                eng.TickResolutionNs = tickResNs;
                 if (attachReplay) replay.AttachLive(eng, source);
                 eng.OnFrameEmitted += _ =>
                 {
@@ -201,7 +200,6 @@ public class LongRunMemoryStressTests
         {
             runner.OnEngineReady += eng =>
             {
-                eng.TickResolutionNs = tickResNs;
                 replay.AttachLive(eng, source); // subscribes first → writes the frame first
                 eng.OnFrameEmitted += args =>
                 {
