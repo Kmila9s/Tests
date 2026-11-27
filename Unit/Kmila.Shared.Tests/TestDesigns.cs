@@ -1,3 +1,4 @@
+using Interpreter.Ir;
 using Interpreter.Services;
 using Kmila.Frontend;
 
@@ -17,14 +18,14 @@ internal static class TestDesigns
 
     /// <summary>
     /// Loads <paramref name="vhdl"/> as a one-file project and returns the
-    /// top entity (<paramref name="entry"/> when it has an architecture, else
-    /// the first entity that has one). Throws the original parse exception.
+    /// top design (<paramref name="entry"/> when it has an architecture, else
+    /// the first entity that has one) in its IR form. Throws the original parse exception.
     /// </summary>
-    public static Entity LoadTop(string vhdl, string? entry = null)
+    public static IrDesign LoadTop(string vhdl, string? entry = null)
     {
         var design = Load(vhdl, entry);
         design.ThrowIfFailed();
-        return design.Top ?? throw new Xunit.Sdk.XunitException("No entity with an architecture was parsed.");
+        return design.Ir ?? throw new Xunit.Sdk.XunitException("No entity with an architecture was parsed.");
     }
 
     /// <summary>Loads <paramref name="vhdl"/> as a one-file project through the VHDL front-end.</summary>
@@ -63,7 +64,7 @@ internal static class TestDesigns
         """;
 
     /// <summary>The free-running counter used by the long-run / watchdog / stress suites.</summary>
-    public static Entity SelfRetriggeringClock() => LoadTop(Fixture("Stress", "self_retriggering_clock.vhd"));
+    public static IrDesign SelfRetriggeringClock() => LoadTop(Fixture("Stress", "self_retriggering_clock.vhd"));
 
     /// <summary>Parses <paramref name="vhdl"/> without touching registries; throws the original parse exception.</summary>
     public static ParsedUnit Parse(string vhdl)

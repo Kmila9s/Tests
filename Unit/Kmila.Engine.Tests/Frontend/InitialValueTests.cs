@@ -1,3 +1,4 @@
+using Interpreter.Ir.Vhdl;
 using Interpreter.Models;
 using Interpreter.Services;
 
@@ -59,7 +60,7 @@ public class InitialValueTests
     public void Didactic_policy_seeds_zero_without_touching_initializers()
     {
         var entity = Parse("signal v : std_logic_vector(3 downto 0); signal w : std_logic := '1'; signal r : integer range 1 to 4; signal en : std_logic;");
-        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(entity), new HashSet<global::Parser.Models.Variable>());
+        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(VhdlDesignAdapter.From(entity)), new HashSet<global::Parser.Models.Variable>());
         var sig = entity.Architecture!.Signals.ToDictionary(s => s.Name);
         Assert.Equal("0000", sig["v"].Value.ToString());
         Assert.Equal("1", sig["w"].Value.ToString());
@@ -71,7 +72,7 @@ public class InitialValueTests
     public void Lrm_policy_leaves_every_object_alone()
     {
         var entity = Parse("signal v : std_logic_vector(3 downto 0);");
-        InitialValueSeeder.Apply(InitialValuePolicy.Lrm, InitialValueSeeder.ObjectsOf(entity), new HashSet<global::Parser.Models.Variable>());
+        InitialValueSeeder.Apply(InitialValuePolicy.Lrm, InitialValueSeeder.ObjectsOf(VhdlDesignAdapter.From(entity)), new HashSet<global::Parser.Models.Variable>());
         Assert.Equal("UUUU", entity.Architecture!.Signals.Single(s => s.Name == "v").Value.ToString());
     }
 
