@@ -1,3 +1,4 @@
+using Interpreter.Ir.Vhdl;
 using Interpreter.Models;
 using Interpreter.Services;
 using Parser.Models;
@@ -168,8 +169,8 @@ end architecture behavioral;";
         var entity = entities.FirstOrDefault(e => e.Architecture != null)
                      ?? throw new InvalidOperationException("No entity with architecture parsed");
 
-        var allSignals = new HashSet<Variable>(entity.Ports.Concat(entity.Architecture!.Signals));
-        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(entity), new HashSet<Variable>());
+        var design = VhdlDesignAdapter.From(entity);
+        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(design), new HashSet<Variable>());
         // run=1, reset=0 so the counter free-runs.
         foreach (var p in entity.Ports)
         {
@@ -182,7 +183,7 @@ end architecture behavioral;";
                        ?? throw new InvalidOperationException("no segments port");
 
         using var engine = new DeltaCycleEngine();
-        engine.Initialize(allSignals, entity.Architecture.Tasks);
+        engine.Initialize(design);
 
         var seen = new HashSet<string>();
 

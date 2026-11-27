@@ -107,7 +107,7 @@ public class ElaborationTests
     public async Task A_missing_inferred_top_unit_falls_back_with_a_warning()
     {
         var run = await RunFilesAsync(Files("r3.vhd"), "r3", 10, entryIsExplicit: false);
-        Assert.Equal("top", run.Entity.Name);
+        Assert.Equal("top", run.Design.Name);
         Assert.Contains(run.Log, l => l.Contains("cannot find entity or configuration \"r3\""));
     }
 

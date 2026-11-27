@@ -1,6 +1,5 @@
 using Kmila.Shared.Services.Vcd;
 using Kmila.TestKit.Harness;
-using static Parser.Models.Constants;
 
 namespace Kmila.Shared.Tests.TestKit;
 
@@ -9,7 +8,7 @@ public class HarnessTests
 {
     private static readonly HarnessSpec Spec = new(
         "counter",
-        [new("clk", PortType.IN, 1, false), new("d", PortType.IN, 4, true), new("q", PortType.OUT, 4, true)],
+        [new("clk", 1, false), new("d", 4, true), new("q", 4, true)],
         [new("clk", 10, false)],
         [new(0, "d", "0011"), new(0, "clk", "0"), new(25, "d", "1100")],
         new Dictionary<string, string> { ["d"] = "0000" },

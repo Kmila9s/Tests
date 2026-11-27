@@ -32,8 +32,8 @@ public class LongRunTraceStoreTests
     private static async Task<RunResult> RunAsync(int clockEdges, int historyCap, TraceStorage? storage,
         Action<Variable, IReadOnlyList<(long, object, int)>>? extraSpill = null)
     {
-        var entity = TestDesigns.SelfRetriggeringClock();
-        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+        var design = TestDesigns.SelfRetriggeringClock();
+        var config = StimulusBuilder.BuildConfigNs(design, portMoments: null,
             totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
 
         var trace = storage?.StartSession(TickFs);

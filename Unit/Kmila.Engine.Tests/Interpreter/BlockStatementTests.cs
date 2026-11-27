@@ -1,3 +1,4 @@
+using Interpreter.Ir.Vhdl;
 using Interpreter.Models;
 using Interpreter.Repositories;
 using Interpreter.Services;
@@ -150,15 +151,15 @@ begin
     end block gb;
 end rtl;";
         var entity = ParseArch(vhdl);
-        var arch = entity.Architecture!;
 
-        var allSignals = new HashSet<Variable>(entity.Ports.Concat(arch.Signals));
+        var design = VhdlDesignAdapter.From(entity);
+        var allSignals = design.Binding.Objects;
         Variable Sig(string n) => allSignals.First(s => s.Name.Equals(n, StringComparison.OrdinalIgnoreCase));
 
-        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(entity), new HashSet<Variable>());
+        InitialValueSeeder.Apply(InitialValuePolicy.Didactic, InitialValueSeeder.ObjectsOf(design), new HashSet<Variable>());
 
         using var engine = new DeltaCycleEngine();
-        engine.Initialize(allSignals, arch.Tasks);
+        engine.Initialize(design);
 
         async Task Settle(ulong t) { engine.AdvanceTime(t); await engine.RunTimeStepAsync(); }
 

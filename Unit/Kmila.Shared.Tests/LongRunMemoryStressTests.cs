@@ -47,13 +47,13 @@ public class LongRunMemoryStressTests
     private static async Task<StressResult> RunStressAsync(int clockEdges, bool attachReplay)
     {
         var source = TestDesigns.Fixture("Stress", "self_retriggering_clock.vhd");
-        var entity = TestDesigns.LoadTop(source);
+        var design = TestDesigns.LoadTop(source);
 
         const int tickResNs = 10;
         const int clockMhz = 50;                 // 20 ns period → rising edge every 20 ns
         long totalNs = (long)clockEdges * 20L;
 
-        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+        var config = StimulusBuilder.BuildConfigNs(design, portMoments: null,
             totalNs: totalNs, tickResNs: tickResNs, systemClockMhz: clockMhz);
 
         var replay = new ReplayState(new SignalCursorBus());
@@ -184,10 +184,10 @@ public class LongRunMemoryStressTests
     public async Task ReplayDoc_DeltaFrames_ReconstructFullTable()
     {
         var source = TestDesigns.Fixture("Stress", "self_retriggering_clock.vhd");
-        var entity = TestDesigns.LoadTop(source);
+        var design = TestDesigns.LoadTop(source);
 
         const int tickResNs = 10;
-        var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+        var config = StimulusBuilder.BuildConfigNs(design, portMoments: null,
             totalNs: (long)EdgesLarge * 20L, tickResNs: tickResNs, systemClockMhz: 50);
 
         var replay = new ReplayState(new SignalCursorBus()) { LiveReplayDuringRun = true };

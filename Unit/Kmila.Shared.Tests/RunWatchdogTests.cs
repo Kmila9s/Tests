@@ -80,8 +80,8 @@ public class RunWatchdogTests
 
     private static SimulationConfig BuildConfig(int clockEdges)
     {
-        var entity = TestDesigns.SelfRetriggeringClock();
-        return StimulusBuilder.BuildConfigNs(entity, portMoments: null,
+        var design = TestDesigns.SelfRetriggeringClock();
+        return StimulusBuilder.BuildConfigNs(design, portMoments: null,
             totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
     }
 
