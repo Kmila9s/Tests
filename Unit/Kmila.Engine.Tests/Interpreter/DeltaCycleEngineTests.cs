@@ -393,7 +393,7 @@ public class DeltaCycleEngineTests
         history.RecordChange(counter, 5000, "0011");
 
         // Export to VCD
-        string vcd = history.ExportToVcd("TestModule", timescaleNs: 1);
+        string vcd = history.ExportToVcd("TestModule", Interpreter.Models.PhysicalTime.FsPerNs);
 
         Console.WriteLine("--- VCD Output ---");
         Console.WriteLine(vcd);

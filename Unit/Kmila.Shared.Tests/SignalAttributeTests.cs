@@ -156,9 +156,9 @@ public class SignalAttributeTests
         h.OnDeltaCommit(new Dictionary<Variable, object?>(), timeMoment: 21000);
 
         // stable(20 ns) at tickRes=1 → 20_000 raw units — elapsed 20_000 → True.
-        Assert.True(h.GetStable(sig, 20));
+        Assert.True(h.GetStable(sig, 20 * Interpreter.Models.PhysicalTime.FsPerNs));
         // stable(30 ns) → 30_000 raw units — elapsed 20_000 → False.
-        Assert.False(h.GetStable(sig, 30));
+        Assert.False(h.GetStable(sig, 30 * Interpreter.Models.PhysicalTime.FsPerNs));
     }
 
     [Fact]
@@ -172,7 +172,7 @@ public class SignalAttributeTests
         h.OnDeltaCommit(new Dictionary<Variable, object?> { [sig] = "0" }, timeMoment: 5000);
 
         // Same timeMoment as the commit — elapsed=0 — stable(1) must be False.
-        Assert.False(h.GetStable(sig, 1));
+        Assert.False(h.GetStable(sig, 1 * Interpreter.Models.PhysicalTime.FsPerNs));
     }
 
     // --- DeferredAttribute re-evaluation ---------------------------------
@@ -228,13 +228,13 @@ public class SignalAttributeTests
         h.OnDeltaCommit(new Dictionary<Variable, object?> { [sig] = "0" }, timeMoment: 1000);
         h.OnDeltaCommit(new Dictionary<Variable, object?>(), timeMoment: 21000);
 
-        var da = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgNs: 20);
+        var da = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgFs: 20 * Interpreter.Models.PhysicalTime.FsPerNs);
         Assert.Equal(true, da.Evaluate().Value);
 
         // Advance less than threshold — should now report unstable relative
         // to a longer T.
         h.OnDeltaCommit(new Dictionary<Variable, object?>(), timeMoment: 22000);
-        var daShort = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgNs: 100);
+        var daShort = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgFs: 100 * Interpreter.Models.PhysicalTime.FsPerNs);
         Assert.Equal(false, daShort.Evaluate().Value);
     }
 
@@ -261,14 +261,14 @@ public class SignalAttributeTests
     // --- Tier 4.1 close-out fences ---------------------------------------
 
     [Fact]
-    public void StableT_ScalesByTickResolutionNs_TenNsDefault()
+    public void StableT_ScalesByTick_TenNsDefault()
     {
         // At tickResolutionNs=10 (bench default), a 10 ns threshold should
         // fire after one tick of quiescence — not ten. Pre-close-out, callers
         // pre-scaled ns*1000 assuming 1 ns/tick, comparing against a 10× off
         // window that silently never fired.
         var h = FreshHandler();
-        h.TickResolutionNs = 10;
+        h.TickFs = 10 * Interpreter.Models.PhysicalTime.FsPerNs;
         var sig = MakeSignal("data", "0");
         h.RegisterSignal(sig);
 
@@ -279,12 +279,12 @@ public class SignalAttributeTests
         h.OnDeltaCommit(new Dictionary<Variable, object?> { [sig] = "0" }, timeMoment: 1000);
         h.OnDeltaCommit(new Dictionary<Variable, object?>(), timeMoment: 2000);
 
-        var da = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgNs: 10);
+        var da = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgFs: 10 * Interpreter.Models.PhysicalTime.FsPerNs);
         Assert.Equal(true, da.Evaluate().Value);
 
         // Same window vs. a 100 ns threshold: 100 ns @ tickRes=10 needs 10_000
         // raw units of quiet, but only 1000 have elapsed — should read unstable.
-        var daLong = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgNs: 100);
+        var daLong = new DeferredAttribute(sig, "stable", DATATYPES.BOOLEAN, timeArgFs: 100 * Interpreter.Models.PhysicalTime.FsPerNs);
         Assert.Equal(false, daLong.Evaluate().Value);
     }
 

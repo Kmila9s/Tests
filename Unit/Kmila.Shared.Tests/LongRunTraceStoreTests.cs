@@ -22,6 +22,7 @@ namespace Kmila.Shared.Tests;
 public class LongRunTraceStoreTests
 {
     private const int TickResNs = 10;
+    private const long TickFs = TickResNs * Interpreter.Models.PhysicalTime.FsPerNs;
 
     private sealed record RunResult(SignalHistory History, WaveformData Waveform, TraceSession? Trace);
 
@@ -35,13 +36,12 @@ public class LongRunTraceStoreTests
         var config = StimulusBuilder.BuildConfigNs(entity, portMoments: null,
             totalNs: (long)clockEdges * 20L, tickResNs: TickResNs, systemClockMhz: 50);
 
-        var trace = storage?.StartSession(TickResNs);
+        var trace = storage?.StartSession(TickFs);
         var runner = new SimulationRunner();
         try
         {
             runner.OnEngineReady += eng =>
             {
-                eng.TickResolutionNs = TickResNs;
                 eng.History.MaxSamplesPerSignal = historyCap;
                 trace?.Attach(eng.History);
                 if (extraSpill != null)
@@ -53,7 +53,7 @@ public class LongRunTraceStoreTests
             await runner.RunAsync(config);
             var history = runner.Engine!.History;
             if (trace != null) await trace.CompleteAsync();
-            var wf = WaveformData.FromSignalHistory(history, TickResNs);
+            var wf = WaveformData.FromSignalHistory(history, TickFs);
             trace?.AttachArchives(wf);
             return new RunResult(history, wf, trace);
         }
@@ -141,7 +141,7 @@ public class LongRunTraceStoreTests
         try
         {
             var full = await RunAsync(12000, historyCap: 0, storage: null);
-            long endNs = (long)full.Waveform.TotalTicks * TickResNs;
+            long endNs = full.Waveform.TotalNs;
             var rnd = new Random(1234);
             foreach (var refSig in full.Waveform.Signals)
             {

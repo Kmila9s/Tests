@@ -114,7 +114,7 @@ public class RecordTests
     public async Task Vcd_dumps_records_as_scopes_and_integers_as_integer_32()
     {
         var run = await RunAsync(Fixture("rec_int_enum.vhdl"), "rec_int_enum", 30, Drive("a", "a"), Drive("n", "n"));
-        var vcd = run.History.ExportToVcd("rec_int_enum").Split('\n').Select(l => l.Trim()).ToList();
+        var vcd = run.History.ExportToVcd("rec_int_enum", run.TickFs).Split('\n').Select(l => l.Trim()).ToList();
         int scope = vcd.IndexOf("$scope module c $end");
         Assert.True(scope > 0, "record c has its own scope");
         var vars = vcd.Skip(scope + 1).TakeWhile(l => l != "$upscope $end").Select(l => l.Split(' ')).ToList();
@@ -123,7 +123,7 @@ public class RecordTests
         Assert.DoesNotContain(vcd, l => l.EndsWith(" idle $end"));   // enum literals are not signals
 
         var counter = await RunAsync(Fixture("int_vcd.vhdl"), "int_vcd", 50);
-        Assert.Contains(counter.History.ExportToVcd("int_vcd").Split('\n'), l => l.Trim().StartsWith("$var integer 32 ") && l.Contains(" cnt "));
+        Assert.Contains(counter.History.ExportToVcd("int_vcd", counter.TickFs).Split('\n'), l => l.Trim().StartsWith("$var integer 32 ") && l.Contains(" cnt "));
     }
 
     [Fact]

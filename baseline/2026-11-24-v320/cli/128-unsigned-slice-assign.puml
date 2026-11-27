@@ -1,0 +1,50 @@
+@startuml
+title Kmila — Control flow
+skinparam shadowing false
+skinparam activity {
+  BackgroundColor #f1f5f9
+  BorderColor #64748b
+  DiamondBackgroundColor #fae8ff
+  DiamondBorderColor #a855f7
+}
+
+start
+partition "entity unsigned_slice_assign / architecture rtl" {
+  fork
+    partition "process #1 (sensitive to: clk)" {
+      if ("rising_edge ( clk )") then (yes)
+        :rom_data <= rom_init ( to_integer ( unsigned ( rom_addr ) ) );
+      else (no)
+      endif
+    }
+  fork again
+    :rom_addr <= std_logic_vector ( mar_reg );
+  fork again
+    partition "process #3 (sensitive to: clk)" {
+      if ("rising_edge ( clk )") then (yes)
+        switch ("state")
+        case ("S_IDLE")
+          if ("go = '1'") then (yes)
+            :mar_reg <= unsigned ( word ( 7 downto 0 ) );
+            :state <= S_FETCH;
+          else (no)
+          endif
+        case ("S_FETCH")
+          :state <= S_WAIT;
+        case ("S_WAIT")
+          :state <= S_WRITE;
+        case ("S_WRITE")
+          :data_reg <= rom_data;
+          :state <= S_DONE;
+        case ("S_DONE")
+          :state <= S_DONE;
+        endswitch
+      else (no)
+      endif
+    }
+  fork again
+    :data <= data_reg;
+  end fork
+}
+stop
+@enduml

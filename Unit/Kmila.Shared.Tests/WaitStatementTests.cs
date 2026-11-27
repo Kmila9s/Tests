@@ -72,7 +72,7 @@ public class WaitStatementTests
         Assert.True(wait.IsTimed);
         Assert.False(wait.IsCondition);
         Assert.False(wait.IsTerminal);
-        Assert.Equal(5, wait.DelayNs);
+        Assert.Equal(5 * Interpreter.Models.PhysicalTime.FsPerNs, wait.DelayFs);
     }
 
 // F-G-14 — the parameter parser must capture the `signal` object
@@ -121,6 +121,6 @@ public class WaitStatementTests
         Assert.Contains(forLoop.Tasks, t => t is WaitForStatement);
         var wait = forLoop.Tasks.OfType<WaitForStatement>().First();
         Assert.True(wait.IsTimed);
-        Assert.Equal(10, wait.DelayNs);
+        Assert.Equal(10 * Interpreter.Models.PhysicalTime.FsPerNs, wait.DelayFs);
     }
 }

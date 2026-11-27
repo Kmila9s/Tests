@@ -1,0 +1,18 @@
+$date
+   2026-11-22 20:35:13
+$end
+$version
+   VHDL Interpreter v0.17.0
+$end
+$timescale
+   1ps
+$end
+$scope module case_expr_selector $end
+$var reg 7 ! seg $end
+$var reg 4 " val $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b0000001 !
+bUUUU "
+$end

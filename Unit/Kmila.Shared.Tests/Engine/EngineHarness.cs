@@ -63,8 +63,11 @@ internal static class EngineHarness
     }
 
     /// <summary><see cref="RunAsync"/> for 100 ns, as a waveform.</summary>
-    public static async Task<WaveformData> SimulateAsync(string vhdl, string entry, params PortMomentConfiguration[] moments) =>
-        WaveformData.FromSignalHistory((await RunAsync(vhdl, entry, 100, moments)).History, 1);
+    public static async Task<WaveformData> SimulateAsync(string vhdl, string entry, params PortMomentConfiguration[] moments)
+    {
+        var run = await RunAsync(vhdl, entry, 100, moments);
+        return WaveformData.FromSignalHistory(run.History, run.TickFs);
+    }
 
     /// <summary>
     /// The samples a GHDL testbench printed as <c>report "t=N p.o=bits …"</c>:
@@ -102,7 +105,8 @@ internal static class EngineHarness
     public static string? RawAt(HeadlessRunResult run, string signal, long ns)
     {
         var v = run.History.GetTrackedSignals().Single(s => s.Name.Equals(signal, StringComparison.OrdinalIgnoreCase));
-        return run.History.GetValueAtTime(v, Interpreter.Services.SignalHistory.SettledMoment(ns))?.ToString()?.ToUpperInvariant();
+        long tick = (long)WaveformData.TickAt(ns, run.TickFs);
+        return run.History.GetValueAtTime(v, Interpreter.Services.SignalHistory.SettledMoment(tick))?.ToString()?.ToUpperInvariant();
     }
 
     /// <summary>Value of <paramref name="signal"/> at <paramref name="ns"/> (bits as a number).</summary>
